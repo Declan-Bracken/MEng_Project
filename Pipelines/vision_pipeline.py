@@ -1,10 +1,11 @@
 from ultralytics import YOLO
 from PIL import Image
-import pytesseract
+# import pytesseract
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import cv2
 import os
+from ocr_processor import OCRProcessor
 
 class vision_pipeline():
   def __init__(self, path_to_cnn):
@@ -86,10 +87,6 @@ class vision_pipeline():
       onlyfiles = [image_directory + '/' + file for file in os.listdir(image_directory)]
     else:
       onlyfiles = [image_directory]
-
-    # Set default values for keyword arguments if they are not provided
-    # iou = kwargs.get('iou', 0.3)  # Default iou is 0.3 if not provided
-    # conf = kwargs.get('conf', 0.5)  # Default conf is 0.5 if not provided
 
     # Model predictions
     results = self.object_detector.predict(onlyfiles, **kwargs)
@@ -235,8 +232,9 @@ if __name__ == '__main__':
 
   pipeline = vision_pipeline(model_path)
   results = pipeline.predict(image_path, plot = True, iou = 0.1, conf = 0.4, agnostic_nms = True)
-  processed_results = pipeline.process_images_with_ocr(results, image_path, config="--psm 6",)
-  formatted_strings = pipeline.format_strings(processed_results)
+  ocr_processor = OCRProcessor()
+  processed_results = ocr_processor.process_images_with_ocr(results, image_path)
+  formatted_strings = ocr_processor.format_strings(processed_results)
 
   first_image_name = next(iter(formatted_strings))
   print(formatted_strings[first_image_name]['table_data'])
