@@ -115,6 +115,22 @@ class vision_pipeline():
     Returns:
         dict: A dictionary where each key is an image name, and the value is a list of dictionaries
               for each bounding box's data including class name, confidence, OCR text, and coordinates.
+
+    Configurations for OCR:
+    0    Orientation and script detection (OSD) only.
+    1    Automatic page segmentation with OSD.
+    2    Automatic page segmentation, but no OSD, or OCR.
+    3    Fully automatic page segmentation, but no OSD. (Default)
+    4    Assume a single column of text of variable sizes.
+    5    Assume a single uniform block of vertically aligned text.
+    6    Assume a single uniform block of text.
+    7    Treat the image as a single text line.
+    8    Treat the image as a single word.
+    9    Treat the image as a single word in a circle.
+    10   Treat the image as a single character.
+    11   Sparse text. Find as much text as possible in no particular order.
+    12   Sparse text with OSD.
+    13   Raw line. Treat the image as a single text line,
     """
     if os.path.isdir(image_directory):
         onlyfiles = [os.path.join(image_directory, file) for file in os.listdir(image_directory)]
@@ -147,6 +163,12 @@ class vision_pipeline():
             confidence = box[4]
 
             pil_cropped_image = Image.fromarray(cropped_image)
+
+            if class_name == 'grade table':
+                config = "--psm 6"  # Example config for grade tables
+            else:
+                config = "--psm 7"  # Default config for other classes
+
             text_extracted = pytesseract.image_to_string(pil_cropped_image, config=config)
 
             image_results.append({
@@ -176,23 +198,8 @@ class vision_pipeline():
     Returns:
         dict: A dictionary where each key is an image name and the value is another dictionary with
               two keys 'table_data' and 'header_data' containing formatted strings for each category.
-
-    Configurations for OCR:
-    0    Orientation and script detection (OSD) only.
-    1    Automatic page segmentation with OSD.
-    2    Automatic page segmentation, but no OSD, or OCR.
-    3    Fully automatic page segmentation, but no OSD. (Default)
-    4    Assume a single column of text of variable sizes.
-    5    Assume a single uniform block of vertically aligned text.
-    6    Assume a single uniform block of text.
-    7    Treat the image as a single text line.
-    8    Treat the image as a single word.
-    9    Treat the image as a single word in a circle.
-    10   Treat the image as a single character.
-    11   Sparse text. Find as much text as possible in no particular order.
-    12   Sparse text with OSD.
-    13   Raw line. Treat the image as a single text line,
     """
+
     formatted_data = {}
 
     for image_name, results in processed_results.items():
@@ -202,7 +209,7 @@ class vision_pipeline():
         for result in results:
             class_name = result['class_name']
             text = result['text']
-
+            
             if class_name == 'grade table' or class_name == 'single row table':
                 table_texts.append(text)
             elif class_name == 'grade headers':
@@ -224,13 +231,12 @@ if __name__ == '__main__':
   image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts/'
   image_name = '2.JPG'
   image_path = image_directory + image_name
-  print(image_path)
   model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v4 (3_classes)/best (1).pt'
 
   pipeline = vision_pipeline(model_path)
-  results = pipeline.predict(image_path, plot = True, iou = 0.1, conf = 0.5, agnostic_nms = True)
+  results = pipeline.predict(image_path, plot = True, iou = 0.1, conf = 0.4, agnostic_nms = True)
   processed_results = pipeline.process_images_with_ocr(results, image_path, config="--psm 6",)
   formatted_strings = pipeline.format_strings(processed_results)
+
   first_image_name = next(iter(formatted_strings))
-  print(first_image_name)
   print(formatted_strings[first_image_name]['table_data'])
