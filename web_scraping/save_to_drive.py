@@ -6,7 +6,7 @@ from google.auth.transport.requests import Request
 import os
 
 class GoogleDriveManager:
-    def __init__(self, credentials_file='/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/client_secret_809384080547-4sfr7l9u8a618keak7b11qan4o63nvh3.apps.googleusercontent.com.json', token_file='token.json', scopes=None):
+    def __init__(self, credentials_file='/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/web_scraping/client_secret_809384080547-4sfr7l9u8a618keak7b11qan4o63nvh3.apps.googleusercontent.com.json', token_file='token.json', scopes=None):
         self.credentials_file = credentials_file
         self.token_file = token_file
         self.scopes = scopes or ['https://www.googleapis.com/auth/drive']
@@ -39,6 +39,5 @@ class GoogleDriveManager:
 if __name__ == "__main__":
     gdrive_manager = GoogleDriveManager()
     folder_key = "14zyq0BXTYrYj81bGlKtYpEG-KL59oNnM"
-    # Assuming you have an image called 'example.jpg' and a folder ID 'your_folder_id'
     file_id = gdrive_manager.upload_file('/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts_v2/image_3.jpg', folder_key)
     print(f"Uploaded file ID: {file_id}")
