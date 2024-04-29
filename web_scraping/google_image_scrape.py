@@ -93,7 +93,6 @@ def upload_image_to_drive(gdrive_manager, image_url, folder_id, image_num):
 # List of queries
 if __name__ == "__main__":
     #Get School Names from CSV (primarily Canadian)
-
     school_names = pd.read_csv('/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/web_scraping/university_names.csv')
     school_name_list = school_names['University Name'].to_list()
     search_query = " undergraduate transcript site:slideshare.net"
@@ -125,28 +124,28 @@ if __name__ == "__main__":
     slide_image_finder.exit_driver()
 
 # Constant Query setup
-if __name__ == "__main__":
-    search_query = "university undergraduate transcript site:slideshare.net"
-    api_key = "AIzaSyAHKp3QovX78D8-RjPyiBZ3HM-4nvcflRM"
-    cx = "868233c9494a2462a"
-    imgSize = "imgSizeUndefined"
-    filter = '1'
-    total_results_required = 50
-    starting_index = 11
+# if __name__ == "__main__":
+#     search_query = "university undergraduate transcript site:slideshare.net"
+#     api_key = "AIzaSyAHKp3QovX78D8-RjPyiBZ3HM-4nvcflRM"
+#     cx = "868233c9494a2462a"
+#     imgSize = "imgSizeUndefined"
+#     filter = '1'
+#     total_results_required = 50
+#     starting_index = 11
 
-    slide_image_finder = SlideImageFinder() # instantiate pse
-    scraped_image_urls, scraped_image_site_urls = scrape_images(slide_image_finder, search_query, cx, api_key, imgSize, 
-                                                                filter, total_results_required, 
-                                                                start_index = starting_index)
-    slide_image_finder.exit_driver() # exit programmable search engine
+#     slide_image_finder = SlideImageFinder() # instantiate pse
+#     scraped_image_urls, scraped_image_site_urls = scrape_images(slide_image_finder, search_query, cx, api_key, imgSize, 
+#                                                                 filter, total_results_required, 
+#                                                                 start_index = starting_index)
+#     slide_image_finder.exit_driver() # exit programmable search engine
 
-    # Instantiate GoogleDriveManager with the path to your credentials
-    gdrive_manager = GoogleDriveManager()
-    folder_key = "14zyq0BXTYrYj81bGlKtYpEG-KL59oNnM" # key to gdrive folder
+#     # Instantiate GoogleDriveManager with the path to your credentials
+#     gdrive_manager = GoogleDriveManager()
+#     folder_key = "14zyq0BXTYrYj81bGlKtYpEG-KL59oNnM" # key to gdrive folder
 
-    # Download each image and upload to Google Drive
-    for idx, image_url in enumerate(scraped_image_urls):
-        upload_image_to_drive(gdrive_manager, image_url, folder_key, idx)
+#     # Download each image and upload to Google Drive
+#     for idx, image_url in enumerate(scraped_image_urls):
+#         upload_image_to_drive(gdrive_manager, image_url, folder_key, idx)
 
 # For Saving Locally:
     
