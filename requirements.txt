@@ -5,12 +5,11 @@ google_auth_oauthlib==1.2.0
 imutils==0.5.4
 matplotlib==3.7.1
 numpy==1.25.2
-opencv_contrib_python==4.6.0.66
-opencv_python==4.6.0.66
-opencv_python_headless==4.9.0.80
+opencv_contrib_python
+opencv_python
+opencv_python_headless
 pandas==2.0.3
-Pillow==10.0.1
-Pillow==10.3.0
+Pillow
 protobuf==3.20.3
 pytesseract==0.3.10
 Requests==2.31.0
