@@ -1,5 +1,6 @@
 from PIL import Image
 import pytesseract
+import easyocr
 import cv2
 import os
 
@@ -7,10 +8,19 @@ class OCRProcessor:
     def __init__(self):
         self.class_names = {0: 'grade headers', 1: 'grade table', 2: 'single row table'}
     
-    def get_string(self, image, config):
-        return pytesseract.image_to_string(image, config=config)
+    def init_easyocr(self, reader = None):
+        # Initialize EasyOCR reader; specify language if different from English
+        self.reader = reader if reader else easyocr.Reader(['en'])
 
-    def process_images_with_ocr(self, results, image_directory, default_config="--psm 7"):
+    def tesseract_get_string(self, image, config):
+        # Run Pytesseract
+        return pytesseract.image_to_string(image, config=config)
+    
+    def easyocr_get_string(self,image):
+        # Use EasyOCR to extract text from cropped image
+        return self.reader.readtext(image, detail=0, paragraph=True)
+
+    def process_images_with_ocr(self, results, image_directory, default_config="--psm 7", use_tesseract = 1):
         """
         Processes images by cropping based on bounding boxes, applying OCR, and organizing the results
         by image name. Each image's results include bounding box coordinates, class name, confidence level,
@@ -49,10 +59,17 @@ class OCRProcessor:
                 class_id = int(classes[idx])
                 class_name = self.class_names[class_id]
                 confidence = box[4]
-
+                
+                # Get cropped Image
                 pil_cropped_image = Image.fromarray(cropped_image)
-                config = default_config if class_name != 'grade table' else "--psm 6"
-                text_extracted = self.get_string(pil_cropped_image, config=config)
+                
+                if use_tesseract == 1:
+                    # Set configuration for tesseract
+                    config = default_config if class_name != 'grade table' else "--psm 6"
+                    text_extracted = self.tesseract_get_string(pil_cropped_image, config=config)
+                else:
+                    text_extracted = self.easyocr_get_string(cropped_image)
+                    print(text_extracted)
 
                 image_results.append({
                     "class_name": class_name,

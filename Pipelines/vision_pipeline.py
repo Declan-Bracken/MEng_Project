@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 from PIL import Image
-# import pytesseract
+import pytesseract
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import cv2
@@ -48,7 +48,7 @@ class vision_pipeline():
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Create figure and axes
-    _, ax = plt.subplots(1, figsize=(12, 12))
+    _, ax = plt.subplots(1, figsize=(8, 8))
 
     # Display the image
     ax.imshow(image)
@@ -226,15 +226,20 @@ class vision_pipeline():
   
 if __name__ == '__main__':
   image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts/'
-  image_name = '2.JPG'
+  # image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts/'
+  image_name = '3.png'
+  # image_name = '2015-queens-university-transcript-1-2048.webp'
   image_path = image_directory + image_name
   model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v4 (3_classes)/best (1).pt'
-
+  # model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt'
   pipeline = vision_pipeline(model_path)
-  results = pipeline.predict(image_path, plot = True, iou = 0.1, conf = 0.4, agnostic_nms = True)
+  results = pipeline.predict(image_path, plot = True, iou = 0.3, conf = 0.5, agnostic_nms = True)
   ocr_processor = OCRProcessor()
-  processed_results = ocr_processor.process_images_with_ocr(results, image_path)
+  # ocr_processor.init_easyocr()
+  processed_results = ocr_processor.process_images_with_ocr(results, image_path, use_tesseract=True)
   formatted_strings = ocr_processor.format_strings(processed_results)
 
   first_image_name = next(iter(formatted_strings))
+  print(formatted_strings[first_image_name]['header_data'])
   print(formatted_strings[first_image_name]['table_data'])
+  
