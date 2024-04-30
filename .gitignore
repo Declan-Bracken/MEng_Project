@@ -3,6 +3,7 @@
 
 # Ignore virtual environment directory
 yolo_env/
+llm_env/
 FasterRCNN_env/fasterrcnn_env
 
 # Ignore other unwanted files
