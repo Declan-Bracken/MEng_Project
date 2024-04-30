@@ -5,16 +5,25 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import cv2
 import os
+import torch
 from ocr_processor import OCRProcessor
 
-class vision_pipeline():
-  def __init__(self, path_to_cnn):
+class VisionPipeline():
+  def __init__(self, path_to_cnn, use_cuda = True):
     self.path_to_cnn = path_to_cnn
+    self.use_cuda = use_cuda
     # Class mapping
     self.class_names = {0: 'grade headers', 1: 'grade table', 2: 'single row table'}
     self.class_colors = {0: 'g', 1: 'r', 2: 'b'}
     # Initialize Model
     self._init_yolo()
+
+    if self.use_cuda and torch.cuda.is_available:
+      print("Using GPU Acceleration.")
+      self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+      self.object_detector.to(self.device)
+    else:
+      print('GPU Unavailable.')
 
   def _init_yolo(self):
     """
@@ -27,6 +36,7 @@ class vision_pipeline():
     try:
       self.object_detector = YOLO(self.path_to_cnn)
       print("Model loaded successfully.")
+         
     except Exception as e:
       print("Failed to load model:", e)
   
@@ -48,7 +58,7 @@ class vision_pipeline():
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Create figure and axes
-    _, ax = plt.subplots(1, figsize=(8, 8))
+    _, ax = plt.subplots(1, figsize=(10, 10))
 
     # Display the image
     ax.imshow(image)
@@ -89,7 +99,8 @@ class vision_pipeline():
       onlyfiles = [image_directory]
 
     # Model predictions
-    results = self.object_detector.predict(onlyfiles, **kwargs)
+    results = self.object_detector.predict(onlyfiles, device = self.device, **kwargs)
+
     if plot:
       for result, image_path in zip(results, onlyfiles):
         classes = result.boxes.cls.cpu().numpy()  # Move to CPU and convert to numpy
@@ -225,17 +236,19 @@ class vision_pipeline():
     return formatted_data
   
 if __name__ == '__main__':
-  image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts/'
-  # image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts/'
-  image_name = '3.png'
-  # image_name = '2015-queens-university-transcript-1-2048.webp'
-  image_path = image_directory + image_name
-  model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v4 (3_classes)/best (1).pt'
+
+
+  # image_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts3.png'
+  # image_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts/2015-queens-university-transcript-1-2048.webp'
+  image_path = r'\Users\Declan Bracken\Pictures\Saved Pictures\2015-queens-university-transcript-1-2048.webp'
+
+  model_path = r'yolo_training\yolo_v8_models\finetune_v4 (3_classes)\best (1).pt'
   # model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt'
-  pipeline = vision_pipeline(model_path)
+
+  pipeline = VisionPipeline(model_path)
   results = pipeline.predict(image_path, plot = True, iou = 0.3, conf = 0.5, agnostic_nms = True)
   ocr_processor = OCRProcessor()
-  # ocr_processor.init_easyocr()
+
   processed_results = ocr_processor.process_images_with_ocr(results, image_path, use_tesseract=True)
   formatted_strings = ocr_processor.format_strings(processed_results)
 
