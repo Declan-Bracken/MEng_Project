@@ -9,21 +9,20 @@ import torch
 from ocr_processor import OCRProcessor
 
 class VisionPipeline():
-  def __init__(self, path_to_cnn, use_cuda = True):
+  def __init__(self, path_to_cnn, device = torch.device('cuda')):
+    self.device = device
     self.path_to_cnn = path_to_cnn
-    self.use_cuda = use_cuda
+    if self.device == torch.device('cuda') and not torch.cuda.is_available(): 
+        self.device = torch.device('cpu') # In case cuda isn't available
+
     # Class mapping
     self.class_names = {0: 'grade headers', 1: 'grade table', 2: 'single row table'}
     self.class_colors = {0: 'g', 1: 'r', 2: 'b'}
+
     # Initialize Model
     self._init_yolo()
-
-    if self.use_cuda and torch.cuda.is_available:
-      print("Using GPU Acceleration.")
-      self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-      self.object_detector.to(self.device)
-    else:
-      print('GPU Unavailable.')
+    # Move to device
+    self.object_detector.to(self.device)
 
   def _init_yolo(self):
     """
@@ -236,7 +235,6 @@ class VisionPipeline():
     return formatted_data
   
 if __name__ == '__main__':
-
 
   # image_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts3.png'
   # image_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts/2015-queens-university-transcript-1-2048.webp'
