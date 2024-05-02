@@ -13,6 +13,7 @@ class VisionPipeline():
     self.device = device
     self.path_to_cnn = path_to_cnn
     if self.device == torch.device('cuda') and not torch.cuda.is_available(): 
+        print("Switching device to CPU.")
         self.device = torch.device('cpu') # In case cuda isn't available
 
     # Class mapping

@@ -3,8 +3,6 @@ from vision_pipeline import VisionPipeline
 from mistral_pipeline import MistralInference
 import torch
 import pandas as pd 
-import os
-# os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 
 class TranscriptPipeline():
     def __init__(self, device = torch.device('cuda'), cnn_path = r'yolo_training\yolo_v8_models\finetune_v4 (3_classes)\best (1).pt'):
@@ -16,9 +14,9 @@ class TranscriptPipeline():
             print('GPU Unavailable, using CPU may cause issues when running Mistral.')
             device = torch.device('cpu')
 
-        self.vision_pipeline = VisionPipeline(cnn_path, device = self.device)    # YOLO Model
-        self.ocr_processor = OCRProcessor()                                 # Tesseract Engine
-        self.mistral_pipeline = MistralInference(device = self.device)           # LLM
+        self.vision_pipeline = VisionPipeline(cnn_path, device = self.device)       # YOLO Model
+        self.ocr_processor = OCRProcessor()                                         # Tesseract Engine
+        self.mistral_pipeline = MistralInference(device = self.device)              # LLM
 
     def get_table_strings(self, image_path, plot_bboxes = False, **kwargs):
         # Predict bboxes
