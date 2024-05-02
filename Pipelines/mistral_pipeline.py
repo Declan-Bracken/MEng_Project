@@ -7,28 +7,40 @@ import torch
 import gc
 
 class MistralInference():
-    def __init__(self, device = torch.device('cuda')):
+    _instance = None  # Class variable to store the singleton instance
 
-        self.headers = ['Course Code','Grade', 'Credits'] # Column names for output dataframe
-        self.model_name = "TheBloke/CapybaraHermes-2.5-Mistral-7B-GPTQ" # Model name to load from HF
-        
-        # In case cuda isn't available
+    # Create new class instance if one doesn't exist (Singleton pattern)
+    def __new__(cls, device=torch.device('cuda')):
+        if cls._instance is None:
+            print("Creating new instance of MistralInference")
+            cls._instance = super(MistralInference, cls).__new__(cls)
+
+            # Initialize instance variables
+            cls._instance.initialize(device)
+        else:
+            print("Using existing instance of MistralInference")
+
+        return cls._instance
+
+    def initialize(self, device):
+        self.headers = ['Course Code', 'Grade', 'Credits']
+        self.model_name = "TheBloke/CapybaraHermes-2.5-Mistral-7B-GPTQ"
         if device == torch.device('cuda') and not torch.cuda.is_available():
+            print("Switching device to CPU.")
             device = torch.device('cpu')
 
-        #Before loading mistral, clear cache and memory 
-        self.model = None
         torch.cuda.empty_cache()
         gc.collect()
 
         print(f"Loading Mistral to {device}...")
-        # Load model from huggingface
-        self.model = AutoModelForCausalLM.from_pretrained(self.model_name,
-                                                    device_map=device,
-                                                    trust_remote_code=False,
-                                                    revision="gptq-4bit-32g-actorder_True")
-
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_name,
+            device_map=device,
+            trust_remote_code=False,
+            revision="gptq-4bit-32g-actorder_True"
+        )
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, use_fast=True)
+
     
     # Function to get a response from mistral given an OCR text string
     def query_mistral(self, text, headers, do_sample = False, temperature=0.3, top_p=0.9, top_k=40, repetition_penalty=1.1):
@@ -79,8 +91,8 @@ class MistralInference():
             temperature=None
             top_p=None
             top_k=None
-
-        # print("*** Pipeline:")
+        
+        # Create pipeline object
         pipe = pipeline(
             "text-generation",
             model=self.model,
@@ -219,11 +231,3 @@ class MistralInference():
             dataframes.append(df_cleaned)
             
         return dataframes
-
-if __name__ == "__main__":
-    pipeline = MistralInference()
-    
-    tables = pipeline.get_dataframes(table_and_header_dict, output_directory=None)
-
-    pd.set_option('display.max_rows', 50)
-    tables[0]
