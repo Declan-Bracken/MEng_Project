@@ -6,7 +6,7 @@ import matplotlib.patches as patches
 import cv2
 import os
 import torch
-from ocr_processor import OCRProcessor
+# from ocr_processor import OCRProcessor
 
 class VisionPipeline():
   def __init__(self, path_to_cnn, device = torch.device('cuda')):
@@ -246,12 +246,12 @@ if __name__ == '__main__':
 
   pipeline = VisionPipeline(model_path)
   results = pipeline.predict(image_path, plot = True, iou = 0.3, conf = 0.5, agnostic_nms = True)
-  ocr_processor = OCRProcessor()
+  # ocr_processor = OCRProcessor()
 
-  processed_results = ocr_processor.process_images_with_ocr(results, image_path, use_tesseract=True)
-  formatted_strings = ocr_processor.format_strings(processed_results)
+  # processed_results = ocr_processor.process_images_with_ocr(results, image_path, use_tesseract=True)
+  # formatted_strings = ocr_processor.format_strings(processed_results)
 
-  first_image_name = next(iter(formatted_strings))
-  print(formatted_strings[first_image_name]['header_data'])
-  print(formatted_strings[first_image_name]['table_data'])
+  # first_image_name = next(iter(formatted_strings))
+  # print(formatted_strings[first_image_name]['header_data'])
+  # print(formatted_strings[first_image_name]['table_data'])
   

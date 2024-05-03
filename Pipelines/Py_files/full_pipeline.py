@@ -1,6 +1,6 @@
-from ocr_processor import OCRProcessor
-from vision_pipeline import VisionPipeline
-from mistral_pipeline import MistralInference
+from Py_files.ocr_processor import OCRProcessor
+from Py_files.vision_pipeline import VisionPipeline
+from Py_files.mistral_pipeline_v2 import MistralInference
 import torch
 import pandas as pd 
 
@@ -27,9 +27,15 @@ class TranscriptPipeline():
         formatted_strings = self.ocr_processor.format_strings(processed_results)
         return formatted_strings
     
-    def get_dataframes(self, table_and_header_dict, output_directory = None):
+    def get_dataframes(self, table_and_header_dict, output_filename = None):
         #Process Image Data Sequentially
-        tables = self.mistral_pipeline.get_table(table_and_header_dict, output_directory = output_directory)
+        tables = {} # Dictionary of dataframes
+        for image_name in table_and_header_dict:
+            text = table_and_header_dict[image_name]['table_data']
+            headers = table_and_header_dict[image_name]['header_data']
+            table = self.mistral_pipeline.process_transcript(headers, text, output_filename = output_filename)
+            tables[image_name] = table
+        # Return List of dataframes, one for each image
         return tables
 
 if __name__ == "__main__":
@@ -45,7 +51,7 @@ if __name__ == "__main__":
     tables = pipeline.get_dataframes(table_and_header_dict, output_directory=None)
 
     pd.set_option('display.max_rows', 50)
-    tables[0]
+    print(tables[0])
 
     
     
