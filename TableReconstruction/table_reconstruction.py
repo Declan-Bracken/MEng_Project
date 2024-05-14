@@ -1,6 +1,4 @@
 import sys
-import numpy as np
-import matplotlib.pyplot as plt
 from image_processor import ImageProcessor
 from text_classifier import TextClassifier
 from row_clusterer import RowClassifier
@@ -12,7 +10,7 @@ from PyQt5 import QtWidgets
 # Manually specify the path to the parent directory
 parent_dir = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base'  # Replace this with the path where 'Pipelines' is located
 sys.path.append(parent_dir)
-from Pipelines.vision_pipeline import vision_pipeline
+from Pipelines.Py_files.vision_pipeline import vision_pipeline
 
 
 class TableReconstructor:

@@ -7,7 +7,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 # Add your parent directory to the path
 parent_dir = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base'
 sys.path.append(parent_dir)
-from Pipelines.vision_pipeline_stlit import VisionPipeline
+from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
 from TableReconstruction.row_clusterer_v2 import RowClassifier
