@@ -57,6 +57,8 @@ class RowClassifier:
             all_rows.extend(self._separate_rows(row))
         for table in self.tables:
             all_rows.extend(self._separate_rows(table))
+        # for header in self.headers:
+        #     all_rows.extend(self._separate_rows(header))
 
         # Clean Rows
         all_rows = self._clean_rows(all_rows)
@@ -146,8 +148,8 @@ class RowClassifier:
             width = text['width']
 
             # Calculate the global positions of the words
-            global_lefts = [box[0] + l for l in left]
-            global_rights = [box[0] + l + w for l, w in zip(left, width)]
+            global_lefts = [l for l in left]
+            global_rights = [l + w for l, w in zip(left, width)]
 
             # Initialize a binary vector with zeros
             binary_vector = np.zeros(num_bins)
@@ -198,7 +200,7 @@ class RowClassifier:
             )
             # Ensure more than one cluster and no noise-only group
             if len(set(labels)) > 1:
-                return calinski_harabasz_score(binary_features, labels)
+                return -davies_bouldin_score(binary_features, labels)
             return float('inf')  # Penalize for a single cluster or noisy clustering
 
         # Set up bounds for the distance threshold
@@ -209,9 +211,42 @@ class RowClassifier:
 
         # Extract the best threshold
         best_threshold = result.x[0]
-        print(f"Optimal distance threshold: {best_threshold}")
+        # print(f"Optimal distance threshold: {best_threshold}")
 
         return best_threshold
+    
+    def optimize_by_histogram(self, rows):
+        word_counts = self.create_wordcount_histogram(rows)
+        best_threshold = self.determine_threshold_based_on_vmr(word_counts)
+        # print(f"Optimal distance threshold: {best_threshold}")
+        return best_threshold
+    
+    def create_wordcount_histogram(self, row_list):
+        word_counts = np.zeros(len(row_list))
+        for i, item in enumerate(row_list):
+            word_counts[i] = len(item['text']['text'])
+        return word_counts
+
+    def calculate_vmr(self, word_counts):
+        mean_count = np.mean(word_counts)
+        variance = np.var(word_counts)
+        vmr = variance / mean_count if mean_count != 0 else 0
+        # print(f"VMR: {vmr}")
+        return vmr
+
+    def determine_threshold_based_on_vmr(self, word_counts):
+
+        vmr = self.calculate_vmr(word_counts)
+
+        # Calculate slope (m) and intercept (c) for linear transformation
+        m = 0.15
+        c = 0.55
+
+        # Calculate the threshold using the linear equation
+        threshold = c - m * vmr
+
+        return threshold
+
 
     def cluster_lines_with_agglomerative_jaccard(self, distance_matrix, distance_threshold=0.4, linkage='average'):
         """

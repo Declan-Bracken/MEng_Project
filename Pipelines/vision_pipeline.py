@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import cv2
 import os
-from ocr_processor import OCRProcessor
+# from ocr_processor import OCRProcessor
 
 class vision_pipeline():
   def __init__(self, path_to_cnn):
@@ -44,7 +44,7 @@ class vision_pipeline():
 
     # Load image
     image = cv2.imread(image_path)
-    print("Image path:", image_path)
+    # print("Image path:", image_path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Create figure and axes
@@ -225,13 +225,13 @@ class vision_pipeline():
     return formatted_data
   
 if __name__ == '__main__':
-  image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts/'
-  # image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts/'
-  image_name = '3.png'
-  # image_name = '2015-queens-university-transcript-1-2048.webp'
+  # image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Real Transcripts/'
+  image_directory = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/Transcripts/Web_Scraped_Transcripts/'
+  # image_name = '3.png'
+  image_name = '2015-queens-university-transcript-1-2048.webp'
   image_path = image_directory + image_name
-  model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v4 (3_classes)/best (1).pt'
-  # model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt'
+  # model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v4 (3_classes)/best (1).pt'
+  model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt'
   pipeline = vision_pipeline(model_path)
   results = pipeline.predict(image_path, plot = True, iou = 0.3, conf = 0.5, agnostic_nms = True)
   ocr_processor = OCRProcessor()
