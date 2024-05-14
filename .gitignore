@@ -11,6 +11,9 @@ FasterRCNN_env/fasterrcnn_env
 __pycache__/
 *.pdf
 
+# Ignore large quantized LLM files
+*.gguf
+
 # Don't track my person codes.
 web_scraping/client_secret_809384080547-4sfr7l9u8a618keak7b11qan4o63nvh3.apps.googleusercontent.com.json
 web_scraping/token.json
