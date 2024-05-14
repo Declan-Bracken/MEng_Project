@@ -3,12 +3,16 @@
 
 # Ignore virtual environment directory
 yolo_env/
+meng_env/
 FasterRCNN_env/fasterrcnn_env
 
 # Ignore other unwanted files
 *.pyc
 __pycache__/
 *.pdf
+
+# Ignore large quantized LLM files
+*.gguf
 
 # Don't track my person codes.
 web_scraping/client_secret_809384080547-4sfr7l9u8a618keak7b11qan4o63nvh3.apps.googleusercontent.com.json
