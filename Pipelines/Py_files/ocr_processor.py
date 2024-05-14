@@ -3,6 +3,7 @@ import pytesseract
 import easyocr
 import cv2
 import os
+from tqdm import tqdm
 
 class OCRProcessor:
     def __init__(self):
@@ -41,7 +42,7 @@ class OCRProcessor:
             onlyfiles = [image_directory]  # Handle single image
 
         processed_results = {}
-        for result, image_path in zip(results, onlyfiles):
+        for result, image_path in tqdm(zip(results, onlyfiles), desc = "Running OCR Engine"):
             image_name = os.path.basename(image_path)
             image = cv2.imread(image_path)
             if image is None:

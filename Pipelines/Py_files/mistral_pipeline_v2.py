@@ -7,6 +7,7 @@ import os
 import sys
 import csv
 
+# For output suppression of the LLM logging
 class SuppressOutput:
     def __enter__(self):
         # Redirect stdout and stderr to os.devnull
@@ -27,21 +28,25 @@ class MistralInference():
     _instance = None  # Class variable to store the singleton instance
 
     # Create new class instance if one doesn't exist (Singleton pattern)
-    def __new__(cls, device=torch.device('cuda')):
-        if cls._instance is None:
+    def __new__(cls, device=torch.device('cuda'), model_path=None, new_instance = False):
+        if cls._instance is None or new_instance == True:
             print("Creating new instance of MistralInference")
             cls._instance = super(MistralInference, cls).__new__(cls)
 
             # Initialize instance variables
-            cls._instance.initialize(device)
+            cls._instance.initialize(device, model_path)
         else:
             print("Using existing instance of MistralInference")
 
         return cls._instance
     
-    def initialize(self, device, model_path = r"C:\Users\Declan Bracken\MEng_Project\mistral\models\dolphin-2.1-mistral-7b.Q5_K_M.gguf", max_sequence_len = 4096):
+    def initialize(self, device, model_path, max_sequence_len = 4096):
+        if not model_path:
+            raise ValueError("Model path must be provided.")
+        
+        # Output Collumns
         self.headers = ['Course Code', 'Grade', 'Credits']
-        self.model_name = "TheBloke/CapybaraHermes-2.5-Mistral-7B-GPTQ"
+
         if device == torch.device('cuda') and not torch.cuda.is_available():
             print("Switching device to CPU.")
             device = torch.device('cpu')
@@ -53,6 +58,7 @@ class MistralInference():
         n_threads = max(1, torch.get_num_threads() - 1)  # Leave one thread for OS and other processes
         print(f"Using {n_threads} CPU threads.")
         n_gpu_layers = 0  # Default to no GPU layers if not using CUDA
+
         if device.type == 'cuda':
             n_gpu_layers = torch.cuda.get_device_capability(device.index)[0]  # Use number of SMs as a heuristic
             print(f"Offloading {n_gpu_layers} layers to GPU.")
@@ -70,27 +76,32 @@ class MistralInference():
             except Exception as e:
                 print(f"Error Loading Model Weights: {e}")
             
-    def query_mistral(self, headers, text):
-        prompt = f'''
-Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. Some extracted table headers are given below to help with formatting. The csv you output should only have 3 columns: 'Course Code', 'Grade', and 'Credits', you must select which columns best fit these fields.
+    def query_mistral(self, text, headers = None):
+        self.prompt_templates = [f'''
+Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
         
-### Headers:
-{headers}
+### Text:{headers}{text}
+
+''',f'''
+Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
 
 ### Text:
 {text}
 
 ### CSV:
 
-'''
+''']
+        if headers is not None:
+            prompt = self.prompt_templates[0]
+        else:
+            prompt = self.prompt_templates[1]
 
-        system_message = "You are a table creation assistant"
+        system_message = "You are a table creation assistant."
         prompt_template=f'''<|im_start|>system
         {system_message}<|im_end|>
         <|im_start|>user
         {prompt}<|im_end|>
-        <|im_start|>assistant
-        '''
+        <|im_start|>assistant'''
 
         max_tokens = 2048
         temperature = 0
@@ -105,106 +116,75 @@ Below is OCR text from a student transcript. This text contains a table, or mult
                     max_tokens=max_tokens,
                     temperature=temperature,
                     echo=echo,
-                    stop=stop,
-                )
+                    stop=stop,)
             print("Prompt Successful!")
             final_result = model_output["choices"][0]["text"].strip()
-
-            return final_result
-        
+            return final_result, model_output
         except Exception as e:
             print(f"An error occurred during model inference: {e}")
 
-    def filter_unidentified_courses(self, mistral_output, original_text):
-        # Step 1: Extract course codes from Mistral's output
-        mistral_courses = set()
-        csv_reader = csv.reader(StringIO(mistral_output))
-        next(csv_reader)  # Skip headers if they exist
-        for row in csv_reader:
-            if row:  # Make sure row is not empty
-                mistral_courses.add(row[0].strip())  # Assume course code is in the first column
+    def query_mistral_headers(self, headers):
+        self.header_prompt = f'''
+Below is OCR text from a student transcript containing table headers. Please discern the correct table headers for a student's grade data, and return the headers in order.
+        
+### Headers:{headers}
 
-        # Step 2: Split the original text by newline and filter
-        original_lines = original_text.strip().split('\n')
-        filtered_lines = []
-
-        for line in original_lines:
-            if not any(course_code in line for course_code in mistral_courses):
-                filtered_lines.append(line)
-
-        # Step 3: Join the filtered lines back into a single string
-        filtered_text = '\n'.join(filtered_lines)
-        return filtered_text
-    
-    def check_missing_courses(self, headers, filtered_text):
-        prompt2 = f'''Below is OCR text from a student transcript. This text might contain student grade data. Determine if there is course information and corresponding grades from this data. If there is, select lines only relevant to student courses and grades and format the fields into a table in csv format. Some extracted table headers are given below to help with formatting. The csv you output should only have 3 columns: 'Course Code', 'Grade', and 'Credits', you must select which columns best fit these fields. The data could be one line long, several lines long, or if you determine that there is no grade data, simply respond with "None".
-
-### Headers:
-{headers}
-
-### Text:
-{filtered_text}
-
-### CSV:
 '''
 
-        system_message2 = "You are a table creation assistant"
-        prompt_template2=f'''<|im_start|>system
-        {system_message2}<|im_end|>
+        system_message = "You are a table creation assistant."
+        prompt_template=f'''<|im_start|>system
+        {system_message}<|im_end|>
         <|im_start|>user
-        {prompt2}<|im_end|>
-        <|im_start|>assistant
-        '''
+        {self.header_prompt}<|im_end|>
+        <|im_start|>assistant'''
 
-        max_tokens2 = 128
+        max_tokens = 2048
         temperature = 0
         echo = False
         stop = ["</s>"]
-
-        print("Asking Mistral to Check it's Work...")
         try:
+            print("Prompting Mistral...")
             # Define the parameters
             with SuppressOutput():
-                model_output2 = self.llm(
-                    prompt_template2,
-                    max_tokens=max_tokens2,
+                model_output = self.llm(
+                    prompt_template,
+                    max_tokens=max_tokens,
                     temperature=temperature,
                     echo=echo,
-                    stop=stop,
-                )
-            print("Check Complete.")
-            output_string = model_output2["choices"][0]["text"].strip()
-            return output_string
-        
+                    stop=stop,)
+            print("Prompt Successful!")
+            final_result = model_output["choices"][0]["text"].strip()
+            return final_result
         except Exception as e:
             print(f"An error occurred during model inference: {e}")
 
+
     def string_to_dataframe(self, data_str):
-        # Use StringIO to simulate a file-like object for the pandas read_csv function.
-        data_io = StringIO(data_str)
-        
-        # Read the data into a DataFrame.
-        df = pd.read_csv(data_io)
+        try:
+            # Use StringIO to simulate a file-like object for the pandas read_csv function.
+            data_io = StringIO(data_str)
+            
+            # Read the data into a DataFrame.
+            df = pd.read_csv(data_io)
 
-        # Strip whitespace from strings in the DataFrame
-        df = df.map(lambda x: x.strip() if isinstance(x, str) else x)
+            # Strip whitespace from strings in the DataFrame
+            df = df.map(lambda x: x.strip() if isinstance(x, str) else x)
 
-        # Apply strip to column titles
-        df.columns = df.columns.str.strip()
-        
+            # Apply strip to column titles
+            df.columns = df.columns.str.strip()
+        except Exception as e:
+            print(f"Failed converting string to dataframe: {e}")
         return df
     
     def fix_ocr_pluses(self, dataframe, grade_header):
         # Define the mapping for grades
         map_plus = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
-
         # Check if the specified grade_header is in the dataframe's columns
         if grade_header in dataframe.columns:
             # Apply the mapping to the specified grade column
             dataframe[grade_header] = dataframe[grade_header].replace(map_plus)
         else:
             raise ValueError(f"The specified grade header '{grade_header}' is not found in the dataframe.")
-
         # Return the modified dataframe
         return dataframe
     
@@ -213,34 +193,22 @@ Below is OCR text from a student transcript. This text contains a table, or mult
         print(f"DataFrame saved to {output_filename}")
     
     def process_transcript(self, headers, text, save=False, output_filename=None):
+        # Ask for table headeras:
+        self.processed_headers = mistral_pipeline.query_mistral_headers(headers)
         # Query Mistral with initial text
-        initial_csv_output = self.query_mistral(headers, text)
-        print("Initial_CSV_Output:\n", initial_csv_output)
-        initial_df = self.string_to_dataframe(initial_csv_output)
-
-        # Filter out identified course lines from the original text
-        remaining_text = self.filter_unidentified_courses(initial_csv_output, text)
-
-        # Check for missing courses
-        filtered_text = self.check_missing_courses(headers, remaining_text)
-        if filtered_text.lower() != "none":
-            additional_df = self.string_to_dataframe(filtered_text)
-            # Append new rows to the initial DataFrame
-            final_df = pd.concat([initial_df, additional_df], ignore_index=True)
-        else:
-            final_df = initial_df
-
+        self.csv_output, self.model_output = mistral_pipeline.query_mistral(text, headers=self.processed_headers)
+        # Convert to Dataframe
+        self.df = self.string_to_dataframe(self.csv_output)
         # Fix OCR issues with grade pluses
-        final_df = self.fix_ocr_pluses(final_df, "Grade")
-
+        self.final_df = self.fix_ocr_pluses(self.df, self.headers[1]) # Second header is for grades
         # Optionally save the DataFrame
         if save:
             if output_filename:
-                self.save_output(final_df, output_filename)
+                self.save_output(self.final_df, output_filename)
             else:
                 print("Output filename not provided, cannot save the DataFrame.")
 
-        return final_df
+        return self.final_df
 
 if __name__ == "__main__":
 
@@ -311,4 +279,4 @@ if __name__ == "__main__":
 
 
     pd.set_option('display.max_rows', 40)
-    print(table.head())
+    table.head(40)
