@@ -35,7 +35,6 @@ def display_image_with_boxes(image_path, _results):
     st.image(img_with_boxes, caption="Image with Bounding Boxes", use_column_width=True)
     return boxes, classes
 
-
 @st.cache_data(show_spinner=False)
 def process_image(image_path, boxes):
     image_processor = ImageProcessor(image_path, boxes)
