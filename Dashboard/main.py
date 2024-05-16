@@ -5,7 +5,7 @@ import sys
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
 # Add your parent directory to the path
-parent_dir = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base'
+parent_dir = r'c:\Users\Declan Bracken\MEng_Project'
 sys.path.append(parent_dir)
 from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
@@ -14,6 +14,10 @@ from TableReconstruction.row_clusterer_v2 import RowClassifier
 from TableReconstruction.column_clusterer import ColumnClusterer
 from TableReconstruction.dataframe_processor import DataFrameProcessorV3
 from TableReconstruction.streamlit_cluster_tuning import StreamlitClusterTuning
+
+
+def set_default_model_path(new_path):
+    st.session_state.default_model_path = new_path
 
 @st.cache_data(show_spinner=False)
 def upload_image(uploaded_file):
@@ -38,10 +42,8 @@ def display_image_with_boxes(image_path, _results):
     st.image(img_with_boxes, caption="Image with Bounding Boxes", use_column_width=True)
     return boxes, classes
 
-
 @st.cache_data(show_spinner=False)
 def process_image(image_path, boxes):
-    print("processing image")
     image_processor = ImageProcessor(image_path, boxes)
     image = image_processor.image
     cropped_images = image_processor.cropped_images
@@ -73,7 +75,7 @@ def cluster_rows(_text_classifier):
     return row_classifier, all_rows
     
 # Cached Resource
-@st.cache_data(show_spinner=False)
+@st.cache_resource(show_spinner=False)
 def cluster_columns(_regrouped_data):
     column_clusterer = ColumnClusterer(_regrouped_data)
     all_tables_data = column_clusterer.all_tables_data
@@ -110,15 +112,31 @@ def merge_columns(df, columns_to_merge):
 
 
 @st.cache_resource
-def load_vision_pipeline():
-    return VisionPipeline('/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt')
+def load_vision_pipeline(model_path):
+    return VisionPipeline(model_path)
 
-pipeline = load_vision_pipeline()
+# Initialize the global variable for the vision pipeline
+pipeline = None
+# Load or set default model path
+if 'default_model_path' not in st.session_state:
+    st.session_state.default_model_path = r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v4 (3_classes)\best (1).pt'
 
 def main():
+    global pipeline
+    
     st.title("Information Extraction - Table Reconstruction Pipeline")
     
-    # Step 1: Upload Image
+    # Step 1: Set Vision Model Path
+    st.subheader("Set Vision Model Path")
+    model_path = st.text_input("Vision Model Path", value=st.session_state.default_model_path)
+    if st.button("Set as Default Path"):
+        set_default_model_path(model_path)
+        st.success("Default model path updated!")
+
+    # Load Vision Pipeline
+    pipeline = load_vision_pipeline(model_path)
+    
+    # Step 1.5: Upload Image
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"])
     if uploaded_file:
         # Clear cache when a new file is uploaded
@@ -156,7 +174,7 @@ def main():
         cluster_tuning.update_clustering(best_threshold)
 
         # Step 8: Cluster Columns
-        grouped_data = cluster_tuning.grouped_data  # This would be obtained from the GUI in the original code
+        grouped_data = cluster_tuning.grouped_data
         column_clusterer, all_tables_data = cluster_columns(grouped_data)
 
         # Step 9: Process Tables into DataFrames
@@ -165,27 +183,21 @@ def main():
             min_samples = st.slider(f"Clustering Strength for Table {idx + 1}", min_value=1, max_value=10, value=4, step=1)
             min_samples_list.append(min_samples)
 
+        # Recompute final_dfs on slider changes
         final_dfs = process_tables_to_dataframe(all_tables_data, column_clusterer, min_samples_list)
         
-        # Initialize session state for DataFrame and selected columns
-        if 'dataframes' not in st.session_state:
-            st.session_state.dataframes = final_dfs
-        if 'selected_columns' not in st.session_state:
-            st.session_state.selected_columns = {}
-
         # Display Results
         st.subheader("Extracted Dataframes:")
         st.write("Please select grade table for analysis.")
-        for idx, df in enumerate(st.session_state.dataframes):
+        for idx, df in enumerate(final_dfs):
             st.write(f"\nTable {idx + 1} Preview:\n")
             selected_columns = display_aggrid(df, key=f"table_{idx}")
 
-            if selected_columns:
-                st.session_state.selected_columns[f"table_{idx}"] = selected_columns
-                if st.button(f"Merge selected columns for Table {idx + 1}", key=f"merge_button_{idx}"):
-                    df = merge_columns(df, selected_columns)
-                    st.session_state.dataframes[idx] = df
-                    st.experimental_rerun()
+            # if selected_columns:
+            #     if st.button(f"Merge selected columns for Table {idx + 1}", key=f"merge_button_{idx}"):
+            #         df = merge_columns(df, selected_columns)
+            #         final_dfs[idx] = df
+            #         st.experimental_rerun()
 
 if __name__ == "__main__":
     main()
