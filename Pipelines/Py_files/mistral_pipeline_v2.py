@@ -77,13 +77,31 @@ class MistralInference():
                 print(f"Error Loading Model Weights: {e}")
             
     def query_mistral(self, text, headers = None):
-        self.prompt_templates = [f'''
-Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
+#         self.prompt_templates = [f'''
+# Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
         
-### Text:{headers}{text}
+# ### Text:{headers}{text}
+
+# ''',f'''
+# Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
+
+# ### Text:
+# {text}
+
+# ### CSV:
+
+# ''']
+        self.prompt_templates = [f'''
+Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields. Make sure to clean the data by removing any extra quotes or semicolons, and fix small OCR mistakes..
+        
+### Text:
+{headers}
+{text}
+
+### CSV:
 
 ''',f'''
-Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
+Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}'. This is not necessarily the order in which the table is currently structured, you must select which columns are likely the best fit for these fields based on contents, and then organize them.
 
 ### Text:
 {text}
@@ -96,7 +114,7 @@ Below is OCR text from a student transcript. This text contains a table, or mult
         else:
             prompt = self.prompt_templates[1]
 
-        system_message = "You are a table creation assistant."
+        system_message = "You are a helpful assistant who excels at organizing data cleanly into structured tables." #You take input input data and clean/organize it into CSV texts
         prompt_template=f'''<|im_start|>system
         {system_message}<|im_end|>
         <|im_start|>user
@@ -123,41 +141,40 @@ Below is OCR text from a student transcript. This text contains a table, or mult
         except Exception as e:
             print(f"An error occurred during model inference: {e}")
 
-    def query_mistral_headers(self, headers):
-        self.header_prompt = f'''
-Below is OCR text from a student transcript containing table headers. Please discern the correct table headers for a student's grade data, and return the headers in order.
+#     def query_mistral_headers(self, headers):
+#         self.header_prompt = f'''
+# Below is OCR text from a student transcript containing table headers. Please discern the correct table headers for a student's grade data, and return the headers in order.
         
-### Headers:{headers}
+# ### Headers:{headers}
 
-'''
+# '''
 
-        system_message = "You are a table creation assistant."
-        prompt_template=f'''<|im_start|>system
-        {system_message}<|im_end|>
-        <|im_start|>user
-        {self.header_prompt}<|im_end|>
-        <|im_start|>assistant'''
+#         system_message = "You are a table creation assistant."
+#         prompt_template=f'''<|im_start|>system
+#         {system_message}<|im_end|>
+#         <|im_start|>user
+#         {self.header_prompt}<|im_end|>
+#         <|im_start|>assistant'''
 
-        max_tokens = 2048
-        temperature = 0
-        echo = False
-        stop = ["</s>"]
-        try:
-            print("Prompting Mistral...")
-            # Define the parameters
-            with SuppressOutput():
-                model_output = self.llm(
-                    prompt_template,
-                    max_tokens=max_tokens,
-                    temperature=temperature,
-                    echo=echo,
-                    stop=stop,)
-            print("Prompt Successful!")
-            final_result = model_output["choices"][0]["text"].strip()
-            return final_result
-        except Exception as e:
-            print(f"An error occurred during model inference: {e}")
-
+#         max_tokens = 2048
+#         temperature = 0
+#         echo = False
+#         stop = ["</s>"]
+#         try:
+#             print("Prompting Mistral...")
+#             # Define the parameters
+#             with SuppressOutput():
+#                 model_output = self.llm(
+#                     prompt_template,
+#                     max_tokens=max_tokens,
+#                     temperature=temperature,
+#                     echo=echo,
+#                     stop=stop,)
+#             print("Prompt Successful!")
+#             final_result = model_output["choices"][0]["text"].strip()
+#             return final_result
+#         except Exception as e:
+#             print(f"An error occurred during model inference: {e}")
 
     def string_to_dataframe(self, data_str):
         try:
@@ -176,7 +193,16 @@ Below is OCR text from a student transcript containing table headers. Please dis
             print(f"Failed converting string to dataframe: {e}")
         return df
     
-    def fix_ocr_pluses(self, dataframe, grade_header):
+    def clean_data(self, dataframe, grade_header):
+        # Remove unwanted characters from all cells
+        dataframe = dataframe.replace({r'[;:"()$%^#*@!]': ''}, regex=True)
+        # Clean the column headers
+        dataframe.columns = dataframe.columns.str.replace(r'[;:"()$%^#*@!]', '', regex=True)
+
+        # Strip leading/trailing whitespaces from headers and all cells
+        dataframe.columns = dataframe.columns.str.strip()
+        dataframe = dataframe.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+
         # Define the mapping for grades
         map_plus = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
         # Check if the specified grade_header is in the dataframe's columns
@@ -193,14 +219,12 @@ Below is OCR text from a student transcript containing table headers. Please dis
         print(f"DataFrame saved to {output_filename}")
     
     def process_transcript(self, headers, text, save=False, output_filename=None):
-        # Ask for table headeras:
-        self.processed_headers = mistral_pipeline.query_mistral_headers(headers)
         # Query Mistral with initial text
-        self.csv_output, self.model_output = mistral_pipeline.query_mistral(text, headers=self.processed_headers)
+        self.csv_output, self.model_output = self.query_mistral(text, headers=headers)
         # Convert to Dataframe
         self.df = self.string_to_dataframe(self.csv_output)
         # Fix OCR issues with grade pluses
-        self.final_df = self.fix_ocr_pluses(self.df, self.headers[1]) # Second header is for grades
+        self.final_df = self.clean_data(self.df, self.headers[1]) # Second header is for grades
         # Optionally save the DataFrame
         if save:
             if output_filename:
