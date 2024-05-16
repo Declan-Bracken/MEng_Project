@@ -5,7 +5,7 @@ import sys
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
 # Add your parent directory to the path
-parent_dir = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base'
+parent_dir = r'c:\Users\Declan Bracken\MEng_Project'
 sys.path.append(parent_dir)
 from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
@@ -13,6 +13,10 @@ from TableReconstruction.text_classifier import TextClassifier
 from TableReconstruction.row_clusterer_v2 import RowClassifier
 from TableReconstruction.column_clusterer import ColumnClusterer
 from TableReconstruction.streamlit_cluster_tuning import StreamlitClusterTuning
+
+
+def set_default_model_path(new_path):
+    st.session_state.default_model_path = new_path
 
 @st.cache_data(show_spinner=False)
 def upload_image(uploaded_file):
@@ -89,9 +93,21 @@ def load_vision_pipeline():
 vision_pipeline = load_vision_pipeline()
 
 def main():
+    global pipeline
+    
     st.title("Information Extraction - Table Reconstruction Pipeline")
     
-    # Step 1: Upload Image
+    # Step 1: Set Vision Model Path
+    st.subheader("Set Vision Model Path")
+    model_path = st.text_input("Vision Model Path", value=st.session_state.default_model_path)
+    if st.button("Set as Default Path"):
+        set_default_model_path(model_path)
+        st.success("Default model path updated!")
+
+    # Load Vision Pipeline
+    pipeline = load_vision_pipeline(model_path)
+    
+    # Step 1.5: Upload Image
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"])
     if uploaded_file:
         # Clear cache when a new file is uploaded
