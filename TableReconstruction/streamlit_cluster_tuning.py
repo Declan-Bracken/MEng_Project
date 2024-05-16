@@ -27,7 +27,7 @@ class StreamlitClusterTuning:
         _self.grouped_data = _self.row_classifier.group_rows_by_labels(_self.all_rows, labels)
         _self.plot_data()
 
-    @st.cache_data(show_spinner=False)
+    # @st.cache_data(show_spinner=False)
     def plot_data(_self):
         fig, ax = plt.subplots(figsize=(10, 10), dpi=200)
         _self.plot_global_bounding_boxes(ax, _self.grouped_data, _self.image, title="Row Grouping")
