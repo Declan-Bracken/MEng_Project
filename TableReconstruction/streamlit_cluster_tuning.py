@@ -4,7 +4,7 @@ import matplotlib.patches as patches
 from matplotlib.lines import Line2D
 
 class StreamlitClusterTuning:
-    @st.cache_data(show_spinner=False)
+    # @st.cache_data(show_spinner=False)
     def __init__(_self, image, _row_classifier, all_rows, best_threshold=0.5, linkage='average'):
         _self.image = image
         _self.row_classifier = _row_classifier
@@ -22,6 +22,7 @@ class StreamlitClusterTuning:
     
     @st.cache_data(show_spinner=False)
     def update_clustering(_self, threshold):
+        print("clustering")
         _self.best_threshold = threshold
         labels = _self.row_classifier.cluster_lines_with_agglomerative_jaccard(_self.distance_matrix, distance_threshold=_self.best_threshold, linkage=_self.linkage)
         _self.grouped_data = _self.row_classifier.group_rows_by_labels(_self.all_rows, labels)
