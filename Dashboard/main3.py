@@ -14,7 +14,7 @@ from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
 from TableReconstruction.row_clusterer_v2 import RowClassifier
-from TableReconstruction.streamlit_cluster_tuning import StreamlitClusterTuning
+from Dashboard.Transcript_Processor.utils.streamlit_cluster_tuning import StreamlitClusterTuning
 from Dashboard.analytics_dashboard import AnalyticsDashboard
 
 @st.cache_data(show_spinner=False)

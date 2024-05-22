@@ -7,8 +7,6 @@ import pytesseract
 from pytesseract import Output
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
-from sklearn.cluster import AgglomerativeClustering
-from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import DBSCAN
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics import davies_bouldin_score

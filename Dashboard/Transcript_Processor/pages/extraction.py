@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 from utils.state_management import initialize_state, update_state
 import utils.pipeline_processor as PP
+import numpy as np
 
 @st.cache_data(show_spinner=False)
 def predict_image(image_path, iou, conf, agnostic_nms):
@@ -12,23 +13,15 @@ def display_image_with_boxes(image_path, boxes, classes):
     img_with_boxes_path = vision_pipeline.visualize_boxes(image_path, boxes, classes, vision_pipeline.class_names)
     img_with_boxes = Image.open(img_with_boxes_path)
     return img_with_boxes
-    # return boxes, classes
 
-@st.experimental_fragment
-def app():
+# @st.experimental_fragment
+def app(): 
+    # update_state("page", "Extraction")
     global vision_pipeline
     st.title("Information Extraction - Table Reconstruction Pipeline")
     
     # Initialize session state
     initialize_state()
-
-    # Step 1: Set Vision Model Path
-    st.subheader("Set Vision Model Path")
-    model_path = st.text_input("Vision Model Path", value=st.session_state.model_path)
-    if st.button("Set Model Path"):
-        update_state('model_path', model_path) # Update status of vision model path
-        update_state('vision_model_loaded', False) # Update status of vision model
-        st.success("Changed Model Path!")
     
     # Step 1.5: Upload Image
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"], key='file_uploader')
@@ -37,13 +30,21 @@ def app():
 
     if st.session_state.uploaded_file is not None:
 
-        # Clear cache when a new file is uploaded
+        # Clear cache and session state when a new file is uploaded
         if st.session_state.uploaded_file != uploaded_file:
             st.cache_data.clear()
 
         #----- CACHED -----
         image_path = PP.upload_image(st.session_state.uploaded_file)
 
+        # Step 1: Set Vision Model Path
+        st.subheader("Set Vision Model Path")
+        model_path = st.text_input("Vision Model Path", value=st.session_state.model_path)
+        if st.button("Set Model Path"):
+            update_state('model_path', model_path) # Update status of vision model path
+            update_state('vision_model_loaded', False) # Update status of vision model
+            st.success("Changed Model Path!")
+            
         # Load Vision Pipeline
         #----- CACHED -----
         vision_pipeline = PP.load_vision_pipeline(model_path)
@@ -109,23 +110,34 @@ def app():
         column_clusterer = PP.load_column_clusterer(grouped_data)
 
         # Step 9: Process Tables into DataFrames
+
         #----- NOT CACHED -----
         min_samples_list = []
         for idx in range(len(grouped_data)):
-            min_samples = st.slider(f"Clustering Strength for Table {idx + 1}", min_value=1, max_value=10, value=4, step=1)
+
+            min_samples = st.slider(f"Clustering Strength for Table {idx + 1}", 
+                                    min_value=1, max_value=10, 
+                                    value=4, step=1, key = f"min_samples_{idx}")
             min_samples_list.append(min_samples)
 
-        #----- NOT CACHED -----
-        final_dfs = column_clusterer.process_tables_to_dataframe(grouped_data, min_samples_list)
-        update_state('final_dataframes', final_dfs)
+        cluster_selection_epsilon = st.slider(f"Regrouping Factor (Cluster Selection Epsilon)", 
+                                            min_value=0.00, max_value=200.00, 
+                                            step=0.1, key = "cluster_selection_epsilon",)
 
+        # Your column_clusterer process, replace with actual implementation
+        final_dfs = column_clusterer.process_tables_to_dataframe(grouped_data, min_samples_list, cluster_selection_epsilon, alpha = 1)
+        update_state('final_dfs', final_dfs) # save to session state
+        
         # Display Results
         st.subheader("Extracted Dataframes:")
         st.write("Please select grade table for analysis.")
         for idx, df in enumerate(final_dfs):
             st.write(f"\nTable {idx + 1} Preview:\n")
-            #----- CACHED -----
-            PP.display_aggrid(df, key=f"table_{idx}")
+            st.dataframe(df, use_container_width=True)
+        
+        with st.expander("Download a Dataframe", expanded=False):
+            df_idx = st.selectbox("Select Dataframe",np.arange(len(final_dfs))+1)
+            st.download_button("Download as CSV", final_dfs[df_idx-1].to_csv(index=False), "dataframe.csv", "text/csv")
 
 if __name__ == "__main__":
     app()
