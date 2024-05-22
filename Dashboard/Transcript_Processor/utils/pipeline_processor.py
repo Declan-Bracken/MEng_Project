@@ -1,6 +1,7 @@
 import streamlit as st
 import tempfile
 import sys
+# import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
 # Add your parent directory to the path
@@ -11,7 +12,7 @@ from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
 from TableReconstruction.row_clusterer_v2 import RowClassifier
 from TableReconstruction.column_clusterer import ColumnClusterer
-from TableReconstruction.streamlit_cluster_tuning import StreamlitClusterTuning
+from Dashboard.Transcript_Processor.utils.streamlit_cluster_tuning import StreamlitClusterTuning
 
 
 def set_default_model_path(new_path):
@@ -65,15 +66,21 @@ def display_aggrid(df, key):
     gb.configure_pagination(paginationAutoPageSize=True)
     # Configure default column settings to allow for edits, resizing, and grouping
     gb.configure_default_column(editable=True, resizable=True, autoHeight=True, wrapText=True)
-    gb.configure_column()
+    # gb.configure_side_bar(columns_panel = True,defaultToolPanel='columns')
     # Configure column selection and interaction
     gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren=True)
 
     # Build the grid options
     gridOptions = gb.build()
 
+    column_defs = gridOptions["columnDefs"]
+    for col_def in column_defs:
+        col_name = col_def["field"]
+        max_len = df[col_name].astype(str).str.len().max() # can add +5 here if things are too tight
+        col_def["width"] = max_len
+
     # Enable fitting columns on grid load
-    gridOptions['defaultColDef']['flex'] = 1
+    # gridOptions['defaultColDef']['flex'] = 1
 
     # Setup the grid display options
     grid_response = AgGrid(
@@ -85,19 +92,47 @@ def display_aggrid(df, key):
     )
     return grid_response
 
+# Function to adjust DataFrame column widths based on content
+# def calculate_column_widths(df):
+#     max_lengths = {}
+#     for col in df.columns:
+#         max_length = df[col].astype(str).map(len).max()
+#         max_lengths[col] = max_length
+#     return max_lengths
+
+# def generate_column_config(df):
+#     col_widths = calculate_column_widths(df)
+#     column_config = {}
+#     for col, width in col_widths.items():
+#         column_config[col] = st.column_config.TextColumn(
+#             width=f"{width + 5}em"  # Adjust width with padding
+#         )
+#     return column_config
+
+# def display_adjusted_dataframe(df):
+#     col_config = generate_column_config(df)
+#     st.experimental_dataframe(df, column_config=col_config)
+
+
 # def display_aggrid(df, key):
 #     df.columns = [str(col) for col in df.columns]  # Ensure all column names are strings
 #     gb = GridOptionsBuilder.from_dataframe(df)
+#     gb.configure_grid_options(ColumnsAutoSizeMode = 'fitGridWidth')
 #     gb.configure_pagination(paginationAutoPageSize=True)  # Enable pagination
 #     gb.configure_default_column(editable=True, resizable=True, groupable = True)  # Enable editable and resizable columns
-
-#     gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren=True)  # Enable column selection
+#     column_defs = gridOptions["columnDefs"]
+#         for col_def in column_defs:
+#             col_name = col_def["field"]
+#             max_len = df[col_name].astype(str).str.len().max() # can add +5 here if things are too tight
+#             col_def["width"] = max_len
+#     # gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren=True)  # Enable column selection
 #     gridOptions = gb.build()
-#     row_height = 29  # Default row height
-#     header_height = 56  # Default header height
-#     total_rows = len(df)
-#     grid_height = max(header_height + (total_rows * row_height), 100)  # Ensure a minimum height
-#     grid_response = AgGrid(df, gridOptions=gridOptions, height=grid_height, fit_columns_on_grid_load=True, update_mode=GridUpdateMode.MODEL_CHANGED, key=key)
+#     # row_height = 29  # Default row height
+#     # header_height = 56  # Default header height
+#     # total_rows = len(df)
+#     # grid_height = max(header_height + (total_rows * row_height), 100)  # Ensure a minimum height
+#     #gridOptions=gridOptions, height=grid_height
+#     grid_response = AgGrid(df, fit_columns_on_grid_load=True,gridOptions=gridOptions,update_mode=GridUpdateMode.MODEL_CHANGED, key=key, )
 
 
 @st.cache_resource

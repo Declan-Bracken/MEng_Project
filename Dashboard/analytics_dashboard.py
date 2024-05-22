@@ -7,7 +7,6 @@ from scipy.stats import zscore
 class AnalyticsDashboard:
     def __init__(self, df):
         self.df = df
-        self.clean_data()
         self.GRADE_MAPPING = {
             'A+': 4.3, 'A': 4.0, 'A-': 3.7,
             'B+': 3.3, 'B': 3.0, 'B-': 2.7,

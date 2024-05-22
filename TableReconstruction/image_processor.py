@@ -38,8 +38,8 @@ class ImageProcessor:
         for box in self.boxes:
             x1, y1, x2, y2 = map(int, box[:4])
             cropped_image = self.image_rgb[y1:y2, x1:x2]
-            preprocessed_image = self.preprocess_image(cropped_image)
-            cropped_images.append(Image.fromarray(preprocessed_image))
+            # preprocessed_image = self.preprocess_image(cropped_image)
+            cropped_images.append(Image.fromarray(cropped_image))
         return cropped_images
 
     def preprocess_image(self, image):
