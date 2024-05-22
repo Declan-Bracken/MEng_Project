@@ -12,7 +12,7 @@ from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
 from TableReconstruction.row_clusterer_v2 import RowClassifier
 from TableReconstruction.column_clusterer import ColumnClusterer
-from TableReconstruction.streamlit_cluster_tuning import StreamlitClusterTuning
+from Dashboard.Transcript_Processor.utils.streamlit_cluster_tuning import StreamlitClusterTuning
 
 
 def set_default_model_path(new_path):
