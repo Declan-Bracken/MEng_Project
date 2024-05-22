@@ -92,7 +92,7 @@ class MistralInference():
 
 # ''']
         self.prompt_templates = [f'''
-Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields. Make sure to clean the data by removing any extra quotes or semicolons, and fix small OCR mistakes..
+Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}' (or units), you must select which columns best fit these fields. Make sure to clean the data by removing any extra quotes or semicolons, and fix small OCR mistakes.
         
 ### Text:
 {headers}
@@ -133,6 +133,7 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
                     prompt_template,
                     max_tokens=max_tokens,
                     temperature=temperature,
+                    top_p=0,
                     echo=echo,
                     stop=stop,)
             print("Prompt Successful!")

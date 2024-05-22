@@ -102,7 +102,7 @@ def display_aggrid(df, key):
 @st.cache_resource(show_spinner=False)
 def load_vision_pipeline(model_path):
     return VisionPipeline(model_path)
-
+ 
 @st.cache_resource(show_spinner=False)
 def load_mistral(model_path = r"C:\Users\Declan Bracken\MEng_Project\mistral\models\dolphin-2.1-mistral-7b.Q5_K_M.gguf"):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -145,7 +145,7 @@ def headers_to_strings(header_lines):
 pipeline = None
 # Load or set default model path
 if 'default_vision_model_path' not in st.session_state:
-    st.session_state.default_model_path = r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v4 (3_classes)\best (1).pt'
+    st.session_state.default_model_path = r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v5\best.pt'
 
 
 def information_extraction():
