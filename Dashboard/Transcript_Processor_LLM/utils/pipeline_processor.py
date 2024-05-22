@@ -1,6 +1,7 @@
 import streamlit as st
 import tempfile
 import sys
+import torch
 # import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
@@ -13,7 +14,8 @@ from TableReconstruction.text_classifier import TextClassifier
 from TableReconstruction.row_clusterer_v2 import RowClassifier
 from TableReconstruction.column_clusterer import ColumnClusterer
 from Dashboard.Transcript_Processor.utils.streamlit_cluster_tuning import StreamlitClusterTuning
-
+# For LLM Inference
+from Pipelines.Py_files.mistral_pipeline_v2 import MistralInference
 
 def set_default_model_path(new_path):
     st.session_state.default_model_path = new_path
@@ -92,49 +94,50 @@ def display_aggrid(df, key):
     )
     return grid_response
 
-# Function to adjust DataFrame column widths based on content
-# def calculate_column_widths(df):
-#     max_lengths = {}
-#     for col in df.columns:
-#         max_length = df[col].astype(str).map(len).max()
-#         max_lengths[col] = max_length
-#     return max_lengths
-
-# def generate_column_config(df):
-#     col_widths = calculate_column_widths(df)
-#     column_config = {}
-#     for col, width in col_widths.items():
-#         column_config[col] = st.column_config.TextColumn(
-#             width=f"{width + 5}em"  # Adjust width with padding
-#         )
-#     return column_config
-
-# def display_adjusted_dataframe(df):
-#     col_config = generate_column_config(df)
-#     st.experimental_dataframe(df, column_config=col_config)
-
-
-# def display_aggrid(df, key):
-#     df.columns = [str(col) for col in df.columns]  # Ensure all column names are strings
-#     gb = GridOptionsBuilder.from_dataframe(df)
-#     gb.configure_grid_options(ColumnsAutoSizeMode = 'fitGridWidth')
-#     gb.configure_pagination(paginationAutoPageSize=True)  # Enable pagination
-#     gb.configure_default_column(editable=True, resizable=True, groupable = True)  # Enable editable and resizable columns
-#     column_defs = gridOptions["columnDefs"]
-#         for col_def in column_defs:
-#             col_name = col_def["field"]
-#             max_len = df[col_name].astype(str).str.len().max() # can add +5 here if things are too tight
-#             col_def["width"] = max_len
-#     # gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren=True)  # Enable column selection
-#     gridOptions = gb.build()
-#     # row_height = 29  # Default row height
-#     # header_height = 56  # Default header height
-#     # total_rows = len(df)
-#     # grid_height = max(header_height + (total_rows * row_height), 100)  # Ensure a minimum height
-#     #gridOptions=gridOptions, height=grid_height
-#     grid_response = AgGrid(df, fit_columns_on_grid_load=True,gridOptions=gridOptions,update_mode=GridUpdateMode.MODEL_CHANGED, key=key, )
-
-
 @st.cache_resource
 def load_vision_pipeline(model_path):
     return VisionPipeline(model_path)
+
+
+
+@st.cache_resource(show_spinner=False)
+def load_mistral(model_path = r"C:\Users\Declan Bracken\MEng_Project\mistral\models\dolphin-2.1-mistral-7b.Q5_K_M.gguf"):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    mistral_pipeline = MistralInference(device=device, model_path=model_path)
+    return mistral_pipeline
+
+@st.cache_data(show_spinner=False)
+def query_mistral(headers, selected_table_text, mistral_model_path):
+    st.write("Querying Mistral...")
+    mistral_pipeline = load_mistral(mistral_model_path)
+    if headers:
+        final_df = mistral_pipeline.process_transcript(headers, selected_table_text)
+    else:
+        final_df = mistral_pipeline.process_transcript(None, selected_table_text)
+    
+    return final_df
+    
+    # # Store the resulting dataframe in session state
+    # st.session_state.final_df = final_df
+
+@st.cache_data
+def groups_to_strings(grouped_data):
+    strings = []
+    for group in grouped_data:
+        lines = {}
+        for line_num, text in zip(group["line_numbers"], group["texts"]):
+            if line_num not in lines:
+                lines[line_num] = []
+            lines[line_num].append(text)
+        
+        ordered_lines = [f"{' '.join(words)}" for _, words in sorted(lines.items())]
+        strings.append('\n'.join(ordered_lines))
+    return strings
+
+@st.cache_data
+def headers_to_strings(header_lines):
+    strings = []
+    for headers in header_lines:
+        ordered_lines = headers["text"]["text"]
+        strings.append(' '.join(ordered_lines).strip())
+    return strings

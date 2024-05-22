@@ -22,10 +22,19 @@ class AnalyticsDashboard:
         self.map_grades()
 
     def clean_data(self):
-        # Strip whitespace and remove unwanted characters from all cells and column headers
-        self.df = self.df.replace({r'[;:"<>~`@!*]': ''}, regex=True)
+        # Define a regex pattern to keep only certain characters (including some special characters)
+        allowed_characters = r'[^a-zA-Z0-9\s.,\'\/\(\)\[\]\-\+]'
+
+        # Use regex to replace characters not in the allowed list with an empty string
+        self.df = self.df.replace({allowed_characters: ''}, regex=True)
         self.df.columns = self.df.columns.str.strip()
-        self.df = self.df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+        self.df = self.df.map(lambda x: x.strip() if isinstance(x, str) else x)
+
+        # Convert 'Credits' column to floats
+        self.df['Credits'] = pd.to_numeric(self.df['Credits'], errors='coerce')
+
+        # Optionally, fill NaN values with zero or another default value if necessary
+        self.df['Credits'] = self.df['Credits'].fillna(0)
 
     def fix_pluses(self, grade_column = 'Grade'):
         plus_mapping = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
@@ -123,26 +132,6 @@ class AnalyticsDashboard:
         # Display the chart in Streamlit
         # st.altair_chart(chart, use_container_width=True)
         return chart
-    
-    # def plot_credits_distribution(self):
-    #     # Group by cluster and sum the credits
-    #     grouped = self.df.groupby('cluster')[['Credits']].sum().reset_index().sort_values(by='Credits')
-
-    #     # Create the Altair pie chart
-    #     chart = alt.Chart(grouped).mark_arc(outerRadius=120).encode(
-    #         theta=alt.Theta(field='Credits', type='quantitative'),
-    #         color=alt.Color(field='cluster', type='nominal', legend=alt.Legend(title="Course Type")),
-    #         tooltip=['cluster', 'Credits'])
-
-
-    #     # Create text annotations
-    #     text = chart.mark_text(radius=150, size=14).encode(text="cluster:N")
-
-    #     final_chart = chart + text
-
-    #     # Display the chart in Streamlit
-    #     st.altair_chart(final_chart, use_container_width=True)
-
 
     def detect_anomalies(self):
         # Detect grade anomalies using Z-score
@@ -193,10 +182,8 @@ class AnalyticsDashboard:
             height=400,
             # title='Average Grade by Course Type'
         ).configure_axis(
-            labelFontSize=15,
-            titleFontSize=17
-        ).configure_title(
-            fontSize=16
+            labelFontSize=18,
+            titleFontSize=20
         )
         
         # Display the chart in Streamlit
@@ -219,7 +206,7 @@ class AnalyticsDashboard:
         col1.metric("Calculated CGPA", f"{gpa:.2f}")
         col2.metric("Average Grade", f"{avg_grade:.2f}")
         col3.metric("Number of Courses", num_courses)
-        col4.metric("Total Credits", total_credits)
+        col4.metric("Total Credits", f"{total_credits:.2f}")
         
         # Plot and display visualizations
         # Plot and display visualizations

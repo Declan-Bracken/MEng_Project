@@ -9,25 +9,21 @@ def initialize_state():
     
     # For Extraction
     if 'model_path' not in st.session_state:
-        st.session_state.model_path = #r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v5\best.pt'
+        st.session_state.model_path = r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v4 (3_classes)\best (1).pt' #r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v5\best.pt' # Default vision path
     if 'uploaded_file' not in st.session_state:
         st.session_state.uploaded_file = None
     if 'vision_model_loaded' not in st.session_state:
         st.session_state.vision_model_loaded = False
     if 'grouped_data' not in st.session_state:
         st.session_state.grouped_data = None
-    if 'min_samples_list' not in st.session_state:
-        st.session_state.min_samples_list = []
-    if 'cluster_selection_epsilon' not in st.session_state:
-        st.session_state.cluster_selection_epsilon = 0.00  # Default value
-    if 'final_dfs' not in st.session_state:
-        st.session_state.final_dfs = None
+    if 'llm_path' not in st.session_state:
+        st.session_state.llm_path = r"C:\Users\Declan Bracken\MEng_Project\mistral\models\dolphin-2.1-mistral-7b.Q5_K_M.gguf" # Default mistral path
+    if 'final_df' not in st.session_state:
+        st.session_state.final_df = None
 
     # For Analytics
     if 'uploaded_df' not in st.session_state:
         st.session_state.uploaded_df = pd.DataFrame()
-    if 'selected_df_index' not in st.session_state:
-        st.session_state.selected_df_index = None
     if 'result_df' not in st.session_state:
         st.session_state.result_df = pd.DataFrame()
 
