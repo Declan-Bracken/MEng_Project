@@ -133,7 +133,8 @@ def app():
         st.subheader("Select Table for LLM Inference")
         selected_table_idx = st.selectbox("Select Table", [i+1 for i, _ in enumerate(table_previews)])
         selected_table_text = table_previews[selected_table_idx-1]
-        
+        selected_table_nlines = selected_table_text.count('\n') + 1 # Count number of lines for consistency check
+        update_state("string_nlines", selected_table_nlines)
 
         # Select Mistral Model Path
         mistral_model_path = st.text_input("LLM Model Path", value=st.session_state.llm_path)
@@ -141,16 +142,33 @@ def app():
 
         # Step 10: Query Mistral
         if st.button("Query Mistral"):
-            final_df = PP.query_mistral(selected_header_text if headers else None, selected_table_text, mistral_model_path)
-            update_state("final_df",final_df)
+            stripped_selected_table = selected_table_text.replace(',','')
+            stripped_selected_headers = selected_header_text.replace(',','')
+            final_df = PP.query_mistral(stripped_selected_headers if headers else None, stripped_selected_table, mistral_model_path)
+            update_state("final_df", final_df)
 
+            final_df_nlines = final_df.shape[0]
+            update_state("df_nlines", final_df_nlines)
+            
         # Display the dataframe if it exists
         if 'final_df' in st.session_state and st.session_state.final_df is not None:
             st.subheader("Extracted Dataframe using LLM:")
+
+            # Perform Consistency Check between # of courses in the string and # of courses in the DF
+            if st.session_state.df_nlines is not None and st.session_state.string_nlines is not None:
+                string_row_count, df_row_count = st.columns(2, gap="small")
+                string_row_count.metric("Row Count from OCR", st.session_state.string_nlines)
+                df_row_count.metric("Row Count from Extracted Data", st.session_state.df_nlines)
+                is_consistent = selected_table_nlines == final_df_nlines
+                if is_consistent:
+                    st.success("All rows are accounted for!")
+                else:
+                    st.error("Row count mismatch! Please check the data.")
+
             st.write("Below is the result from querying Mistral. You can download and edit the table as needed.")
             edited_df = st.data_editor(st.session_state.final_df)
             update_state("final_df", edited_df)
-            # st.dataframe(final_df)
+
             # Save the updated dataframe
             if st.button("Save DataFrame"):
                 st.session_state.final_df.to_csv("grade_dataframe.csv", index=False)

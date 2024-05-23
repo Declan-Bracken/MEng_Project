@@ -141,3 +141,12 @@ def headers_to_strings(header_lines):
         ordered_lines = headers["text"]["text"]
         strings.append(' '.join(ordered_lines).strip())
     return strings
+
+# Function to save DataFrame to selected directory
+def save_dataframe(df, directory):
+    if directory:
+        file_path = f"{directory}/grade_dataframe.csv"
+        df.to_csv(file_path, index=False)
+        st.success(f"DataFrame saved successfully at {file_path}!")
+    else:
+        st.error("No directory selected. Please select a directory.")
