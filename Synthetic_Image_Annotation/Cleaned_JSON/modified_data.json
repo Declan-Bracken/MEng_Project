@@ -1,0 +1,436 @@
+[
+    {
+        "id": "request-2",
+        "image": "Synthetic_Image_Annotation/images/1M_8OgVIUafvwupnvRVkjCiFtw9F3LZ4R.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Semester, Course Code, Course Title, Grade\nSPRING 2013, MATH 168, GEOM ELEM & MID SCH TCHR, C\nSPRING 2013, ENGL 232, AMERICAN LIT, B\nSPRING 2013, HIST 102, WESTERN CIV SINCE 1500, B\nSPRING 2013, ART 371, ART FOR THE ELEM TEACHER, B\nSPRING 2013, EDUC 304, TCH READ ELEM SCH, A\nSPRING 2013, EPSY 301, RDG PSYC CHILD ADOL, D\nFALL 2013, MATH 277, MATHEMATICS FOR ELEM ED I, W\nFALL 2013, PHSC 102, PHYSICAL SCIENCE II, A\nFALL 2013, ENGL 231, ENGLISH LIT, A\nFALL 2013, EDUC 307, INSTRUCTIONAL PLANNING, B\nFALL 2013, LSED 401, BKS REL MAT CHLD, A\nFALL 2013, EPSY 315, CLS MGMT/MTV BEGN TCHR, A\nSPRING 2014, EDUC 320, FOUNDATIONS OF PK-8 MATHE, A\nSPRING 2014, EDUC 322, DIAG-PRESC READING, A\nSPRING 2014, EDUC 326, CURR & NSTRUCT GRDS 1-5, A\nSPRING 2014, PHYS 143, PHYS FOR ELEMENTARY ED, A\nSUMMER 2014, MATH 277, MATHEMATICS FOR ELEM ED I, B\nSUMMER 2014, EPSY 301, ED PSYCH CHILD ADOL, A\nSUMMER 2014, BIOL 154, GENERAL BIOL LAB II, A\nSUMMER 2014, GBIO 107, INTRO TO BIOLOGY PRIN II, A\nSPRING 2012, HIST 201, AMERICAN HISTORY TO 1877, B\nSPRING 2012, SOC 212, SOCIAL PROBLEMS, W\nSPRING 2012, ENGL 322, INTRO TO PROF/TECH WRITIN, W\nSPRING 2012, KINL 133, WALKING FOR FITNESS, B\nSPRING 2012, CSD 201, INTRODUCTION TO AUDIOLOGY, B\nSPRING 2012, POLI 201, AMERICAN POLITICS, A\nSPRING 2012, CMPS 110, COMPUTER LITERACY, C\nFALL 2012, MATH 167, ELEM NUMBER STRUCTURE, B\nFALL 2012, BIOL 152, GENERAL BIOL LAB I, B\nFALL 2012, MUS 291, FUNDAMENTALS OF MUSIC, B\nFALL 2012, GEOG 103, INTRODUCTION TO GEOGRAPHY, B\nFALL 2012, EDUC 203, FOUNDATIONS OF EDUC, A\nFALL 2012, EDUC 212, DIVERSITY IN CLASSROOM, A\nFALL 2012, SPED 210, CHARACTERISTICS OF INDIVI, B\nFALL 2014, MATH 367, CAPSTONE IN MATH FOR ELEM, B\nFALL 2014, EDUC 415, CURR-INSTR/ELEM SCH, A\nFALL 2014, SPED 495, INCLSN OF STU W DIS REG C, A\nSPRING 2015, EDUC 427, STUDENT TCHG IN ELEM MID, P"
+            }
+        ]
+    },
+    {
+        "id": "request-5",
+        "image": "Synthetic_Image_Annotation/images/1a27GpxxEBqAL5X1QYcoHcenfaVLXyVgG.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ,NO.,COURSE TITLE,CRED,GRD,R,PTS\nJOUR,303, COLLaw and Ethics of Mass Com,3.000, IN PROGRESS,,\nLATN,110, COLBeginning Latin II,3.000, IN PROGRESS,,\nPOLI,362, COLPolitics and the Mass Media,3.000, IN PROGRESS,,\nPOLI,374, COLPublic Policy,3.000, IN PROGRESS,,\nPOLI,451, COLConstitutional law,3.000, IN PROGRESS,,\nSPCH,140, COLPublic Communication,3.000, IN PROGRESS,,"
+            }
+        ]
+    },
+    {
+        "id": "request-6",
+        "image": "Synthetic_Image_Annotation/images/17G7k-uJgDe94yGv4a99t4EUAtj463eMO.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO,COURSE_TITLE,CRED_PTS,GRD\nHIST 109,COL Latin American Civilization,3.000,B+\nJOUR 201,COL Survey of Mass Communications,3.000,B\nPOLI 101,COL Controversies in World Politic,3.000,A\nSTAT 110,COL Intro to Statistical Reasoning,3.000,C+\nUNIV 101,COL The Student in the University,3.000,A\nENGL 102,COL Rhetoric and Composition,3.000,A\nJOUR 328,COL Principles of Public Relations,3.000,B+\nPOLI 357,COL Film, Politics & Social Change,3.000,B+\nPOLI 483,COL Middle East Politics,3.000,A\nSOCY 101,COL Introductory Sociology,3.000,B\nLATN 109,COL Beginning Latin I,3.000,B\nPOLI 360,COL American Political Parties,3.000,A\nPOLI 361,COL Elections and Voting Behavior,3.000,B+\nPOLI 474,COL Public Policy,3.000,W\nPOLI 452,COL The Judicial Process,3.000,B+"
+            }
+        ]
+    },
+    {
+        "id": "request-11",
+        "image": "Synthetic_Image_Annotation/images/1PaxJGQ3egf1W2a-7pCsmdmqsVQBIJi7v.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Code,Section,Credits,Grade\nFall 2011-Management,General Chemistry Lecture,CHE106,REC M036,0.0,\nFall 2011-Management,General Chemistry Lecture,CHE106,SEC M029,3.0,B+\nFall 2011-Management,General Chemistry Laboratory,CHE107,LAB M025,0.0,\nFall 2011-Management,General Chemistry Laboratory,CHE107,SEC M001,1.0,A\nFall 2011-Management,Discover Entrepreneur Within,BEE110,SEC M001,1.0,A\nFall 2011-Management,Elements of Modern Mathematics,MAT183,REC M102,0.0,\nFall 2011-Management,Elements of Modern Mathematics,MAT183,SEC M100,3.0,A\nFall 2011-Management,Foundatns Human Behavior,PSY205,LEC M001,0.0,\nFall 2011-Management,Foundatns Human Behavior,PSY205,SEC M031,3.0,A\nFall 2011-Management,Perspectives of Business/Mgmt,SOM122,LEC M007,0.0,\nFall 2011-Management,Perspectives of Business/Mgmt,SOM122,SEC M100,3.0,B+\nFall 2011-Management,Studio 1:Academic Writing,WRT105,SEC M284,3.0,A\nSpring 2012-Management,Intro to Financial Accounting,ACC151,REC M027,0.0,\nSpring 2012-Management,Intro to Financial Accounting,ACC151,SEC M025,3.0,A-\nSpring 2012-Management,General Chemistry Lecture,CHE116,REC M014,0.0,\nSpring 2012-Management,General Chemistry Lecture,CHE116,SEC M009,1.0,B\nSpring 2012-Management,General Chemistry Laboratory,CHE117,LAB M002,0.0,\nSpring 2012-Management,General Chemistry Laboratory,CHE117,SEC M001,1.0,A\nSpring 2012-Management,Economic Ideas & Issues,ECN203,SEC M015,3.0,A\nSpring 2012-Management,Discover Entrepreneur Within,BEE111,SEC M001,1.0,A\nSpring 2012-Management,Intro to the Legal System,LP255,SEC M104,3.0,A-\nSpring 2012-Management,Business Calculus,MAT284,REC M002,0.0,\nSpring 2012-Management,Business Calculus,MAT284,SEC M100,3.0,A\nFall 2012-Management,Intro to Managerial Acct,ACC252,SEC M006,3.0,B\nFall 2012-Management,Arts & Ideas I,HOM195,DIS M010,0.0,\nFall 2012-Management,Arts & Ideas I,HOM195,SEC M001,3.0,A-\nFall 2012-Management,Info Reporting & Presentation,IST444,SEC M006,3.0,A\nFall 2012-Management,Intro. Statistics for Mngmt.,MAS260,LEC M001,3.0,A\nFall 2012-Management,Major Concepts of Physics I,PHY101,LAB M006,0.0,\nFall 2012-Management,Major Concepts of Physics I,PHY101,SEC M001,4.0,B+\nFall 2012-Management,Intro to Strategic MNgmt,SHR247,SEC M008,3.0,A\nFall 2012-Management,Community Service,SOM201,SEC M001,0.0,P\nSpring 2013-Management,Corporation Finance,FIN256,SEC M002,3.0,A\nSpring 2013-Management,Principles of Marketing,MAR255,SEC M002,3.0,B+\nSpring 2013-Management,Major Concepts of Physics II,PHY102,LAB M004,0.0,\nSpring 2013-Management,Major Concepts of Physics II,PHY102,SEC M001,4.0,B\nSpring 2013-Management,Intro to SCM,SCM265,REC M006,0.0,\nSpring 2013-Management,Intro to SCM,SCM265,SEC M002,3.0,A\nSpring 2013-Management,Studio 2:Critical Research,WRT205,SEC M265,3.0,B+\nFall 2013-Management,Intro to EEE,BEE370,SEC M001,3.0,A\nFall 2013-Management,Investments,FIN346,SEC M003,3.0,B+\nFall 2013-Management,Decision Tools for Management,MAS362,SEC M006,3.0,B+\nFall 2013-Management,Intro Info. Syst. Managers,MIS325,SEC M002,3.0,B+\nFall 2013-Management,Managing in a Global Setting,SOS344,SEC M001,3.0,A\nSpring 2014-Management,Intro to Cultural Anthrop,ANT111,DIS M003,0.0,\nSpring 2014-Management,Intro to Cultural Anthrop,ANT111,SEC M001,3.0,A-\nSpring 2014-Management,Intermediate Macroeconomics,ECN302,SEC M002,3.0,A\nSpring 2014-Management,Imagination,EEE378,SEC M001,3.0,A\nSpring 2014-Management,Entrepreneurial Marketing,EEE382,SEC M002,3.0,B+\nSpring 2014-Management,Experienced-EEE,BEE470,SEC M003,3.0,A\nSpring 2014-Management,Strategic Human Resrc. Mngmt,SHR355,SEC M007,3.0,A-\nFall 2014-Management, Fin for Emergng Entrprses,EEE451,SEC M001,3.0,B+\nFall 2014-Management, Stratgc&Entrepren'L Mngmt,EEE457,SEC M003,3.0,A-\nFall 2014-Management, Financial Management,FIN345,SEC M001,3.0,A-\nFall 2014-Management, Financial Planning,FIN378,SEC M001,3.0,A\nFall 2014-Management, Internship for Mgmt Students,SOM301,SEC M001,0.0,P"
+            }
+        ]
+    },
+    {
+        "id": "request-12",
+        "image": "Synthetic_Image_Annotation/images/1w0AuTOfeNgzQcQ10QeFcUsG5Z8nexSOc.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course Level,Title,Grade,Credit Hours,Quality Points\nMECH 6970,GR,Int Special Topics in Mech Eng- Embedded Systems in Robotics,A,3.000,12.00\nMECH 7620,GR,Nonlinear Systems,A,3.000,12.00\nMECH 7990,GR,Research & Thesis,TD,1.000,0.00\nMECH 5390, GR, Fundamentals of the Finite Element Method,,3.000,"
+            }
+        ]
+    },
+    {
+        "id": "request-13",
+        "image": "Synthetic_Image_Annotation/images/1dtMhvdMM9SPDA8iTtDg8HK4Lbhv7xN4m.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course Level,Title,Grade,Credit Hours,Quality Points\nARCH,2600 UG,Art Of Arch Place And Culture,A,3.000,12.00\nMECH,5710 UG,Kinem & Dyna Of Robots-Honor,A,3.000,12.00\nPHIL,1020 UG,Introduction To Ethics-Honor,A,3.000,12.00\nMECH,6610 GR,Mechanical Vibration,A,3.000,12.00\nMECH,7010 GR,Advanced Thermodynamics,A,3.000,12.00\nMECH,7240 GR,Num Methods In Heat Transfer,A,3.000,12.00\nMECH,7990 GR,Research & Thesis,TD,1.000,0.00"
+            }
+        ]
+    },
+    {
+        "id": "request-14",
+        "image": "Synthetic_Image_Annotation/images/1ZRimkmpXljp-sYfOJDMd6RibjPjML69E.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Subject,Course,Level,Title,Grade,Credit Hours,Quality Points\n,COOP,4920,UG,Cooperative Work Experience,NN,0.000,0.00\nSpring 2015,HONR,2077,UG,Honors Forum: Seniors,S,1.000,0.00\nSpring 2015,HONR,2087,UG,Honors Book Club,S,1.000,0.00\nSpring 2015,MECH,3040,UG,Heat Transfer,A,3.000,12.00\nSpring 2015,MECH,3050,UG,Meas And Instrumentation,A,3.000,12.00\nSpring 2015,MECH,4240,UG,Comprehensive Design I,A,2.000,8.00\nSpring 2015,MECH,5970,UG,Design of Feedback Control for Dynamic Systems,W,3.000,0.00\nSpring 2015,MECH,6220,UG,Virtual Prototyping,A,3.000,12.00\nSummer 2015,MECH,4250,UG,Comprehensive Design II,A,2.000,8.00\nSummer 2015,MECH,5970,UG,Int Special Topics in Mech Eng- Advanced Manufacturing Concepts,A,3.000,12.00\n"
+            }
+        ]
+    },
+    {
+        "id": "request-15",
+        "image": "Synthetic_Image_Annotation/images/1_1cGpVa8Dn8BY8AnhybCBQY-o-QbJmEI.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Title,Grade,Credit Hours\nMECH 3030,Fluid Mechanics,B,3.000\nMECH 3130,Mechanics Of Materials,B,4.000\nMECH 3200,Concepts in Design Manufacturi,A,2.000\nMECH 3210,Design and Manufacturing Lab,A,1.000\nCOOP 4920,Cooperative Work Experience,NN,0.000\nELEC 3810,Fund Of Electrical Engr,A,3.000\nINSY 3600,Engineering Economy,A,3.000\nMECH 3140,System Dynamics And Controls,B,3.000\nMECH 3230,Machine Design,A,3.000\nMECH 3AA0,Mech Engr Progress Assmt II,S,0.000\n\n"
+            }
+        ]
+    },
+    {
+        "id": "request-16",
+        "image": "Synthetic_Image_Annotation/images/1WwYDf3a75X8kGY2MSqtzlUOWzyPj_djh.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Subject,Course,Level,Title,Grade,Credit Hours,Quality R Points\nSpring 2013,ENGL,2207,UG,Honors World Literature I,A,3.000,12.00\nSpring 2013,ENGR,2010,UG,Thermodynamics,A,3.000,12.00\nSpring 2013,MATH,2660,UG,Topics In Linear Algebra,A,3.000,12.00\nSpring 2013,MATL,2100,UG,Intro To Materials Science,A,3.000,12.00\nSpring 2013,MECH,2220,UG,Computer-Aided Engineering,A,3.000,12.00\nSpring 2013,MECH,2AA0,UG,Mech Engr Progress Assmnt I,S,0.000,0.00\nSummer 2013,COOP,4920,UG,Cooperative Work Experience,NN,0.000,0.00\nFall 2013,MECH,2120,UG,Kinematics And Dyna Of Mach,A,4.000,16.00\nFall 2013,MECH,3020,UG,Thermodynamics II,B,3.000,9.00"
+            }
+        ]
+    },
+    {
+        "id": "request-17",
+        "image": "Synthetic_Image_Annotation/images/1b5xz5UrpOuWfCEfJXrYujU5nmnihBRh6.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course Level Title,Grade,Credit Hours,Quality Points\nCHEM 1030,Fundamentals Chemistry I,A,3.000,12.00\nCHEM 1031,Fund of Chemistry I Lab,A,1.000,4.00\nENGL 1120,English Composition II:Sustainability,A,3.000,12.00\nMATH 1610,Calculus I,A,4.000,16.00\nPSYC 2010,Intro To Psychology,A,3.000,12.00\nCOMP 1200,Intro to Computing - Matlab,A,2.000,8.00\nENGR 1100,Engineering Orientation,S,0.000,0.00\nENGR 1110,Intro - Indus. & Systems Engr.,A,2.000,8.00\nHONR 1097,Honors Forum for Freshmen,S,1.000,0.00\nMATH 1620,Calculus II,A,4.000,16.00\nPHYS 1600,Engineering Physics I,A,4.000,16.00\nPOLI 1097,Hon Amer Gov Multicul World,A,3.000,12.00\n\nHONR 2097,Honors Forum for Sophomores,S,1.000,0.00\nMATH 2637,Honors Calculus III,A,4.000,16.00\nMATH 2650,Linear Differential Equations,A,3.000,12.00\nMECH 2110,Statics And Dynamics,B,4.000,12.00\nPHYS 1610,Engineering Physics II,A,4.000,16.00"
+            }
+        ]
+    },
+    {
+        "id": "request-18",
+        "image": "Synthetic_Image_Annotation/images/1ak0U4JeGTH9eXMuRW92l18ZxkZAQKQ1X.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course,Title,Grade,Credit Hours,Quality Points\nENGL,1100,English Composition I,S,3.000,0.00\nHIST,1010,World History I,S,3.000,0.00\nHIST,1020,World History II,S,0.000,0.00\nHIST,2010,Survey Of US History To 1877,S,3.000,0.00\nHIST,2020,Survey Of US History Since 1877,S,3.000,0.00\nMATH,1130,Precalculus Trigonometry,S,3.000,0.00\nMATH,1610,Calculus I,S,4.000,0.00"
+            }
+        ]
+    },
+    {
+        "id": "request-20",
+        "image": "Synthetic_Image_Annotation/images/1FR4WAPUbhlAGZOMacTpMvjr_zCKjZADt.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Not a transcript."
+            }
+        ]
+    },
+    {
+        "id": "request-21",
+        "image": "Synthetic_Image_Annotation/images/1ANYGDGNKBiVGhThTkCaa12-j6Dct6hHm.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED GRD RPT\nFRE 2310,Intermediate French,3.00,A\nGEO 3427,Rocks & Rock-Forming Minerals,4.00,A\nLF 1106,Begin Aerobics,1.00,A\nLF 1111,Aerobic Running,1.00,A\nMTH 2311,Linear Algebra,3.00,B\nPHY 1420,General Physics I,4.00,B+\n      \nBIO 1403,Exploring the Living World,4.00,A\nCHE 1101, General Chemistry Lab I,1.00,A\nFRE 2320,Intermediate French,3.00,A\nGEO 4458,Geophys Exploration II,4.00,A\nLF 1171,Softball,1.00,A\nPHI 1306,Logic,3.00,A\n      \nENG 3300,Technical & Prof Writing,3.00,A\nGEO 3435,Invertebrate Paleontology,4.00,A\nGEO 3445,Structural Geology,4.00,A-\nLF 1192,Weight Control,1.00,A\n      \nGEO 3430,Petrology,4.00,A\nGEO 3442,Field Stratigraphy-Sedimentolo,3.00,B+\nGEO 43C0,Senior Thesis,1.00,A\nGEO 4v90,Plate Kinematics,3.00,A-\nREL 1350,The Christian Heritage,3.00,A\n      \nGEO 3643,Field Geology,6.00,A\nPHY 1409,Physics Nat Behav Sci II,4.00,A"
+            }
+        ]
+    },
+    {
+        "id": "request-22",
+        "image": "Synthetic_Image_Annotation/images/15QNknzhnE5bXlBGpz7uoEb44x7YIJl-F.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "```csv\nSUBJ,NO.,COURSE TITLE,CRED,GRD,RPT\nHIST,2365,Hist of U.S. To 1877,3.00,TA,\nHIST,2366,Hist of U.S. Since 1877,3.00,TB,\nECO,2307,Princ of Macroeconomics,3.00,TA,\nENG,2301,British Literature,3.00,TA,\nMTH,1000,Mathematics Credit,3.00,TA,\nENG,2304,American Lit: Masterpieces,3.00,TA,\nMTH,1304,Pre-Calculus,3.00,TA,\nPSC,1305,American National Govt,3.00,TA,\nGEO,1405,The Dynamic Earth,4.00,TA,\nGEO,1406,Earth Through Time,4.00,TA,\nCHE,1102,General Chemistry Lab II,1.00,TA,\nCHE,1302,Bas Prin Mod Chem II,3.00,TA,\nENV,1301,Exploring Environmental Issues,3.00,CR,\nCHA,1088,Chapel - New Freshmen,0.00,CR,\nCHE,1301,Bas Prin Mod Chemistry I,3.00,A,\nFRE,1401,Elementary French,4.00,A,\nMTH,1321,Calculus I,3.00,B+,\nREL,1310,The Christian Scriptures,3.00,A,\nCHA,1088,Chapel,0.00,CR,\nENG,1302,Thinking & Writing,3.00,A,\nFRE,1402,Elementary French,4.00,A,\nGEO,3319,Intro to Geophysical,3.00,A,\nMTH,1322,Calculus II,3.00,A,\nPSC,2302,Amer Constitutional Dev,3.00,A,"
+            }
+        ]
+    },
+    {
+        "id": "request-24",
+        "image": "Synthetic_Image_Annotation/images/1DomjxpvnO5jC_xTi9x9pu_Lg-_J-hiC4.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Description,Attempted Credits,Earned Credits,Grade,Points\nHIST 3240,History of Russia & Sov Union,3.000,0.000,,0.000\nMUSC 2330,Intro of World Music,3.000,0.000,,0.000\nMUSC 3120,Hist of Music:Baroq/Classic,3.000,0.000,,0.000\nSPAN 1020,Elementary Spanish II,4.000,0.000,,0.000\n"
+            }
+        ]
+    },
+    {
+        "id": "request-25",
+        "image": "Synthetic_Image_Annotation/images/1rHdr-XuWqoHn8r4jYRfX0dSVwDmBmm6Z.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Semester,Year,Course,Description,Attempted,Earned,Grade,Points\nSummer,2013-14,MUBS 2020,Introduction Music Publishing,3.000,3.000,B-,8.010\nSpring,2014-15,BIBL 3410,Images of Jesus Then and Now,3.000,3.000,B+,9.990\nSpring,2014-15,HIST 3190,Jewish Holocaust/Hist Context,3.000,3.000,B,9.000\nSpring,2014-15,MUBS 3380,Concert Booking/Promot,2.000,2.000,A,8.000\nSpring,2014-15,MUPF 1080,Chorale,1.000,1.000,A,4.000\nSpring,2014-15,MUPF 1150,Opera Production,1.000,1.000,A,4.000\nSpring,2014-15,MUPF 1170,Lyrie Theatre Workshop,1.000,1.000,A,4.000\nSpring,2014-15,MUPF 4700,Voice,3.000,3.000,B-,8.010\nSpring,2014-15,MUSC 3170,Hist-Mus-Popular 20th Cent,3.000,3.000,A,12.000\nFall,2014-15,ENGL 1400,Valuing Through Literature,3.000,3.000,B+,9.990\nFall,2014-15,MUBS 2070,Songwriting,2.000,0.000,W,0.000\nFall,2014-15,MUPF 3350,Music Marketing,3.000,3.000,A-,11.010\nFall,2014-15,MUPF 1080,Chorale,1.000,1.000,A,4.000\nFall,2014-15,MUPF 1170,Lyric Theatre Workshop,1.000,1.000,A,4.000\nFall,2014-15,MUPF 4700,Voice,1.000,1.000,B-,2.670\nFall,2014-15,MUSC 2010,Theory III (Music Business),3.000,3.000,C-,5.010\nFall,2014-15,MUSC 2110,Intro to Music Literature,2.000,2.000,B-,5.340\nSummer,2014-15,MUBS 4800,Internship in Music Business,3.000,3.000,A,12.000\nFall,2015-16,BSNS 3150,Financial Planning,3.000,3.000,B,9.000\nFall,2015-16,MUBS 3310,Legal Aspects of Music Busines,2.000,2.000,B+,6.660\nFall,2015-16,MUPF 4700,Voice,1.000,1.000,A,4.000\nFall,2015-16,PHYS 1240,Astronomy,4.000,4.000,B+,13.320\nFall,2015-16,SPAN 1010,Elementary Spanish I,4.000,4.000,A,16.000"
+            }
+        ]
+    },
+    {
+        "id": "request-26",
+        "image": "Synthetic_Image_Annotation/images/1gXk5Ohob7lkNcjnVXUZfUV7R-EcTaRDG.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nHIST 2120,American Civilization II,3.000,3.000,B+,9.990\nLART 1050,First-Year Experience Sem,1.000,1.000,A,4.000\nMUPF 1050,Keyboard Class I,2.000,2.000,A,8.000\nMUPF 1070,Women\u2019s Chorus,1.000,1.000,A,4.000\nMUPF 2700,Voice,2.000,2.000,B+,6.660\nMUSC 1010,Theory I,3.000,3.000,B,9.000\nMUSC 1030,Aural Comprehension I,1.000,1.000,A,4.000\nPEHS 1000,Fitness/Leisure-For Life Cross Training,2.000,2.000,A,8.000\nSOCI 2010,Intro to Sociology,3.000,3.000,B-,8.010\nDANC 2110,Musical Theatre Dance Forms,1.000,1.000,A,4.000\nENGL 1120,Rhetoric & Research,3.000,3.000,A-,11.010\nLART 1100,Liberal Arts Seminar,2.000,2.000,A,8.000\nMUED 2510,Singers Diction I,2.000,2.000,B-,5.340\nMUPF 1060,Keyboard Class II,2.000,2.000,B-,5.340\nMUPF 1070,Women\u2019s Chorus,1.000,1.000,A,4.000\nMUPF 1150,Opera Production,1.000,1.000,A,4.000\nMUPF 2700,Voice,2.000,2.000,A,8.000\nMUSC 1020,Theory II,3.000,3.000,C,6.000\nMUSC 1040,Aural Comprehension II,1.000,1.000,B,3.000\nBIBL 2000,Intro To The Bible,4.000,4.000,A-,14.680\nCOMM 1000,Intro to Speech Communication,3.000,3.000,A,12.000\nMATH 1300,Finite Mathematics,3.000,3.000,C+,6.990\nMUBS 2010,Introduction To Music Business,3.000,3.000,A,12.000\nMUBS 3210,Recording Techniques I,3.000,3.000,D,3.000\nMUPF 1070,Women\u2019s Chorus,0.000,0.000,A,0.000\nMUPF 1150,Opera Production,0.000,0.000,A,0.000\nMUPF 2700,Voice,2.000,2.000,B+,6.660"
+            }
+        ]
+    },
+    {
+        "id": "request-28",
+        "image": "Synthetic_Image_Annotation/images/1NmE1mGFh4k5ktdXe02tCMU-uv4CqKn_n.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSES, TITLE, CREDIT, GRADE, HONOR POINTS\nCAS BI107, BIOLOGY I, 4.0, B+, 13.2\nCAS CC101, ANCIENT WORLD, 4.0, B, 12.0\nCAS CH101, GEN CHEM 1, 4.0, C, 8.0\nCAS FY101, FIRST YEAR EXP, 1.0, P, 0.0\nCAS MA123, CALCULUS I, 4.0, C, 8.0\nPDP MA105, SHOTOKAN KARATE, 1.0, P, 0.0\n\nCAS BI260, MARINE BIOLOGY, 4.0, A, 16.0\nCAS CC102, CORE HUMANIT 2, 4.0, A-, 14.8\nCAS CH102, GEN CHEM 2, 4.0, C+, 9.2\nCAS MA115, STATISTICS I, 4.0, A-, 14.8\nPDP FT202, ATHLETIC CNDTNG, 1.0, P, 0.0\n\nCAS CC203, CORE SOC SC 1, 4.0, A-, 14.8\nCAS ES144, OCEANOGRAPHY, 4.0, A, 16.0\nCAS LS111, FIRST SEM SPAN, 4.0, A-, 14.8\nCAS MA124, CALCULUS 2, 4.0, C, 8.0\n\nCAS BI303, ECOLOGY, 4.0, B+, 13.2\nCAS CC204, CORE SOC SCI 2, 4.0, B+, 13.2\nCAS ES440, MARINE GEOLOGY, 4.0, B+, 13.2\nCAS LS112, SECOND SEM SPAN, 4.0, A, 16.0\n\nCAS BI531, ICHTHYOLOGY 1, 4.0, A, 16.0\nCAS BI563, SENIOR BIOLOGY, 4.0, A-, 14.8\nCAS BI599, TROPICAL INVERT, 4.0, A, 16.0\nCAS ES543, ESTUARIES, 4.0, A, 16.0\n\nCAS BI438E, TROP MONTANE EC, 4.0, A, 16.0\nCAS BI439F, TROP RM FRST EC, 4.0, A, 16.0\nCAS BI440E, TROP COASTAL EC, 4.0, A, 16.0\nCAS BI441E, STD/TROP ECOLOGY, 4.0, A, 16.0\nCAS QU300E, INTNS SPANISH, 2.0, B, 6.0\n\nCAS BI550, MARINE GENOMICS, 4.0, , 0.0\nCAS BI578, MARINE GIS, 4.0, A, 16.0\nCAS ES557, OCEAN STELLWAG, 4.0, A, 16.0\nCAS MR401, SR INDEP WORK, 4.0, , 0.0\n\nCAS CL202, WARFARE IN ANTI, 4.0, , 0.0\nCAS ES423, MARINE BIOGECH, 4.0, , 0.0\nCAS MR402, SR INDEP WORK, 4.0, , 0.0\nCAS PY105, ELEM PHYSICS 1, 4.0, , 0.0"
+            }
+        ]
+    },
+    {
+        "id": "request-29",
+        "image": "Synthetic_Image_Annotation/images/13MtURI337tI0kE0CRSUZY4Apu9qOPo64.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Course Name,Grade,Credits\nANT185,Global Encounters,A,3.0\nCAS101,First Year Forum,A,1.0\nFRE101,French I,C+,4.0\nPSC124,International Relations,A-,3.0\nREL101,Religions of the World,B+,3.0\nWRT105,Studio I: Academic Writing,B,3.0\n\nANT121,Peoples&Cultures of World,A,3.0\nANT131,Intro to Bio Anthropology,B+,3.0\nANT365,Sexual Attrctn/Cultural Persp,A-,3.0\nFRE102,French II,B-,4.0\nHST400,East Asia since 1885,A,3.0\n\nANT141,Intro/Archaeology & Prehistory,A,3.0\nANT373,Magic and Religion,A,3.0\nFRE201,French III,B+,4.0\nGEO155,The Natural Environment,A,3.0\nHST300,Africa in Global Affairs,A,3.0\n\nETS300,European Cinema,B+,3.0\nFRE202,French IV,A,4.0\nIPA470,Int'l Internship Abroad,B+,1.0\nPSC369,Global Migration,B,3.0\nPSC400,The European Identity,A,3.0\nPSC427,Policy Seminar/Contemp Europe,A,3.0\n\nANT311,Anthropological Theory,B,3.0\nANT325,Anthrop of American Life,C,3.0\nECN203,Economic Ideas & Issues,B+,3.0\nGEO215,Global Env Change,B-,3.0\nSPA201,Spanish III,A,4.0\n\nANT380,Latin American Anthropology,B,3.0\nGEO380,Geography of Latin America,B-,3.0\nSPA480,Advanced-Intermediate SPA II,A,3.0\nIRP334,Issues in Contemp. Latin Amer.,A-,3.0\nIRP424,Dictatrshps/HumRights&HSTMmry,A,3.0\nSPA380,Adv SPA: Cult/Conv/Grammar,B,3.0\n\nANT415,Culture &Personality,A,3.0\nANT482,Life Histories/Narratives,A,3.0\nAST101,Our Corner Of The Universe,B+,4.0\nREL244,Indigenous Religions,A,3.0\nSOC445,Caribbean:Sex, Cap&Tourism,A,3.0\n\nANT111,Intro to Cultural Anthrop,,3.0\nANT322,South American Cultures,,3.0\nHST324,Latin American History Recent,,3.0\nWRT205,Studio 2:Critical Research,,3.0"
+            }
+        ]
+    },
+    {
+        "id": "request-31",
+        "image": "Synthetic_Image_Annotation/images/1myrUCJhXIWCyotz6ISy9tRTnrnqHe-bD.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Description,Attempted,Earned,Grade,Points\nSumr 2015,MAE 496LEC,Engineering Internship,3.000,3.000,A,12.000\nFall 2015,ATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nFall 2015,GEO 101LEC,Earth Systems Science I,3.000,3.000,A,12.000\nFall 2015,MAE 338LAB,MAE Lab II,2.000,2.000,A,8.000\nFall 2015,MAE 377LLB,Product Design-CAE Environment,3.000,3.000,A,12.000\nFall 2015,MAE 422LEC,Gas Dynamics,3.000,3.000,A,12.000\nFall 2015,MAE 436LR,Flight Dynamics,3.000,3.000,A-,11.010\nFall 2015,MAE 451LEC,Design Process & Methods,3.000,3.000,A,12.000\nSpr 2016,MAE 311LEC,Machines & Mechanisms 1,3.000,3.000,A,12.000\nSpr 2016,MAE 364LEC,Manufacturing Processes,3.000,3.000,A,12.000\nSpr 2016,MAE 423LEC,Intro to Propulsion,3.000,3.000,A,12.000\nSpr 2016,MAE 425LEC,Space Dyn & Ctrl,3.000,3.000,A,12.000\nSpr 2016,MAE 434LEC,Aircraft Design,3.000,3.000,A,12.000\nSpr 2016,MAE 494LT,Design Project,3.000,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-32",
+        "image": "Synthetic_Image_Annotation/images/1Lqu1rouut65vuymNnRiBDhoNfqePRt-Y.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Description,Attempted,Earned,Grade,Points\nMTH309LLB,Intro Linear Algebra,4.0,4.0,A,16.000\nEAS207LR,Statics,3.0,3.0,A,12.000\nMAE204LR,Thermodynamics 1,3.0,3.0,B+,9.990\nMAE278LEC,Intro to AE Practice,3.0,3.0,A-,11.010\nMTH241LLB,College Calculus 3,4.0,4.0,A,16.000\nPHY108LR,General Physics 2,4.0,4.0,B+,13.320\nPHY158LAB,General Physics Lab 2,1.0,1.0,A,4.000\nMAE315LEC,Analysis of Structures,3.0,3.0,A,12.000\nMAE335LR,Fluid Mechanics,3.0,3.0,A,12.000\nMAE340LEC,Dynamic Systems,3.0,3.0,A,12.000\nMAE376LLB,Applied Math for MAEs,3.0,3.0,A,12.000\nMAE381LEC,Engng Materials 1,3.0,3.0,B+,9.990\nCOM101LEC,Principles of Comm,3.0,3.0,A,12.000\nEAS208LR,Dynamics,3.0,3.0,B+,9.990\nEAS209LR,Mechanics of Solids,3.0,3.0,A,12.000\nEE200LR,EE Concepts/Non-Majors,3.0,3.0,A,12.000\nMTH306LLB,Intro Diff Equations,4.0,4.0,A,16.000\nMAE316LEC,Aerospace Structures,3.0,3.0,A,12.000\nMAE334LLB,MAE Laboratory I,2.0,2.0,A,8.000\nMAE336LEC,Heat Transfer,3.0,3.0,A,12.000\nMAE385LAB,Engng Materials Lab,1.0,1.0,A,4.000\nMAE424LLB,Aerodynamics,4.0,4.0,A,16.000\nSOC121LEC,Substance Use and Abuse,3.0,3.0,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-33",
+        "image": "Synthetic_Image_Annotation/images/1jlO5TWSvRNMcCFer0Z4po1g97Ixfti2z.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Description,Attempted,Earned,Grade,Points\nFall 2012,ATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nFall 2012,ATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nFall 2012,CHE 107LEC,Gen Chem for Engineers Lecture,4.000,4.000,B,12.000\nFall 2012,MTH 141LLB,College Calculus 1,4.000,4.000,A-,14.680\nFall 2012,SOC 101LEC,Introduction to Sociology,3.000,3.000,B,9.000\nSpring 2013,EAS 230LLB,Engineering Computations,3.000,3.000,A,12.000\nSpring 2013,GEO 120LEC,Maps: Earth from Above,3.000,3.000,A,12.000\nSpring 2013,MAE 177LLB,Engr CAD Drawing,2.000,2.000,A,8.000\nSpring 2013,MTH 142LLB,College Calculus 2,4.000,4.000,A,16.000\nSpring 2013,PHY 107LR,General Physics 1,4.000,4.000,A-,14.680"
+            }
+        ]
+    },
+    {
+        "id": "request-35",
+        "image": "Synthetic_Image_Annotation/images/1JgQ6E7trMyZZnS3EfJWIfMW_oCc6ighO.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCE 5179,CONST COST ESTIMATING SOFTWARE,1.00,1.00,B,3.000\nCE 5186,CONST PLAN AND SCHED SOFTWARE,1.00,1.00,A,4.000\nCE 5279,CONSTRUCTION COST ESTIMATING,2.0,2.00,B,6.000\nCE 5286,CONST PLANNING & SCHEDULING,2.00,2.00,B,6.000\nCE 5300,TOPICS IN CIVIL ENGINEERING (Construction Management),3.00,3.00,A,12.000\nCE 5300,TOPICS IN CIVIL ENGINEERING (Building Information Modeling),3.00,3.00,A,12.000\nCE 5378,CONST CNTRCT, SPECS & ADMN,3.00,3.00,B,9.000\nCE 5387,CONSTRUCTION PRODUCTIVITY,3.00,3.00,B,9.000\nCE 5312,ADVANCED CONCRETE DESIGN I,3.00,3.00,A,12.000\nCE 5336,PAVEMENT DESIGN,3.00,3.00,C,6.000\nCE 5344,CONSTRUCTION METHODS FIELD OPS,3.00,3.00,B,9.000\nCE 5300,TOPICS IN CIVIL ENGINEERING,3.00,3.00,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-37",
+        "image": "Synthetic_Image_Annotation/images/19t7Hh981wqVjpsWTray28BtbR8jQFj9t.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Plan,Session,Course,Description,Attempted,Earned,Grade,Points\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 295,Spec Top Biology,2.000,2.000,A,8.000\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 330,Course Topic: Islands and Evolution,3.000,3.000,A+,12.999\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 353,Applctv Animal Bio,3.000,3.000,B+,9.999\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 350,Anim Phy Diversity,4.000,4.000,B,12.000\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 493,SP Problens in BS,3.000,3.000,S,0.000\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 460,Field Ecol Methds,4.000,4.000,A-,14.668\nBiological Sciences, Bachelor of Science,Regular Academic Session,BIO 493,SP Problens in BS,3.000,3.000,S,0.000\nBiological Sciences, Bachelor of Science,Regular Academic Session,HESD 240,Social Dance,1.000,1.000,S,0.000\nBiological Sciences, Bachelor of Science,Regular Academic Session,NR 406,Cons Bio Diversity,3.000,3.000,A-,11.001\nBiological Sciences, Bachelor of Science,Regular Academic Session,PP 222,Kingdom of Fungi,3.000,3.000,A,12.000\nBiological Sciences, Bachelor of Science,Global Perspectives, Undergraduate Certificate,Regular Academic Session,BIO 495,Spec Topic Biology (Course Topic: Ecology of Cities),1.000,1.000,S,0.000\nBiological Sciences, Bachelor of Science,Global Perspectives, Undergraduate Certificate,Regular Academic Session,BIO 499,Course Topic: Ecology of Cities,3.000,3.000,S,0.000\nBiological Sciences, Bachelor of Science,Global Perspectives, Undergraduate Certificate,Regular Academic Session,GIS 410,Intro to GIS,3.000,3.000,A,12.000\nBiological Sciences, Bachelor of Science,Global Perspectives, Undergraduate Certificate,Regular Academic Session,HESS 251,Target Archery,1.000,1.000,S,0.000\nBiological Sciences, Bachelor of Science,Global Perspectives, Undergraduate Certificate,Regular Academic Session,ST 511,Exp Stat Bio Sec I,3.000,3.000,B,12.000\nBiological Sciences, Bachelor of Science,Global Perspectives, Undergraduate Certificate,Regular Academic Session,ZO 624,Topic Problems (Course Topic: Evolutionary Thinking),3.000,3.000,S,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-38",
+        "image": "Synthetic_Image_Annotation/images/1ItVfqYnz0xElY2RUKIHyZqJOTxChVnO0.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nENG 101,Acad Writing Rsch,4.000,4.000,CR,0.000\nHI 252,Modern Amer Hist,3.000,3.000,CR,0.000\nMEA 100,Earth Sys Science,4.000,4.000,CR,0.000\nST 311,Intro to Statistic,3.000,3.000,CR,0.000\nBIO 183,Intro Bio Cell/Mol,4.000,4.000,B+,13.332\nCH 221,Org Chem I,3.000,3.000,C,6.000\nCH 222,Org CH I Lab,1.000,1.000,A,4.000\nEC 201,Princ of Microecon,3.000,3.000,A-,11.001\nHSS 111,Scholars Forum,0.000,0.000,S,0.000\nMA 231,Calc Life Manag B,3.000,3.000,A-,11.001\nPSY 200,Intro to Psych,3.000,3.000,A,12.000\nBIO 250,Animal Anat Phys,4.000,4.000,A-,14.668\nCH 223,Org Chem II,3.000,3.000,B-,8.001\nCH 224,Org Chem II Lab,1.000,1.000,A+,4.333\nCOM 110,Public Speaking,3.000,3.000,B+,9.999\nPB 360,Ecology,4.000,4.000,A,16.000\nPE 105,Aerobics/Body Cond,1.000,1.000,S,0.000\nUSP 110,Scholars Forum,0.000,0.000,S,0.000\nALS 103,Intro Topics ALS,1.000,1.000,A,4.000\nBIO 181,Intro Bio Ecol/Div,4.000,4.000,A-,14.668\nCH 101,Chem Molecular Sci,3.000,3.000,A-,11.001\nCH 102,Gen Chem Lab,1.000,1.000,A+,4.333\nFLS 201,Interm Spanish I,3.000,3.000,A,12.000\nHSS 110,Scholars Forum,0.000,0.000,S,0.000\nMA 131,Calc Life Manag A,3.000,3.000,A-,12.000\nPE 249,Tennis I,1.000,1.000,A+,4.333\nENG 333,Commun Sci & Res,3.000,3.000,A-,11.001\nFW 221,Conserv of Nat Resources,3.000,3.000,A,12.000\nGN 311,Princ of Genetics,4.000,4.000,B,12.000\nGN 312,Elem Genetics Lab,1.000,1.000,A-,3.667\nPY 212,College Physics II,4.000,4.000,A-,14.668"
+            }
+        ]
+    },
+    {
+        "id": "request-40",
+        "image": "Synthetic_Image_Annotation/images/1qhje2I2KPaJ5Vgxn-PKmqfT3a68KjoGj.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS R\nART 1400,Drawing Online,3.00,A,0.00\nBIOL 1400,Principles in Science,4.00,B,0.00\nCSCI 1000,Computer Basics,3.00,A,0.00\nENGL 1111,Freshman English I,3.00,A,0.00\nENGL 1112,College Writing II,3.00,A,0.00\nENGL 1150,Introduction to Literature,3.00,B,0.00\nMUSC 1300,Music World Cultures,3.00,A,0.00\nPE 1050,Weight Training,1.00,A,0.00\nPE 1810,Step Aerobics,1.00,A,0.00\nSPCH 1010,Fundamentals of Public Speaking,3.00,A,0.00\nTFT 1250,Intro to Film,3.00,B,0.00\nTFT 1500,Acting I: Improv and Founda,3.00,A,0.00\nPSY 1005,Introduction to Psychology,4.00,B-,10.68\nCMM 4013,Concepts of Communication,2.00,A,8.00\nCMM 4031,Business Communication,2.00,A,8.00\nETH 4021,Foundations for Ethics,2.00,A,8.00\nETH 4023,Worldwide Ethics,2.00,A,8.00\nCOMN 4015,Comm'n Theory and Practice,2.00,A,8.00\nCOMN 4032,Public Relations Writing,2.00,A,8.00\nCOMN 4042,Advanced Speaking Present,2.00,A,8.00\nCOMN 4046,Comm Conflict Resolution,2.00,A-,7.34\nCOMN 4018,Interpersonal Communication,2.00,A,8.00\nCOMN 4025,Communication Ethics,2.00,A,8.00\nCOMN 4034,PR Event Planning,2.00,A,8.00\nCOMN 4016,Intercultural Communication,2.00,A,8.00\nCOMN 4017,Groupe Communication,2.00,A,8.00\nCOMN 4044,Technological Communication,2.00,A,8.00\nCOMN 4048,Mediation Communication,2.00,A,8.00\nCOMN 4051,Communication Research,3.00,A,12.00\nCOMN 485,Communication Capstone,3.00,A,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-42",
+        "image": "Synthetic_Image_Annotation/images/14nyusdMelGWTQQe-uyS5TcmHWwe8-wfL.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course, Credits, Grade, Grade Points\nACCT 460, 5.00, A-, 18.500\nACCT 461, 5.00, A, 20.000\nIT 359, 3.00, A, 12.000\n\nACCT 450, 5.00, A-, 18.500\nMGT 489, 5.00, A, 20.000\nMIS 386, 5.00, A, 20.000"
+            }
+        ]
+    },
+    {
+        "id": "request-43",
+        "image": "Synthetic_Image_Annotation/images/1_ugldd9gX5KT8z_c9Pl75y5Z-YcQU3ln.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course Code,Course Name,Credits,Grade\nFall 2013,ACCT 350,Intermediate Accounting I,5.00,A\nFall 2013,ADMG 385,Bus Com & Rep Writ,5.00,A\nFall 2013,SCM 310,Supply Chain Management,5.00,A\nWinter 2014,ACCT 351,Intermediate Accounting II,5.00,B\nWinter 2014,ACCT 430,Governmental & Non-Profit Acct,5.00,A\nWinter 2014,ACCT 455,Accounting Information Systems,5.00,A\nSpring 2014,ACCT 352,Intermediate Accounting III,5.00,B\nSpring 2014,MGT 382,Principles of Management,5.00,A\nSpring 2014,MKT 362,Essential Mkt Concepts,5.00,A"
+            }
+        ]
+    },
+    {
+        "id": "request-44",
+        "image": "Synthetic_Image_Annotation/images/1zE4OTw2gtZ8O5SNwGJAlBnFyEw2XWQdO.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Session,Course Code,Course Name,Credits,Grade,Grade Points\nSix Week - First,FIN 370,Intro Financial Mgt,5.00,A-,18.500\nRegular Academic Session,ACCT 305,Cost Accounting,5.00,A,20.000\nRegular Academic Session,ACCT 346,Income Tax Accounting I,5.00,A-,18.500"
+            }
+        ]
+    },
+    {
+        "id": "request-46",
+        "image": "Synthetic_Image_Annotation/images/1KYe2Liz-VC-eELz2VqIrK1FbL5kOSFKg.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nBIO 0101,Prin of Biology,5.00,B,\nCH 1T07L,Human Anat/Phys,5.00,B,\nPOL 3T61,Intl Politics,5.00,B,\nECON 2105,Prin of Macroecon,3.00,A,12.00\nECON 2106,Prin of Microecon,3.00,A-,11.10\nPHIL 2010,Intro to Philosophy,3.00,A-,11.10\nSTAT 2000,Intro Statistics,4.00,WP,0.00\nARTS 2000,Art Apprce,3.00,A,12.00\nINTL 4250,Amer Foreign Policy,3.00,A-,11.10\nINTL 4280,Natlm & Ethnc Conf,3.00,A,12.00\nSPAN 1001,Elementary Spanish,4.00,WP,0.00\nGRMN 1001,Ele German I,4.00,A,16.00\nINTL 4410,Terrorism,3.00,A-,11.10\nINTL 4780,Sp Top Compara Pol,3.00,A,12.00\nGRMN 1002,Ele German II,4.00,A,16.00\nINTL 4360,E Asian Pol Sys,3.00,A,12.00\nINTL 4440,Strategic Intl,3.00,A,12.00\nGRMN 2001,Intermed German I,3.00,A,12.00\nINTL 3300,Intro to Comp Pol,3.00,A,12.00\nINTL 4240,Intl Organization,3.00,A,12.00\nCSCI 1100,Topics in Computing,3.00,A,12.00\nGRMN 2002,Intermed German II,3.00,A,12.00\nPEDB 1950,PTL Walking,1.00,S,0.00"
+            }
+        ]
+    },
+    {
+        "id": "request-47",
+        "image": "Synthetic_Image_Annotation/images/1XUOwZOu0RyskFG6m7HLinwNSv3DRJq6t.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD\nHPB 1T12,Health,1.00,S\nMIL 1T13,Military,2.00,S\nPEB 1T11, P.E.,1.00,S\nENG 0101,English Composition,5.00,C\nHIS 0111,West Civ To 1500,5.00,B\nMAT 0102,College Algebra,5.00,A\nGGY 0101,Intro Human Geog,5.00,B\nMAT 0116,Precalculus Math,5.00,A\nPSY 1T09,Contemp Psych,5.00,B\nENG 0102,English Composition,5.00,B\nMAT 0253,Analytic Geo Calcul,5.00,C\nPOL 0101,American Government,5.00,B\nGER 0101,Elementary German,5.00,D\nPOL 0202,Intro Pol Science,5.00,C\nSOC 0105,Intro Sociology,5.00,C\nCML 0221,Western World Liter,5.00,B\nHIS 0122,Modern West Civ,5.00,B\nHIS 2T08Z,United States,5.00,A\nGLY 0115,Earth Proc Resource,5.00,B\nHIS 4T09,Brazil 1800-Prsnt,5.00,A\nMIL 4T07,Amphib Warfare I,3.00,A\nPOL 4T08,Gov Pol Sov Onion,5.00,B\nMIL 1T10,Naval Org/Sea Power,2.00,C\nMIL 1T11,Naval Ship Sys I,2.00,C\nMIL 1T12,Naval Ship Sys II,2.00,B\nMIL 2T05,Naval Weapon Sys I,2.00,D"
+            }
+        ]
+    }
+]

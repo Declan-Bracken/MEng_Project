@@ -22,8 +22,9 @@ class AnalyticsDashboard:
         self.map_grades()
 
     def clean_data(self):
+        allowed_characters = r'[^a-zA-Z0-9\s,\'\/\(\)\[\]\-]'
         # Strip whitespace and remove unwanted characters from all cells and column headers
-        self.df = self.df.replace({r'[;:"<>~`@!*]': ''}, regex=True)
+        self.df = self.df.replace({allowed_characters: ''}, regex=True)
         self.df.columns = self.df.columns.str.strip()
         self.df = self.df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
