@@ -1,0 +1,25 @@
+{
+    "General Engineering": ["ENGR", "APSC"],
+    "Electrical Engineering": ["ELEC"],
+    "Civil Engineering": ["CIVL"],
+    "Mining Engineering": ["MINE"],
+    "Chemical Engineering": ["CHEE", "CHM", "CHEM"],
+    "Computer Science": ["CS", "CPSC", "COMP", "INF", "IT", "CSC"],
+    "Physics": ["PHYS", "ASTRO"],
+    "Biology": ["BIOL", "GEN", "ECO"],
+    "Environmental Science": ["ENV", "ECOL", "FRST"],
+    "Economics": ["ECON", "MICRO", "MACRO"],
+    "Business": ["BUS", "COMM", "MGMT", "FIN", "MKT", "ACCT", "ECON"],
+    "Psychology": ["PSYCH", "PSYC", "CNPS"],
+    "Language and Literature": ["WRDS", "ENG", "GERM", "FR", "ENGL"],
+    "Anthropology": ["ANT", "ANTHRO"],
+    "Political Science": ["POL", "POLI"],
+    "Environmental Studies": ["ENVS"],
+    "Sociology": ["SOC", "SOCI"],
+    "Chemistry": ["CHEM", "CHM"],
+    "Mechanical Engineering": ["MECH"],
+    "Mathematics": ["MATH", "CALC", "ALGEBRA", "STAT", "GEOM", "MTHE"],
+    "History": ["HIST", "CLAS", "ASIA", "EURO", "AMST", "CLST"],
+    "Philosophy": ["PHIL", "LOGIC", "ETH"]
+}
+    
