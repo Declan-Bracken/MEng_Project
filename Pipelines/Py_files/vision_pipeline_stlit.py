@@ -34,8 +34,9 @@ class VisionPipeline:
             confidence = box[4]
             rect = patches.Rectangle((x1, y1), x2 - x1, y2 - y1, linewidth=1, edgecolor=self.class_colors[class_id], facecolor='none')
             ax.add_patch(rect)
-            ax.text(x1, y1, f'{label} {confidence:.2f}', color='white', fontsize=8, bbox=dict(facecolor=self.class_colors[class_id], alpha=0.4))
+            ax.text(x1, y1, f'{label} {confidence:.2f}', color='white', fontsize=5, bbox=dict(facecolor=self.class_colors[class_id], alpha=0.5))
 
+        # ax.legend(labels = self.class_names.values)
         plt.axis('off')
         
         # Save the figure to a temporary file

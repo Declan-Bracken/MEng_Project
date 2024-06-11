@@ -77,23 +77,17 @@ class MistralInference():
                 print(f"Error Loading Model Weights: {e}")
             
     def query_mistral(self, text, headers = None):
-#         self.prompt_templates = [f'''
-# Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
-        
-# ### Text:{headers}{text}
-
-# ''',f'''
-# Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields.
-
-# ### Text:
-# {text}
-
-# ### CSV:
-
-# ''']
-        self.prompt_templates = [f'''
-Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}', you must select which columns best fit these fields. Make sure to clean the data by removing any extra quotes or semicolons, and fix small OCR mistakes..
-        
+        self.prompt_templates = [f'''I will provide you with OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have the following columns: '{self.headers[0]}' or 'Course Title' (or both), '{self.headers[1]}', and '{self.headers[2]}'. you must select which columns best fit these fields. For example, this is how you would format the following table:
+Example Input:
+Course Description Attempted Earned Grade Points
+MAT 101 Intro to Math 3.000 3.000 At 12.999
+                                 
+Expected Result:
+Course Code, Course Title, Credits, Grade
+MAT 101, Intro to Math, 3.000, At
+                                 
+MAT 101 is an example course, DO NOT include it in your CSV.
+                                                              
 ### Text:
 {headers}
 {text}
@@ -101,7 +95,16 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
 ### CSV:
 
 ''',f'''
-Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}'. This is not necessarily the order in which the table is currently structured, you must select which columns are likely the best fit for these fields based on contents, and then organize them.
+Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}' or 'Course Title' (or both), '{self.headers[1]}', and '{self.headers[2]}'. you must select which columns best fit these fields. For example, this is how you would format the following table:
+
+Example Input:
+MAT 101 Intro to Math 3.000 3.000 At 12.999
+
+Expected Result:
+Course Code, Course Title, Credits, Grade
+MAT 101, Intro to Math, 3.000, At
+
+MAT 101 is an example course, DO NOT include it in your CSV.
 
 ### Text:
 {text}
@@ -109,12 +112,30 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
 ### CSV:
 
 ''']
+#         self.prompt_templates = [f'''
+# Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}' (or units), you must select which columns best fit these fields. Make sure to clean the data by removing any extra quotes or semicolons, and fix small OCR mistakes.
+        
+# ### Text:
+# {headers}
+# {text}
+
+# ### CSV:
+
+# ''',f'''
+# Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}'. This is not necessarily the order in which the table is currently structured, you must select which columns are likely the best fit for these fields based on contents, and then organize them.
+
+# ### Text:
+# {text}
+
+# ### CSV:
+
+# ''']
         if headers is not None:
             prompt = self.prompt_templates[0]
         else:
             prompt = self.prompt_templates[1]
 
-        system_message = "You are a helpful assistant who excels at organizing data cleanly into structured tables." #You take input input data and clean/organize it into CSV texts
+        system_message = "You are a helpful assistant who excels at organizing data into structured tables." #You take input input data and clean/organize it into CSV texts
         prompt_template=f'''<|im_start|>system
         {system_message}<|im_end|>
         <|im_start|>user
@@ -133,6 +154,7 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
                     prompt_template,
                     max_tokens=max_tokens,
                     temperature=temperature,
+                    top_p=0,
                     echo=echo,
                     stop=stop,)
             print("Prompt Successful!")
@@ -140,42 +162,7 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
             return final_result, model_output
         except Exception as e:
             print(f"An error occurred during model inference: {e}")
-
-#     def query_mistral_headers(self, headers):
-#         self.header_prompt = f'''
-# Below is OCR text from a student transcript containing table headers. Please discern the correct table headers for a student's grade data, and return the headers in order.
-        
-# ### Headers:{headers}
-
-# '''
-
-#         system_message = "You are a table creation assistant."
-#         prompt_template=f'''<|im_start|>system
-#         {system_message}<|im_end|>
-#         <|im_start|>user
-#         {self.header_prompt}<|im_end|>
-#         <|im_start|>assistant'''
-
-#         max_tokens = 2048
-#         temperature = 0
-#         echo = False
-#         stop = ["</s>"]
-#         try:
-#             print("Prompting Mistral...")
-#             # Define the parameters
-#             with SuppressOutput():
-#                 model_output = self.llm(
-#                     prompt_template,
-#                     max_tokens=max_tokens,
-#                     temperature=temperature,
-#                     echo=echo,
-#                     stop=stop,)
-#             print("Prompt Successful!")
-#             final_result = model_output["choices"][0]["text"].strip()
-#             return final_result
-#         except Exception as e:
-#             print(f"An error occurred during model inference: {e}")
-
+            
     def string_to_dataframe(self, data_str):
         try:
             # Use StringIO to simulate a file-like object for the pandas read_csv function.
@@ -201,7 +188,7 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
 
         # Strip leading/trailing whitespaces from headers and all cells
         dataframe.columns = dataframe.columns.str.strip()
-        dataframe = dataframe.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+        dataframe = dataframe.map(lambda x: x.strip() if isinstance(x, str) else x)
 
         # Define the mapping for grades
         map_plus = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
@@ -221,6 +208,7 @@ Below is OCR text of a grade table from a student transcript. Format the fields 
     def process_transcript(self, headers, text, save=False, output_filename=None):
         # Query Mistral with initial text
         self.csv_output, self.model_output = self.query_mistral(text, headers=headers)
+        print(self.csv_output)
         # Convert to Dataframe
         self.df = self.string_to_dataframe(self.csv_output)
         # Fix OCR issues with grade pluses
