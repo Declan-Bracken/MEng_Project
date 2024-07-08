@@ -19,10 +19,10 @@ class DatasetInteractor:
         with open(self.dataset_path, 'r') as f:
             self.dataset = json.load(f)
 
-    def save_dataset(self):
-        with open(self.dataset_path, 'w') as f:
+    def save_dataset(self, path):
+        with open(path, 'w') as f:
             json.dump(self.dataset, f, indent=4)
-        print(f"Dataset saved to {self.dataset_path}")
+        print(f"Dataset saved to {path}")
 
     def get_absolute_image_path(self, relative_path):
         return os.path.join(self.dataset_dir, relative_path)
@@ -33,9 +33,10 @@ class DatasetInteractor:
             return
         
         entry = self.dataset[index]
-        image_path = entry['image']
-        if not os.path.exists(image_path):
-            print(f"Image not found at path: {image_path}")
+        self.image_path = entry['image']
+        print(self.image_path)
+        if not os.path.exists(self.image_path):
+            print(f"Image not found at path: {self.image_path}")
             return
 
         # Create a map
@@ -44,7 +45,7 @@ class DatasetInteractor:
         # Add the image overlay
         folium.raster_layers.ImageOverlay(
             name='Image Overlay',
-            image=image_path,
+            image=self.image_path,
             bounds=[[0, 0], [1, 1]],
             opacity=1,
             interactive=True,
@@ -70,6 +71,130 @@ class DatasetInteractor:
             role = conversation['role']
             content = conversation['content']
             print(f"{role}: {content}")
+    
+    def interactive_delete_entries(self, new_file_path):
+        # Widget for typing in list of indices to remove
+        entries = Textarea(
+            placeholder='Type list here...',
+            description='Remove Indices:',
+            disabled=False,
+            layout={'width': '100%', 'height': '50px'}
+        )
+
+        delete_button = Button(description="Delete Entries", button_style='success')
+        output = Output()
+
+        def delete_entries_from_list(b):
+            with output:
+                # Clear Output
+                clear_output()
+                
+                # Convert string to list
+                try:
+                    index_list = [int(element.strip()) for element in entries.value.split(',')]
+                    print(f"Indices to delete: {index_list}")
+                    
+                    # Extract IDs corresponding to the given indices
+                    ids_to_delete = [self.dataset[idx]['id'] for idx in index_list]
+                    print(f"IDs to delete: {ids_to_delete}")
+                    
+                    # Delete entries with matching IDs
+                    self.dataset = [entry for entry in self.dataset if entry['id'] not in ids_to_delete]
+
+                    # Save to new path
+                    self.save_dataset(new_file_path)
+                    print(f"Deleted entries with IDs: {ids_to_delete}")
+
+                except ValueError as e:
+                    print(f"Error converting indices: {e}")
+                except IndexError as e:
+                    print(f"An Indexing Error Occurred: {e}")
+
+        delete_button.on_click(delete_entries_from_list)
+        display(VBox([entries, delete_button, output]))
+    
+    def modify_entries(self, capitalize_indices, strip_indices):
+        def capitalize(entry):
+            if 'conversations' in entry:
+                for conversation in entry['conversations']:
+                    if conversation['role'] == 'assistant':
+                        conversation['content'] = conversation['content'].upper()
+            return entry
+
+        def strip_quotation_marks(entry):
+            if 'conversations' in entry:
+                for conversation in entry['conversations']:
+                    if conversation['role'] == 'assistant':
+                        conversation['content'] = conversation['content'].replace('"', '')
+            return entry
+
+        # Modify entries based on provided indices
+        for idx in capitalize_indices:
+            try:
+                self.dataset[idx] = capitalize(self.dataset[idx])
+            except IndexError as e:
+                print(f"An Indexing Error Occurred for capitalize index {idx}: {e}")
+
+        for idx in strip_indices:
+            try:
+                self.dataset[idx] = strip_quotation_marks(self.dataset[idx])
+            except IndexError as e:
+                print(f"An Indexing Error Occurred for strip index {idx}: {e}")
+        
+        # Save
+        self.save_dataset(self.dataset_path)
+        
+    def remove_spaces(self):
+        def trim_spaces_and_newlines(entry):
+            if 'conversations' in entry:
+                for conversation in entry['conversations']:
+                    if conversation['role'] == 'assistant':
+                        content = conversation['content']
+                        content = content.replace(' ,', ',').replace(', ', ',')
+                        content = content.strip('\n')
+                        conversation['content'] = content
+            return entry
+        
+        for idx in range(len(self.dataset)):
+            try:
+                self.dataset[idx] = trim_spaces_and_newlines(self.dataset[idx])
+            except IndexError as e:
+                print(f"An Indexing Error Occurred for trim spaces index {idx}: {e}")
+        
+        # Save
+        self.save_dataset(self.dataset_path)
+        
+    def check_csv_consistency(self):
+        def can_be_converted_to_csv(entry):
+            if 'conversations' in entry:
+                for conversation in entry['conversations']:
+                    if conversation['role'] == 'assistant':
+                        # Split content by line and filter out empty lines and lines without commas
+                        content_lines = [line for line in conversation['content'].split('\n') if ',' in line]
+                        
+                        if not content_lines:
+                            return True  # If no lines contain commas, consider it convertible
+                        
+                        # Count number of commas in each line
+                        num_commas = [line.count(',') for line in content_lines]
+                        
+                        # Check if all lines with commas have the same number of commas
+                        if len(set(num_commas)) > 1:
+                            return False
+
+            return True
+        
+        # Check CSV convertibility
+        indices_not_convertible = []
+        for idx, entry in enumerate(self.dataset):
+            if not can_be_converted_to_csv(entry):
+                indices_not_convertible.append((idx, entry['id']))
+
+        if indices_not_convertible:
+            print(f"Entries with IDs that cannot be converted to CSV: {indices_not_convertible}")
+            print(f"Number of inconvertible indices: {len(indices_not_convertible)}")
+        else:
+            print("All entries can be converted to CSV.")
 
     def interactive_edit_response(self, index):
         if index < 0 or index >= len(self.dataset):
@@ -124,7 +249,7 @@ class DatasetInteractor:
 
         def save_response(b):
             assistant_response['content'] = response_textarea.value
-            self.save_dataset()
+            self.save_dataset(self.dataset_path)
             with output:
                 clear_output()
                 print(f"Response updated and saved for entry index: {index}")
@@ -149,6 +274,7 @@ class DatasetInteractor:
 
         display(VBox([prompt_textarea, response_textarea, HBox([prev_button, next_button]), save_button, output]))
 
+
     def get_entry_by_index(self, index):
         if index < 0 or index >= len(self.dataset):
             return None
@@ -166,7 +292,7 @@ class DatasetInteractor:
                 conversation['content'] = new_response
                 break
         
-        self.save_dataset()
+        self.save_dataset(self.dataset_path)
         print(f"Response updated for entry id: {entry_id}")
 
 if __name__ == "__main__":
