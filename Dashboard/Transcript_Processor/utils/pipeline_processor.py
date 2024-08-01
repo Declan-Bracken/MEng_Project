@@ -3,6 +3,15 @@ import tempfile
 import sys
 # import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
+import os
+
+current_directory = os.getcwd()
+print("Current working directory:", current_directory)
+items = os.listdir(current_directory)
+
+folders = [item for item in items if os.path.isdir(os.path.join(current_directory, item))]
+
+print("Folders in the current directory:", folders)
 
 # Add your parent directory to the path
 parent_dir = r'/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base'
