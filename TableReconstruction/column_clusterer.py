@@ -216,6 +216,7 @@ class ColumnClustererV2:
                 num_cols = len(set(labels))
 
             df = pd.DataFrame(np.nan, index=range(num_lines), columns=range(num_cols))
+            df = df.astype(object)
 
             for text, label, line in zip(texts, labels, line_numbers):
                 if 0 <= label < num_cols and 0 <= line < num_lines:
