@@ -1,6 +1,6 @@
 import streamlit as st
 import pages.extraction as extraction
-import pages.analytics as analytics
+# import pages.analytics as analytics
 from utils.state_management import initialize_state, update_state
 
 # Set the page configuration to use wide mode
@@ -11,8 +11,8 @@ initialize_state()
 def navigate():
     st.session_state.page = st.session_state.navigation
 
-with st.sidebar:
-    st.radio("Go to", ["Main", "Extraction", "Analytics"], key='navigation', on_change=navigate)
+# with st.sidebar:
+#     st.radio("Go to", ["Main", "Extraction"], key='navigation', on_change=navigate) #, "Analytics"
 
 # Define the main page
 def main_page():
@@ -23,21 +23,20 @@ def main_page():
     Transcript Vision is an innovative tool designed to simplify and enhance the process of extracting and analyzing university student transcript information. Our app provides a seamless experience for administrators, educators, and students to gain valuable insights from academic records with ease and accuracy.
     
     ### How It Works
-    Transcript Vision operates through two main modules:
+    For now, this Transcript Vision prototype only works for data extraction and not post-extraction analytics:
     
-    1. **Extraction Module**: This module allows users to upload and extract information from student transcripts. Our advanced algorithms accurately identify and capture relevant data, making the extraction process efficient and pain-free.
-    
-    2. **Analytics Module**: Once the data is extracted, the Analytics module offers powerful tools to analyze the information. Users can classify courses into predetermined categories, generate detailed reports, visualize academic trends, and gain insights into student performance, helping in decision-making and academic planning.
+    **Extraction Module**: This module allows users to upload and extract information from student transcripts. Our advanced algorithms accurately identify and capture relevant data, making the extraction process efficient and pain-free.
     
     ### Get Started
-    Use the navigation panel to select the module you need.
+    Use the navigation panel to select the extraction module.
     """)
+# 2. **Analytics Module**: Once the data is extracted, the Analytics module offers powerful tools to analyze the information. Users can classify courses into predetermined categories, generate detailed reports, visualize academic trends, and gain insights into student performance, helping in decision-making and academic planning.
 
 # Page mapping
 pages = {
     "Main": main_page,
     "Extraction": extraction.app,
-    "Analytics": analytics.app
+    # "Analytics": analytics.app
 }
 
 # Load the selected page
