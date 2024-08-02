@@ -18,17 +18,17 @@ def navigate():
 def main_page():
     st.title("Transcript Vision")
     st.write("Developed by Declan Bracken")
-    st.header("Welcome to Transcript Vision")
+    st.header("Welcome to Transcript Vision 1.0")
     st.write("""
-    Transcript Vision is an innovative tool designed to simplify and enhance the process of extracting and analyzing university student transcript information. Our app provides a seamless experience for administrators, educators, and students to gain valuable insights from academic records with ease and accuracy.
+    Transcript Vision is an innovative tool designed to simplify and enhance the process of extracting and analyzing university student transcript information. This app provides a seamless experience for administrators, educators, and students to gain valuable insights from academic records with ease and accuracy.
     
     ### How It Works
-    For now, this Transcript Vision prototype only works for data extraction and not post-extraction analytics:
+    For now, this Transcript Vision prototype only works for data extraction and not post-extraction analytics.:
     
-    **Extraction Module**: This module allows users to upload and extract information from student transcripts. Our advanced algorithms accurately identify and capture relevant data, making the extraction process efficient and pain-free.
+    **Extraction Module**: This module allows users to upload and extract grade data from student transcripts. The algorithm identifies regions of interest in transcript images, performs OCR using Microsoft's open-source Tesseract software, and has a user interactively cluster output lines and columns for table reconstruction.
     
     ### Get Started
-    Use the navigation panel to select the extraction module.
+    Use the navigation panel to select the extraction module. Upload your own university transcript image or select an example image for a demo.
     """)
 # 2. **Analytics Module**: Once the data is extracted, the Analytics module offers powerful tools to analyze the information. Users can classify courses into predetermined categories, generate detailed reports, visualize academic trends, and gain insights into student performance, helping in decision-making and academic planning.
 
