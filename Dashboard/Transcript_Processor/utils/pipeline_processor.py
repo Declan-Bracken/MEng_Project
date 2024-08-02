@@ -1,10 +1,8 @@
 import streamlit as st
 import tempfile
 import sys
-# import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
-# Add your parent directory to the path
 # Ensure the parent directory is added to the system path
 parent_dir = r'./'  # This represents the root of the repository
 sys.path.append(parent_dir)

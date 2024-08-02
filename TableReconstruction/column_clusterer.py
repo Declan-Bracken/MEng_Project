@@ -5,8 +5,7 @@ from sklearn.metrics import pairwise_distances
 from sklearn.cluster import DBSCAN
 from sklearn.metrics import davies_bouldin_score
 from hdbscan import HDBSCAN
-from sklearn.preprocessing import MinMaxScaler
-from scipy.spatial.distance import pdist, squareform
+from scipy.spatial.distance import cdist
 
 
 class ColumnClusterer:
@@ -35,8 +34,14 @@ class ColumnClusterer:
             sorted_labels = sorted(centroids, key=centroids.get)
             label_mapping = {old_label: new_label for new_label, old_label in enumerate(sorted_labels)}
             new_labels = [label_mapping[label] for label in labels]
-            return new_labels
-        return labels
+            return new_labels, centroids, label_mapping
+        return labels, {}, {}
+    
+    def classify_new_headers(self, new_positions, centroids, label_mapping):
+        distances = cdist(new_positions, np.array(list(centroids.values())).reshape(-1, 1), metric='euclidean')
+        new_labels = np.argmin(distances, axis=1)
+        new_mapped_labels = [label_mapping[label] for label in new_labels]
+        return new_mapped_labels
 
     def binary_search_optimize_eps(self, positions, eps_min=5, eps_max=50, tolerance=1):
         best_eps = None
@@ -67,6 +72,7 @@ class ColumnClusterer:
             return eps_mid
         
         return best_eps
+    
     @st.cache_data(show_spinner=False)
     def process_tables_to_dataframe(_self, tables_data, min_samples_list, cluster_selection_epsilon = 0, alpha = 1):
         all_tables_dfs = []
@@ -85,7 +91,7 @@ class ColumnClusterer:
 
             if has_columns and num_lines > 1:
                 labels = _self.perform_hdbscan_clustering(positions, min_cluster_size=num_lines, min_samples=min_samples, cluster_selection_epsilon = cluster_selection_epsilon, alpha = alpha)
-                labels = _self.reorder_columns(labels, positions)
+                labels, centroids, label_mapping = _self.reorder_columns(labels, positions)
                 num_cols = len(set(labels))
             elif num_lines > 1:  # More than one line, but one column
                 labels = [0 for _ in range(num_lines)]
@@ -109,8 +115,7 @@ class ColumnClusterer:
             all_tables_dfs.append(df)
 
         return all_tables_dfs
-
-
+    
 class ColumnClustererV2:
     def __init__(self, tables):
         self.all_tables_data = tables
@@ -230,4 +235,6 @@ class ColumnClustererV2:
             all_tables_dfs.append(df)
 
         return all_tables_dfs
+
+        
 
