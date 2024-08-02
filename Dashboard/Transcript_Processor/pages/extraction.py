@@ -122,6 +122,7 @@ def app():
 
         # Step 7: Interactive Cluster Tuning
         st.subheader("Interactive Row Cluster Tuning")
+        st.write("Adjust the clustering threshold to have all lines of grade data under the same color.")
         #----- CACHED ----- (but can't hash row_classifier)
         cluster_tuning = PP.initialize_cluster_tuning(image, row_classifier, all_rows)
         #----- CACHED -----
@@ -139,7 +140,8 @@ def app():
         column_clusterer = PP.load_column_clusterer(grouped_data)
 
         # Step 9: Process Tables into DataFrames
-
+        st.subheader("Interactive Column Cluster Tuning")
+        st.write("Adjust the clustering strength or regrouping factor to increase/decrease how words are clustered together for any table of interest.")
         #----- NOT CACHED -----
         min_samples_list = []
         for idx in range(len(grouped_data)):
