@@ -66,18 +66,29 @@ def generate_dataset_json(original_files, response_files, output_file, download_
     print(f"Dataset saved to {output_file}")
 
 if __name__ == "__main__":
+    # original_files = [
+    #     "Synthetic_Image_Annotation/Input_JSONL/batchinput.jsonl"
+    # ]
+
+    # response_files = [
+    #     "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_1.jsonl",
+    #     "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_2.jsonl",
+    #     "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_3.jsonl",
+    #     "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_4.jsonl",
+    # ]
+
+    # output_file = "Synthetic_Image_Annotation/Cleaned_JSONL/cleaned_transcripts.json"
+    # download_dir = "Synthetic_Image_Annotation/images/"
+
+    # generate_dataset_json(original_files, response_files, output_file, download_dir)
+
     original_files = [
-        "Synthetic_Image_Annotation/Input_JSONL/batchinput.jsonl"
+        "Synthetic_Image_Annotation/Test_Data/Input_JSONL/input.jsonl"
     ]
 
-    response_files = [
-        "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_1.jsonl",
-        "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_2.jsonl",
-        "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_3.jsonl",
-        "Synthetic_Image_Annotation/Output_JSONL/batchoutput_part_4.jsonl",
-    ]
-
-    output_file = "Synthetic_Image_Annotation/Cleaned_JSONL/cleaned_transcripts.json"
-    download_dir = "Synthetic_Image_Annotation/images/"
+    response_files = ["Synthetic_Image_Annotation/Test_Data/Output_JSONL/batch_mNvrFzYMUglQNiBy9OYZoMpY_output.jsonl"]
+    # Output file for cleaned data
+    output_file = "Synthetic_Image_Annotation/Test_Data/cleaned_transcripts.json"
+    download_dir = "Synthetic_Image_Annotation/Test_Data/images/"
 
     generate_dataset_json(original_files, response_files, output_file, download_dir)
