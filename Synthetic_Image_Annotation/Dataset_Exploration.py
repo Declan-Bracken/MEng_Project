@@ -112,6 +112,7 @@ class DatasetInteractor:
 
         delete_button.on_click(delete_entries_from_list)
         display(VBox([entries, delete_button, output]))
+
     
     def modify_entries(self, capitalize_indices, strip_indices):
         def capitalize(entry):
@@ -242,9 +243,17 @@ class DatasetInteractor:
             layout={'width': '100%', 'height': '200px'}
         )
 
+        column_indices_textarea = Textarea(
+            placeholder='Type column indices to remove (comma-separated)...',
+            description='Remove Columns:',
+            disabled=False,
+            layout={'width': '100%', 'height': '50px'}
+        )
+
         save_button = Button(description="Save Response", button_style='success')
         next_button = Button(description="Next", button_style='primary')
         prev_button = Button(description="Previous", button_style='primary')
+        remove_columns_button = Button(description="Remove Columns", button_style='danger')
         output = Output()
 
         def save_response(b):
@@ -267,13 +276,40 @@ class DatasetInteractor:
             self.display_image(self.current_index)
             # self.print_prompt_and_response(self.current_index)
             self.interactive_edit_response(self.current_index)
+        
+        def remove_columns(b):
+            try:
+                indices = [int(idx.strip()) for idx in column_indices_textarea.value.split(',')]
+                content_lines = assistant_response['content'].split('\n')
+                new_lines = []
+
+                for line in content_lines:
+                    columns = line.split(',')
+                    # Remove the specified columns
+                    new_line = ','.join([col for i, col in enumerate(columns) if i not in indices])
+                    new_lines.append(new_line)
+
+                # Update the assistant's response with the modified CSV
+                assistant_response['content'] = '\n'.join(new_lines)
+                response_textarea.value = assistant_response['content']  # Update the textarea with the new content
+                self.save_dataset(self.dataset_path)
+
+                with output:
+                    clear_output()
+                    print(f"Columns {indices} removed from the response for entry index: {index}")
+
+            except ValueError as e:
+                with output:
+                    clear_output()
+                    print(f"Error: {e}. Please enter valid integers for column indices.")
+
 
         save_button.on_click(save_response)
         next_button.on_click(next_entry)
         prev_button.on_click(prev_entry)
+        remove_columns_button.on_click(remove_columns)
 
-        display(VBox([prompt_textarea, response_textarea, HBox([prev_button, next_button]), save_button, output]))
-
+        display(VBox([prompt_textarea, response_textarea, column_indices_textarea, HBox([remove_columns_button, save_button]), HBox([prev_button, next_button]), output]))
 
     def get_entry_by_index(self, index):
         if index < 0 or index >= len(self.dataset):
@@ -294,6 +330,7 @@ class DatasetInteractor:
         
         self.save_dataset(self.dataset_path)
         print(f"Response updated for entry id: {entry_id}")
+
 
 if __name__ == "__main__":
     dataset_path = "Synthetic_Image_Annotation/Cleaned_JSON/cleaned_transcripts.json"
