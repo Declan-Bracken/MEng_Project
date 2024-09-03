@@ -1,6 +1,6 @@
 import json
 import os
-from Download_imgs import download_images
+from Synthetic_Image_Annotation.Generate_Data.Download_imgs import download_images
 """ Delete This
 """
 def extract_image_url(data):
