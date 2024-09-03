@@ -2,7 +2,7 @@ import json
 import os
 import requests
 from pathlib import Path
-from Download_imgs import download_images
+from Synthetic_Image_Annotation.Generate_Data.Download_imgs import download_images
 
 # Function to extract the image URL from the request data
 def extract_image_url(data):

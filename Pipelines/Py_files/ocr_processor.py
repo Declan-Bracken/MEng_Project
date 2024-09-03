@@ -1,6 +1,5 @@
 from PIL import Image
 import pytesseract
-import easyocr
 import cv2
 import os
 from tqdm import tqdm
@@ -9,9 +8,9 @@ class OCRProcessor:
     def __init__(self):
         self.class_names = {0: 'grade headers', 1: 'grade table', 2: 'single row table'}
     
-    def init_easyocr(self, reader = None):
-        # Initialize EasyOCR reader; specify language if different from English
-        self.reader = reader if reader else easyocr.Reader(['en'])
+    # def init_easyocr(self, reader = None):
+    #     # Initialize EasyOCR reader; specify language if different from English
+    #     self.reader = reader if reader else easyocr.Reader(['en'])
 
     def tesseract_get_string(self, image, config):
         # Run Pytesseract

@@ -13,7 +13,7 @@ from Pipelines.Py_files.mistral_pipeline_v2 import MistralInference
 from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
-from TableReconstruction.row_clusterer_v2 import RowClassifier
+from TableReconstruction.row_clustering.row_clusterer_v2 import RowClassifier
 from Dashboard.Transcript_Processor.utils.streamlit_cluster_tuning import StreamlitClusterTuning
 from Dashboard.analytics_dashboard import AnalyticsDashboard
 
