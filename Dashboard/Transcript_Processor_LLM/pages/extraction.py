@@ -39,15 +39,15 @@ def app():
 
         # Step 1: Set Vision Model Path
         st.subheader("Set Vision Model Path")
-        model_path = st.text_input("Vision Model Path", value=st.session_state.model_path)
+        vision_model_path = st.text_input("Vision Model Path", value=st.session_state.vision_model_path)
         if st.button("Set Model Path"):
-            update_state('model_path', model_path) # Update status of vision model path
+            update_state('vision_model_path', vision_model_path) # Update status of vision model path
             update_state('vision_model_loaded', False) # Update status of vision model
             st.success("Changed Model Path!")
             
         # Load Vision Pipeline
         #----- CACHED -----
-        vision_pipeline = PP.load_vision_pipeline(model_path)
+        vision_pipeline = PP.load_vision_pipeline(vision_model_path)
         update_state('vision_model_loaded', True) # Update status of vision model
 
         # Step 2 & 3: Run YOLO and Display Image with Bounding Boxes
@@ -122,6 +122,11 @@ def app():
             for idx, table_text in enumerate(table_previews):
                 st.markdown(f"**Table {idx + 1} Preview:**\n```\n{table_text}\n```")
 
+        # HOTFIX
+        headers_str = '\n'.join(header_previews)
+        tables_str = '\n'.join(table_previews)
+        print(headers_str, tables_str)
+
         # Step 9: Select Header & Table for LLM Inference
         if headers:
             st.subheader("Select Header for LLM Inference")
@@ -144,12 +149,13 @@ def app():
         if st.button("Query Mistral"):
             stripped_selected_table = selected_table_text.replace(',','')
             stripped_selected_headers = selected_header_text.replace(',','')
-            final_df = PP.query_mistral(stripped_selected_headers if headers else None, stripped_selected_table, mistral_model_path)
+            # final_df = PP.query_mistral(stripped_selected_headers if headers else None, stripped_selected_table, mistral_model_path)
+            final_df = PP.query_mistral(headers_str, tables_str, mistral_model_path)
             update_state("final_df", final_df)
 
             final_df_nlines = final_df.shape[0]
             update_state("df_nlines", final_df_nlines)
-            
+        
         # Display the dataframe if it exists
         if 'final_df' in st.session_state and st.session_state.final_df is not None:
             st.subheader("Extracted Dataframe using LLM:")

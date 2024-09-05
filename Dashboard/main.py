@@ -5,8 +5,10 @@ import sys
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
 # Add your parent directory to the path
-parent_dir = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base'
+# parent_dir = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base' #For mac
+parent_dir = r'c:\Users\Declan Bracken\MEng_Project'
 sys.path.append(parent_dir)
+
 from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
@@ -98,7 +100,8 @@ def main():
     # Step 1: Set Vision Model Path
     st.subheader("Set Vision Model Path")
     if 'default_model_path' not in st.session_state:
-        st.session_state.default_model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt'
+        # st.session_state.default_model_path = '/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/yolo_training/yolo_v8_models/finetune_v5/best.pt'
+        st.session_state.default_model_path = r'yolo_training\yolo_v8_models\finetune_v5\best.pt'
 
     model_path = st.text_input("Vision Model Path", value=st.session_state.default_model_path)
     if st.button("Set as Default Path"):
