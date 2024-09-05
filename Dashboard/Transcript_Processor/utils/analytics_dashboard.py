@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 from scipy.stats import zscore
 import altair as alt
-import matplotlib.pyplot as plt
-from PIL import Image
-from io import BytesIO
-import xlsxwriter
+# import matplotlib.pyplot as plt
+# from PIL import Image
+# from io import BytesIO
+# import xlsxwriter
 
 class AnalyticsDashboard:
-    def __init__(self, df):
+    def __init__(self, df, grade_column):
         self.df = df
         self.GRADE_MAPPING = {
             'A+': 4.3, 'A': 4.0, 'A-': 3.7,
@@ -18,18 +18,19 @@ class AnalyticsDashboard:
             'F': 0.0
         }
         self.clean_data()
-        self.fix_pluses()
-        self.map_grades()
+        self.fix_pluses(grade_column = grade_column)
+        self.map_grades(grade_column = grade_column)
 
     def clean_data(self):
+        allowed_characters = r'[^a-zA-Z0-9\s,\'\/\(\)\[\]\-]'
         # Strip whitespace and remove unwanted characters from all cells and column headers
-        self.df = self.df.replace({r'[;:"<>~`@!*]': ''}, regex=True)
+        self.df = self.df.replace({allowed_characters: ''}, regex=True)
         self.df.columns = self.df.columns.str.strip()
         self.df = self.df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
     def fix_pluses(self, grade_column = 'Grade'):
         plus_mapping = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
-        self.df[grade_column] = self.df['Grade'].map(plus_mapping).fillna(self.df[grade_column])
+        self.df[grade_column] = self.df[grade_column].map(plus_mapping).fillna(self.df[grade_column])
 
     def map_grades(self, grade_column = 'Grade'):
         # Ensure the grade column is in the dataframe

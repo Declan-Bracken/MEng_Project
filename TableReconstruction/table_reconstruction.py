@@ -1,9 +1,9 @@
 import sys
 from image_processor import ImageProcessor
 from text_classifier import TextClassifier
-from row_clusterer import RowClassifier
+from TableReconstruction.row_clustering.row_clusterer import RowClassifier
 from clustering_gui import TableReconstructorGUI
-from column_clusterer import ColumnClusterer
+from TableReconstruction.column_clustering.column_clusterer import ColumnClusterer
 from dataframe_processor import DataFrameProcessor
 from PyQt5 import QtWidgets
 

@@ -1,5 +1,13 @@
 import streamlit as st
 import pandas as pd
+import os
+
+current_directory = os.getcwd()
+items = os.listdir(current_directory)
+
+folders = [item for item in items if os.path.isdir(os.path.join(current_directory, item))]
+
+print("Folders in the current directory:", folders)
 
 def initialize_state():
     # For main
@@ -9,7 +17,8 @@ def initialize_state():
     
     # For Extraction
     if 'model_path' not in st.session_state:
-        st.session_state.model_path = r'C:\Users\Declan Bracken\MEng_Project\yolo_training\yolo_v8_models\finetune_v5\best.pt'
+        print()
+        st.session_state.model_path = r'yolo_training/yolo_v8_models/finetune_v5/best.pt'
     if 'uploaded_file' not in st.session_state:
         st.session_state.uploaded_file = None
     if 'vision_model_loaded' not in st.session_state:

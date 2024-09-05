@@ -53,17 +53,19 @@ class RowClassifier:
     def collect_all_rows(self):
         """ Excludes headers for now. """
         all_rows = []
+        #all_headers = []
         for row in self.single_row:
             all_rows.extend(self._separate_rows(row))
         for table in self.tables:
             all_rows.extend(self._separate_rows(table))
         # for header in self.headers:
-        #     all_rows.extend(self._separate_rows(header))
+        #     all_headers.extend(self._separate_rows(header))
 
         # Clean Rows
         all_rows = self._clean_rows(all_rows)
+        #all_headers = self._clean_rows(all_headers)
 
-        return all_rows
+        return all_rows#, all_headers
 
     def _clean_rows(self, row_list):
         """

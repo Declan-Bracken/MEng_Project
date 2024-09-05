@@ -76,9 +76,11 @@ def app():
         column_name = st.selectbox("Select the column with course titles or codes", df.columns)
         type_option = st.selectbox("Select the type", ["title", "code"])
 
+        column_name_grade = st.selectbox("Select the grade column", df.columns)
+
         if st.button("Classify Courses"):
             result_df = clustering_analytics.classify_courses(df, column_name, type=type_option)
-            analytics_dash = AnalyticsDashboard(result_df)
+            analytics_dash = AnalyticsDashboard(result_df, column_name_grade)
             result_df = analytics_dash.df
             update_state("result_df", result_df)
 

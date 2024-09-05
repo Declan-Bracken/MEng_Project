@@ -1,19 +1,17 @@
 import streamlit as st
 import tempfile
 import sys
-# import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 
-# Add your parent directory to the path
-parent_dir = r'c:\Users\Declan Bracken\MEng_Project'
+# Ensure the parent directory is added to the system path
+parent_dir = r'./'  # This represents the root of the repository
 sys.path.append(parent_dir)
 from Pipelines.Py_files.vision_pipeline_stlit import VisionPipeline
 from TableReconstruction.image_processor import ImageProcessor
 from TableReconstruction.text_classifier import TextClassifier
-from TableReconstruction.row_clusterer_v2 import RowClassifier
-from TableReconstruction.column_clusterer import ColumnClusterer
+from TableReconstruction.row_clustering.row_clusterer_v2 import RowClassifier
+from TableReconstruction.column_clustering.column_clusterer import ColumnClusterer
 from Dashboard.Transcript_Processor.utils.streamlit_cluster_tuning import StreamlitClusterTuning
-
 
 def set_default_model_path(new_path):
     st.session_state.default_model_path = new_path

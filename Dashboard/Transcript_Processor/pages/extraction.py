@@ -3,6 +3,8 @@ from PIL import Image
 from utils.state_management import initialize_state, update_state
 import utils.pipeline_processor as PP
 import numpy as np
+import os
+import io
 
 @st.cache_data(show_spinner=False)
 def predict_image(image_path, iou, conf, agnostic_nms):
@@ -14,6 +16,17 @@ def display_image_with_boxes(image_path, boxes, classes):
     img_with_boxes = Image.open(img_with_boxes_path)
     return img_with_boxes
 
+
+# Example image directory
+EXAMPLE_IMAGE_DIR = "Dashboard/Transcript_Processor/assets"
+
+# Example images
+example_images = {
+    "Example 1": os.path.join(EXAMPLE_IMAGE_DIR, "2015-queens-university-transcript-1-2048.webp"),
+    "Example 2": os.path.join(EXAMPLE_IMAGE_DIR, "unofficial-undergraduate-transcript-1-2048.webp"),
+    "Example 3": os.path.join(EXAMPLE_IMAGE_DIR, "transcript-1-2-2048.webp"),
+}
+
 # @st.experimental_fragment
 def app(): 
     # update_state("page", "Extraction")
@@ -24,9 +37,25 @@ def app():
     initialize_state()
     
     # Step 1.5: Upload Image
+    # Option to select an example image
+    example_option = st.radio("Select an example image", list(example_images.keys()), index=0)
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"], key='file_uploader')
+
     if uploaded_file is not None:
-        update_state('uploaded_file', uploaded_file)
+        image = Image.open(uploaded_file)
+        st.image(image, caption='Uploaded Image', use_column_width=True)
+        if st.button("Process Image"):
+            update_state('uploaded_file', uploaded_file)
+    else:
+        example_image_path = example_images[example_option]
+        with open(example_image_path, 'rb') as f:
+            example_image = f.read()
+        example_file = io.BytesIO(example_image)
+        example_file.name = example_image_path  # Set the name attribute
+        image = Image.open(example_file)
+        st.image(image, caption=f'Selected Example Image: {example_option}', use_column_width=True)
+        if st.button("Process Image"):
+            update_state('uploaded_file', example_file)
 
     if st.session_state.uploaded_file is not None:
 
@@ -93,6 +122,7 @@ def app():
 
         # Step 7: Interactive Cluster Tuning
         st.subheader("Interactive Row Cluster Tuning")
+        st.write("Adjust the clustering threshold to have all lines of grade data under the same color.")
         #----- CACHED ----- (but can't hash row_classifier)
         cluster_tuning = PP.initialize_cluster_tuning(image, row_classifier, all_rows)
         #----- CACHED -----
@@ -110,7 +140,8 @@ def app():
         column_clusterer = PP.load_column_clusterer(grouped_data)
 
         # Step 9: Process Tables into DataFrames
-
+        st.subheader("Interactive Column Cluster Tuning")
+        st.write("Adjust the clustering strength or regrouping factor to increase/decrease how words are clustered together for any table of interest.")
         #----- NOT CACHED -----
         min_samples_list = []
         for idx in range(len(grouped_data)):
@@ -124,7 +155,7 @@ def app():
                                             min_value=0.00, max_value=200.00, 
                                             step=0.1, key = "cluster_selection_epsilon",)
 
-        # Your column_clusterer process, replace with actual implementation
+        
         final_dfs = column_clusterer.process_tables_to_dataframe(grouped_data, min_samples_list, cluster_selection_epsilon, alpha = 1)
         update_state('final_dfs', final_dfs) # save to session state
         

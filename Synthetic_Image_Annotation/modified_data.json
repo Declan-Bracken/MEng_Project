@@ -1,0 +1,1654 @@
+[
+    {
+        "id": "request-2",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1M_8OgVIUafvwupnvRVkjCiFtw9F3LZ4R.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Semester,Course Code,Course Title,Grade\nFALL 2011,SE 101,FRESH ACADEMIC SUCCESS,A\nFALL 2011,BIOL 152,GENERAL BIOL LAB I,B\nFALL 2011,MUS 291,FUNDAMENTALS OF MUSIC,B\nFALL 2011,GEOG 103,INTRODUCTION TO GEOGRAPHY,B\nFALL 2011,EDUC 203,FOUNDATIONS OF EDUC,A\nFALL 2011,EDUC 212,DIVERSITY IN CLASSROOM,A\nFALL 2011,SPED 210,CHARACTERISTICS OF INDIVI,B\n\nSPRING 2012,HIST 201,AMERICAN HISTORY TO 1877,B\nSPRING 2012,SOC 212,SOCIAL PROBLEMS,W\nSPRING 2012,ENGL 322,INTRO TO PROF/TECH WRITIN,W\nSPRING 2012,KINL 133,WALKING FOR FITNESS,B\nSPRING 2012,CSD 201,INTRODUCTION TO AUDIOLOGY,B\nSPRING 2012,POLI 201,AMERICAN POLITICS,A\nSPRING 2012,CMPS 110,COMPUTER LITERACY,C\n\nFALL 2012,MATH 167,ELEM NUMBER STRUCTURE,B\nFALL 2012,BIOL 152,GENERAL BIOL LAB I,B\nFALL 2012,MUS 291,FUNDAMENTALS OF MUSIC,B\nFALL 2012,GEOG 103,INTRODUCTION TO GEOGRAPHY,B\nFALL 2012,EDUC 203,FOUNDATIONS OF EDUC,A\nFALL 2012,EDUC 212,DIVERSITY IN CLASSROOM,A\nFALL 2012,SPED 210,CHARACTERISTICS OF INDIVI,B\n\nSPRING 2013,MATH 168,GEOM ELEM & MID SCH TCHR,C\nSPRING 2013,ENGL 232,AMERICAN LIT,B\nSPRING 2013,HIST 102,WESTERN CIV SINCE 1500,B\nSPRING 2013,ART 371,ART FOR THE ELEM TEACHER,B\nSPRING 2013,EDUC 304,TCH READ ELEM SCH,A\nSPRING 2013,EPSY 301,RDG PSYC CHILD ADOL,D\n\nFALL 2013,MATH 277,MATHEMATICS FOR ELEM ED I,W\nFALL 2013,PHSC 102,PHYSICAL SCIENCE II,A\nFALL 2013,ENGL 231,ENGLISH LIT,A\nFALL 2013,EDUC 307,INSTRUCTIONAL PLANNING,B\nFALL 2013,LSED 401,BKS REL MAT CHLD,A\nFALL 2013,EPSY 315,CLS MGMT/MTV BEGN TCHR,A\n\nSPRING 2014,EDUC 320,FOUNDATIONS OF PK-8 MATHE,A\nSPRING 2014,EDUC 322,DIAG-PRESC READING,A\nSPRING 2014,EDUC 326,CURR & NSTRUCT GRDS 1-5,A\nSPRING 2014,PHYS 143,PHYS FOR ELEMENTARY ED,A\n\nSUMMER 2014,MATH 277,MATHEMATICS FOR ELEM ED I,B\nSUMMER 2014,EPSY 301,ED PSYCH CHILD ADOL,A\nSUMMER 2014,BIOL 154,GENERAL BIOL LAB II,A\nSUMMER 2014,GBIO 107,INTRO TO BIOLOGY PRIN II,A\n\nFALL 2014,MATH 367,CAPSTONE IN MATH FOR ELEM,B\nFALL 2014,EDUC 415,CURR-INSTR/ELEM SCH,A\nFALL 2014,SPED 495,INCLSN OF STU W DIS REG C,A\n\nSPRING 2015,EDUC 427,STUDENT TCHG IN ELEM MID,P"
+            }
+        ]
+    },
+    {
+        "id": "request-5",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1a27GpxxEBqAL5X1QYcoHcenfaVLXyVgG.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ,NO.,COURSE TITLE,CRED,GRD,R,PTS\nJOUR,303,COLLaw and Ethics of Mass Com,3.000,IN PROGRESS,,\nLATN,110,COLBeginning Latin II,3.000,IN PROGRESS,,\nPOLI,362,COLPolitics and the Mass Media,3.000,IN PROGRESS,,\nPOLI,374,COLPublic Policy,3.000,IN PROGRESS,,\nPOLI,451,COLConstitutional law,3.000,IN PROGRESS,,\nSPCH,140,COLPublic Communication,3.000,IN PROGRESS,,"
+            }
+        ]
+    },
+    {
+        "id": "request-6",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/17G7k-uJgDe94yGv4a99t4EUAtj463eMO.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO,COURSE_TITLE,CRED,GRD,PTS,R\nHIST 109,COL Latin American Civilization,3.000,B+,10.50,\nJOUR 201,COL Survey of Mass Communications,3.000,B,9.00,\nPOLI 101,COL Controversies in World Politic,3.000,A,12.00,\nSTAT 110,COL Intro to Statistical Reasoning,3.000,C+,7.50,\nUNIV 101,COL The Student in the University,3.000,A,12.00,\n\nENGL 102,COL Rhetoric and Composition,3.000,A,12.00,\nJOUR 328,COL Principles of Public Relations,3.000,B+,10.50,\nPOLI 357,COL Film Politics & Social Change,3.000,B+,10.50,\nPOLI 483,COL Middle East Politics,3.000,A,12.00,\nSOCY 101,COL Introductory Sociology,3.000,B,9.00,\n\nLATN 109,COL Beginning Latin I,3.000,B,9.00,\nPOLI 360,COL American Political Parties,3.000,A,12.00,\nPOLI 361,COL Elections and Voting Behavior,3.000,B+,10.50,\nPOLI 474,COL Public Policy,3.000,W,.00,\nPOLI 452,COL The Judicial Process,3.000,B+,10.50,"
+            }
+        ]
+    },
+    {
+        "id": "request-9",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1NiNGMa_erAA75qmuN8EQxkhf_reWep5J.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course No,Course,Credits,Grade\nSTAT 200,ELEM STATISTICS,4.0,A\n\nPSY 002,PSYCHOLOGY,3.0,A\nPHIL 001,BASIC PROB OF PHIL,3.0,A\n\nPHYS 001,SCIENCE OF PHYS,3.0,B\nECON 004,MACROEC ANLY,3.0,A-\nPSY 009,PSY 100H 1ST-YR SMNR,1.0,A\nMATH 110,TECH CALCULUS I,4.0,B+\nENGL 015,RHETORIC & COMP,3.0,B+\n\nSPAN 001,ELEM SPANISH I,4.0,B+\nECON 002,MICROEC ANLY,3.0,B-\nGEOSC 040L,THE SEA AROUND US,3.0,B\nWMNST 194,WOMEN WRITERS,3.0,WN\nPSU 009,COMM 1ST-YR SMNR,1.0,A\nCOMM 160,NEWS WRITING SKILL,1.0,A-\nRL ST 003,RELIGIONS OF EAST,3.0,C+\n\nPSY 217,SOCIAL PSYCHOLOGY,3.0,A\nCAS 100C,EFFECTIVE SPEECH,3.0,A\nCAS 101,INTRO HUMAN COMM,3.0,A\nSPAN 002,ELEM SPANISH II,4.0,A-\nENGL 050,INTR CREATIVE WRIT,3.0,WN\nCAS 202,COMM THRY,3.0,A\nCOMM 320,INTRO ADVERTISING,3.0,A\nMUSIC 089,UNIVERSITY CHOIR,1.0,A\nSPAN 003,INMD SPANISH,4.0,A-\nCAS 311,MTHD RHTRCAL CRIT,3.0,A\n\nCOMM 495,INTERNSHIP,1.0,A-\n\nSOC 005,SOCIAL PROBLEMS,3.0,A\n\nCOMM 204,COMM RSCH MTHDS,3.0,A\nCOMM 422,ADVTC MEDIA PLNG,3.0,A-\nCOMM 370,PUBLIC RELATIONS,3.0,B+\nCAS 201,RHETORICAL THEORY,3.0,A\n\nPHIL 109,INTRO AESTHETICS,3.0,B\nPHIL 199,PHIL FOREIGN STDY,1.0,B-\nCOMM 499,FOREIGN STDY,4.0,C\nPHIL 001,BASIC PROB OF PHIL,3.0,B-\nCOMM 299,FOREIGN STUDIES,4.0,B+\nPHIL 199,PHIL FOREIGN STDY,1.0,B\n\nCAS 203,INTERPERSONAL COMM,3.0,A\nCAS 415,RHETORIC FILM & TV,3.0,A-\nKINES 068,STRENGTH TRAINING,1.5,A-\nCOMM 260W,NEWS WRITING,3.0,A-\nCOMM 420,RESEARCH IN AD/PR,3.0,A\nSOC 300,PRECEPT SOC,3.0,A\n\nCAS 426W,COMM ETHICS,3.0,A\nCAS 411,RHETORICAL CRIT,3.0,A\nCOMM 471,PUB REL METHODS,3.0,A-\nNUTR 100,CONTEMP NUTR CONC,3.0,C+\nBI SC 004,HUMAN BODY,3.0,A\n\nCAS 471,INTERCULT COMM,3.0,A-\nCOMM 410,INTERNATIONAL M C,3.0,A-\nPHOTO 100,INTRO PHOTO,3.0,A\nCOMM 473,PUB RLTS PROBS,3.0,A"
+            }
+        ]
+    },
+    {
+        "id": "request-11",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1PaxJGQ3egf1W2a-7pCsmdmqsVQBIJi7v.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Code,Section,Credits,Grade\nFall 2011-Management,General Chemistry Lecture,CHE106,REC M036,0.0,\nFall 2011-Management,General Chemistry Lecture,CHE106,SEC M029,3.0,B+\nFall 2011-Management,General Chemistry Laboratory,CHE107,LAB M025,0.0,\nFall 2011-Management,General Chemistry Laboratory,CHE107,SEC M001,1.0,A\nFall 2011-Management,Discover Entrepreneur Within,BEE110,SEC M001,1.0,A\nFall 2011-Management,Elements of Modern Mathematics,MAT183,REC M102,0.0,\nFall 2011-Management,Elements of Modern Mathematics,MAT183,SEC M100,3.0,A\nFall 2011-Management,Foundatns Human Behavior,PSY205,LEC M001,0.0,\nFall 2011-Management,Foundatns Human Behavior,PSY205,SEC M031,3.0,A\nFall 2011-Management,Perspectives of Business/Mgmt,SOM122,LEC M007,0.0,\nFall 2011-Management,Perspectives of Business/Mgmt,SOM122,SEC M100,3.0,B+\nFall 2011-Management,Studio 1:Academic Writing,WRT105,SEC M284,3.0,A\n\nSpring 2012-Management,Intro to Financial Accounting,ACC151,REC M027,0.0,\nSpring 2012-Management,Intro to Financial Accounting,ACC151,SEC M025,3.0,A-\nSpring 2012-Management,General Chemistry Lecture,CHE116,REC M014,0.0,\nSpring 2012-Management,General Chemistry Lecture,CHE116,SEC M009,1.0,B\nSpring 2012-Management,General Chemistry Laboratory,CHE117,LAB M002,0.0,\nSpring 2012-Management,General Chemistry Laboratory,CHE117,SEC M001,1.0,A\nSpring 2012-Management,Economic Ideas & Issues,ECN203,SEC M015,3.0,A\nSpring 2012-Management,Discover Entrepreneur Within,BEE111,SEC M001,1.0,A\nSpring 2012-Management,Intro to the Legal System,LP255,SEC M104,3.0,A-\nSpring 2012-Management,Business Calculus,MAT284,REC M002,0.0,\nSpring 2012-Management,Business Calculus,MAT284,SEC M100,3.0,A\n\nFall 2012-Management,Intro to Managerial Acct,ACC252,SEC M006,3.0,B\nFall 2012-Management,Arts & Ideas I,HOM195,DIS M010,0.0,\nFall 2012-Management,Arts & Ideas I,HOM195,SEC M001,3.0,A-\nFall 2012-Management,Info Reporting & Presentation,IST444,SEC M006,3.0,A\nFall 2012-Management,Intro. Statistics for Mngmt.,MAS260,LEC M001,3.0,A\nFall 2012-Management,Major Concepts of Physics I,PHY101,LAB M006,0.0,\nFall 2012-Management,Major Concepts of Physics I,PHY101,SEC M001,4.0,B+\nFall 2012-Management,Intro to Strategic MNgmt,SHR247,SEC M008,3.0,A\nFall 2012-Management,Community Service,SOM201,SEC M001,0.0,P\n\nSpring 2013-Management,Corporation Finance,FIN256,SEC M002,3.0,A\nSpring 2013-Management,Principles of Marketing,MAR255,SEC M002,3.0,B+\nSpring 2013-Management,Major Concepts of Physics II,PHY102,LAB M004,0.0,\nSpring 2013-Management,Major Concepts of Physics II,PHY102,SEC M001,4.0,B\nSpring 2013-Management,Intro to SCM,SCM265,REC M006,0.0,\nSpring 2013-Management,Intro to SCM,SCM265,SEC M002,3.0,A\nSpring 2013-Management,Studio 2:Critical Research,WRT205,SEC M265,3.0,B+\n\nFall 2013-Management,Intro to EEE,BEE370,SEC M001,3.0,A\nFall 2013-Management,Investments,FIN346,SEC M003,3.0,B+\nFall 2013-Management,Decision Tools for Management,MAS362,SEC M006,3.0,B+\nFall 2013-Management,Intro Info. Syst. Managers,MIS325,SEC M002,3.0,B+\nFall 2013-Management,Managing in a Global Setting,SOS344,SEC M001,3.0,A\n\nSpring 2014-Management,Intro to Cultural Anthrop,ANT111,DIS M003,0.0,\nSpring 2014-Management,Intro to Cultural Anthrop,ANT111,SEC M001,3.0,A-\nSpring 2014-Management,Intermediate Macroeconomics,ECN302,SEC M002,3.0,A\nSpring 2014-Management,Imagination,EEE378,SEC M001,3.0,A\nSpring 2014-Management,Entrepreneurial Marketing,EEE382,SEC M002,3.0,B+\nSpring 2014-Management,Experienced-EEE,BEE470,SEC M003,3.0,A\nSpring 2014-Management,Strategic Human Resrc. Mngmt,SHR355,SEC M007,3.0,A-\n\nFall 2014-Management,Fin for Emergng Entrprses,EEE451,SEC M001,3.0,B+\nFall 2014-Management,Stratgc&Entrepren'L Mngmt,EEE457,SEC M003,3.0,A-\nFall 2014-Management,Financial Management,FIN345,SEC M001,3.0,A-\nFall 2014-Management,Financial Planning,FIN378,SEC M001,3.0,A\nFall 2014-Management,Internship for Mgmt Students,SOM301,SEC M001,0.0,P"
+            }
+        ]
+    },
+    {
+        "id": "request-12",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1w0AuTOfeNgzQcQ10QeFcUsG5Z8nexSOc.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course Level,Title,Grade,Credit Hours,Quality Points\nMECH 6970,GR,Int Special Topics in Mech Eng- Embedded Systems in Robotics,A,3.000,12.00\nMECH 7620,GR,Nonlinear Systems,A,3.000,12.00\nMECH 7990,GR,Research & Thesis,TD,1.000,0.00\n\nMECH 5390,GR,Fundamentals of the Finite Element Method,,3.000,\nMECH 6310,GR,MECHANICS OF ELECTRONIC PACKAGING,,3.000,"
+            }
+        ]
+    },
+    {
+        "id": "request-13",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1dtMhvdMM9SPDA8iTtDg8HK4Lbhv7xN4m.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course Level,Title,Grade,Credit Hours,Quality Points\nARCH,2600 UG,Art Of Arch Place And Culture,A,3.000,12.00\nMECH,5710 UG,Kinem & Dyna Of Robots-Honor,A,3.000,12.00\nPHIL,1020 UG,Introduction To Ethics-Honor,A,3.000,12.00\n\nMECH,6610 GR,Mechanical Vibration,A,3.000,12.00\nMECH,7010 GR,Advanced Thermodynamics,A,3.000,12.00\nMECH,7240 GR,Num Methods In Heat Transfer,A,3.000,12.00\n\nMECH,7990 GR,Research & Thesis,TD,1.000,0.00"
+            }
+        ]
+    },
+    {
+        "id": "request-14",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ZRimkmpXljp-sYfOJDMd6RibjPjML69E.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Subject,Course,Level,Title,Grade,Credit Hours,Quality Points\n,COOP,4920,UG,Cooperative Work Experience,NN,0.000,0.00\nSpring 2015,HONR,2077,UG,Honors Forum: Seniors,S,1.000,0.00\nSpring 2015,HONR,2087,UG,Honors Book Club,S,1.000,0.00\nSpring 2015,MECH,3040,UG,Heat Transfer,A,3.000,12.00\nSpring 2015,MECH,3050,UG,Meas And Instrumentation,A,3.000,12.00\nSpring 2015,MECH,4240,UG,Comprehensive Design I,A,2.000,8.00\nSpring 2015,MECH,5970,UG,Design of Feedback Control for Dynamic Systems,W,3.000,0.00\nSpring 2015,MECH,6220,UG,Virtual Prototyping,A,3.000,12.00\n\nSummer 2015,MECH,4250,UG,Comprehensive Design II,A,2.000,8.00\nSummer 2015,MECH,5970,UG,Int Special Topics in Mech Eng- Advanced Manufacturing Concepts,A,3.000,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-15",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1_1cGpVa8Dn8BY8AnhybCBQY-o-QbJmEI.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Title,Grade,Credit Hours\nMECH 3030,Fluid Mechanics,B,3.000\nMECH 3130,Mechanics Of Materials,B,4.000\nMECH 3200,Concepts in Design Manufacturi,A,2.000\nMECH 3210,Design and Manufacturing Lab,A,1.000\n\nCOOP 4920,Cooperative Work Experience,NN,0.000\n\nELEC 3810,Fund Of Electrical Engr,A,3.000\nINSY 3600,Engineering Economy,A,3.000\nMECH 3140,System Dynamics And Controls,B,3.000\nMECH 3230,Machine Design,A,3.000\nMECH 3AA0,Mech Engr Progress Assmt II,S,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-16",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1WwYDf3a75X8kGY2MSqtzlUOWzyPj_djh.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Subject,Course,Level,Title,Grade,Credit Hours,Quality Points\nSpring 2013,ENGL,2207,UG,Honors World Literature I,A,3.000,12.00\nSpring 2013,ENGR,2010,UG,Thermodynamics,A,3.000,12.00\nSpring 2013,MATH,2660,UG,Topics In Linear Algebra,A,3.000,12.00\nSpring 2013,MATL,2100,UG,Intro To Materials Science,A,3.000,12.00\nSpring 2013,MECH,2220,UG,Computer-Aided Engineering,A,3.000,12.00\nSpring 2013,MECH,2AA0,UG,Mech Engr Progress Assmnt I,S,0.000,0.00\n\nSummer 2013,COOP,4920,UG,Cooperative Work Experience,NN,0.000,0.00\n\nFall 2013,MECH,2120,UG,Kinematics And Dyna Of Mach,A,4.000,16.00\nFall 2013,MECH,3020,UG,Thermodynamics II,B,3.000,9.00"
+            }
+        ]
+    },
+    {
+        "id": "request-17",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1b5xz5UrpOuWfCEfJXrYujU5nmnihBRh6.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course Level Title,Grade,Credit Hours,Quality Points\nCHEM 1030,Fundamentals Chemistry I,A,3.000,12.00\nCHEM 1031,Fund of Chemistry I Lab,A,1.000,4.00\nENGL 1120,English Composition II:Sustainability,A,3.000,12.00\nMATH 1610,Calculus I,A,4.000,16.00\nPSYC 2010,Intro To Psychology,A,3.000,12.00\n\nCOMP 1200,Intro to Computing - Matlab,A,2.000,8.00\nENGR 1100,Engineering Orientation,S,0.000,0.00\nENGR 1110,Intro - Indus. & Systems Engr.,A,2.000,8.00\nHONR 1097,Honors Forum for Freshmen,S,1.000,0.00\nMATH 1620,Calculus II,A,4.000,16.00\nPHYS 1600,Engineering Physics I,A,4.000,16.00\nPOLI 1097,Hon Amer Gov Multicul World,A,3.000,12.00\n\nHONR 2097,Honors Forum for Sophomores,S,1.000,0.00\nMATH 2637,Honors Calculus III,A,4.000,16.00\nMATH 2650,Linear Differential Equations,A,3.000,12.00\nMECH 2110,Statics And Dynamics,B,4.000,12.00\nPHYS 1610,Engineering Physics II,A,4.000,16.00"
+            }
+        ]
+    },
+    {
+        "id": "request-18",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ak0U4JeGTH9eXMuRW92l18ZxkZAQKQ1X.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject,Course,Title,Grade,Credit Hours,Quality Points\nENGL,1100,English Composition I,S,3.000,0.00\nHIST,1010,World History I,S,3.000,0.00\nHIST,1020,World History II,S,0.000,0.00\nHIST,2010,Survey Of US History To 1877,S,3.000,0.00\nHIST,2020,Survey Of US History Since 1877,S,3.000,0.00\nMATH,1130,Precalculus Trigonometry,S,3.000,0.00\nMATH,1610,Calculus I,S,4.000,0.00\n\nENGL,1100,English Composition I,S,3.000,0.00"
+            }
+        ]
+    },
+    {
+        "id": "request-20",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1FR4WAPUbhlAGZOMacTpMvjr_zCKjZADt.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "not a transcript"
+            }
+        ]
+    },
+    {
+        "id": "request-21",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ANYGDGNKBiVGhThTkCaa12-j6Dct6hHm.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD\nFRE 2310,Intermediate French,3.00,A\nGEO 3427,Rocks & Rock-Forming Minerals,4.00,A\nLF 1106,Begin Aerobics,1.00,A\nLF 1111,Aerobic Running,1.00,A\nMTH 2311,Linear Algebra,3.00,B\nPHY 1420,General Physics I,4.00,B+\n      \nBIO 1403,Exploring the Living World,4.00,A\nCHE 1101,General Chemistry Lab I,1.00,A\nFRE 2320,Intermediate French,3.00,A\nGEO 4458,Geophys Exploration II,4.00,A\nLF 1171,Softball,1.00,A\nPHI 1306,Logic,3.00,A\n      \nENG 3300,Technical & Prof Writing,3.00,A\nGEO 3435,Invertebrate Paleontology,4.00,A\nGEO 3445,Structural Geology,4.00,A-\nLF 1192,Weight Control,1.00,A\n      \nGEO 3430,Petrology,4.00,A\nGEO 3442,Field Stratigraphy-Sedimentolo,3.00,B+\nGEO 43C0,Senior Thesis,1.00,A\nGEO 4v90,Plate Kinematics,3.00,A-\nREL 1350,The Christian Heritage,3.00,A\n      \nGEO 3643,Field Geology,6.00,A\n\nPHY 1409,Physics Nat Behav Sci II,4.00,A"
+            }
+        ]
+    },
+    {
+        "id": "request-22",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/15QNknzhnE5bXlBGpz7uoEb44x7YIJl-F.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ,NO.,COURSE TITLE,CRED,GRD,RPT\nHIST,2365,Hist of U.S. To 1877,3.00,TA,\n\nHIST,2366,Hist of U.S. Since 1877,3.00,TB,\n\nECO,2307,Princ of Macroeconomics,3.00,TA,\nENG,2301,British Literature,3.00,TA,\nMTH,1000,Mathematics Credit,3.00,TA,\n\nENG,2304,American Lit: Masterpieces,3.00,TA,\nMTH,1304,Pre-Calculus,3.00,TA,\nPSC,1305,American National Govt,3.00,TA,\n\nGEO,1405,The Dynamic Earth,4.00,TA,\nGEO,1406,Earth Through Time,4.00,TA,\n\nCHE,1102,General Chemistry Lab II,1.00,TA,\nCHE,1302,Bas Prin Mod Chem II,3.00,TA,\n\nENV,1301,Exploring Environmental Issues,3.00,CR,\n\nCHA,1088,Chapel - New Freshmen,0.00,CR,\nCHE,1301,Bas Prin Mod Chemistry I,3.00,A,\nFRE,1401,Elementary French,4.00,A,\nMTH,1321,Calculus I,3.00,B+,\nREL,1310,The Christian Scriptures,3.00,A,\n\nCHA,1088,Chapel,0.00,CR,\nENG,1302,Thinking & Writing,3.00,A,\nFRE,1402,Elementary French,4.00,A,\nGEO,3319,Intro to Geophysical,3.00,A,\nMTH,1322,Calculus II,3.00,A,\nPSC,2302,Amer Constitutional Dev,3.00,A,"
+            }
+        ]
+    },
+    {
+        "id": "request-24",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1DomjxpvnO5jC_xTi9x9pu_Lg-_J-hiC4.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Description,Attempted Credits,Earned Credits,Grade,Points\nHIST 3240,History of Russia & Sov Union,3.000,0.000,,0.000\nMUSC 2330,Intro of World Music,3.000,0.000,,0.000\nMUSC 3120,Hist of Music:Baroq/Classic,3.000,0.000,,0.000\nSPAN 1020,Elementary Spanish II,4.000,0.000,,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-25",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1rHdr-XuWqoHn8r4jYRfX0dSVwDmBmm6Z.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Semester,Year,Course,Description,Attempted,Earned,Grade,Points\nSummer,2013-14,MUBS 2020,Introduction Music Publishing,3.000,3.000,B-,8.010\n\nSpring,2014-15,BIBL 3410,Images of Jesus Then and Now,3.000,3.000,B+,9.990\nSpring,2014-15,HIST 3190,Jewish Holocaust/Hist Context,3.000,3.000,B,9.000\nSpring,2014-15,MUBS 3380,Concert Booking/Promot,2.000,2.000,A,8.000\nSpring,2014-15,MUPF 1080,Chorale,1.000,1.000,A,4.000\nSpring,2014-15,MUPF 1150,Opera Production,1.000,1.000,A,4.000\nSpring,2014-15,MUPF 1170,Lyrie Theatre Workshop,1.000,1.000,A,4.000\nSpring,2014-15,MUPF 4700,Voice,3.000,3.000,B-,8.010\nSpring,2014-15,MUSC 3170,Hist-Mus-Popular 20th Cent,3.000,3.000,A,12.000\n\nFall,2014-15,ENGL 1400,Valuing Through Literature,3.000,3.000,B+,9.990\nFall,2014-15,MUBS 2070,Songwriting,2.000,0.000,W,0.000\nFall,2014-15,MUPF 3350,Music Marketing,3.000,3.000,A-,11.010\nFall,2014-15,MUPF 1080,Chorale,1.000,1.000,A,4.000\nFall,2014-15,MUPF 1170,Lyric Theatre Workshop,1.000,1.000,A,4.000\nFall,2014-15,MUPF 4700,Voice,1.000,1.000,B-,2.670\nFall,2014-15,MUSC 2010,Theory III (Music Business),3.000,3.000,C-,5.010\nFall,2014-15,MUSC 2110,Intro to Music Literature,2.000,2.000,B-,5.340\n\nSummer,2014-15,MUBS 4800,Internship in Music Business,3.000,3.000,A,12.000\n\nFall,2015-16,BSNS 3150,Financial Planning,3.000,3.000,B,9.000\nFall,2015-16,MUBS 3310,Legal Aspects of Music Busines,2.000,2.000,B+,6.660\nFall,2015-16,MUPF 4700,Voice,1.000,1.000,A,4.000\nFall,2015-16,PHYS 1240,Astronomy,4.000,4.000,B+,13.320\nFall,2015-16,SPAN 1010,Elementary Spanish I,4.000,4.000,A,16.000"
+            }
+        ]
+    },
+    {
+        "id": "request-26",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1gXk5Ohob7lkNcjnVXUZfUV7R-EcTaRDG.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nHIST 2120,American Civilization II,3.000,3.000,B+,9.990\nLART 1050,First-Year Experience Sem,1.000,1.000,A,4.000\nMUPF 1050,Keyboard Class I,2.000,2.000,A,8.000\nMUPF 1070,Women\u2019s Chorus,1.000,1.000,A,4.000\nMUPF 2700,Voice,2.000,2.000,B+,6.660\nMUSC 1010,Theory I,3.000,3.000,B,9.000\nMUSC 1030,Aural Comprehension I,1.000,1.000,A,4.000\nPEHS 1000,Fitness/Leisure-For Life Cross Training,2.000,2.000,A,8.000\nSOCI 2010,Intro to Sociology,3.000,3.000,B-,8.010\n\nDANC 2110,Musical Theatre Dance Forms,1.000,1.000,A,4.000\nENGL 1120,Rhetoric & Research,3.000,3.000,A-,11.010\nLART 1100,Liberal Arts Seminar,2.000,2.000,A,8.000\nMUED 2510,Singers Diction I,2.000,2.000,B-,5.340\nMUPF 1060,Keyboard Class II,2.000,2.000,B-,5.340\nMUPF 1070,Women\u2019s Chorus,1.000,1.000,A,4.000\nMUPF 1150,Opera Production,1.000,1.000,A,4.000\nMUPF 2700,Voice,2.000,2.000,A,8.000\nMUSC 1020,Theory II,3.000,3.000,C,6.000\nMUSC 1040,Aural Comprehension II,1.000,1.000,B,3.000\n\nBIBL 2000,Intro To The Bible,4.000,4.000,A-,14.680\nCOMM 1000,Intro to Speech Communication,3.000,3.000,A,12.000\nMATH 1300,Finite Mathematics,3.000,3.000,C+,6.990\nMUBS 2010,Introduction To Music Business,3.000,3.000,A,12.000\nMUBS 3210,Recording Techniques I,3.000,3.000,D,3.000\nMUPF 1070,Women\u2019s Chorus,0.000,0.000,A,0.000\nMUPF 1150,Opera Production,0.000,0.000,A,0.000\nMUPF 2700,Voice,2.000,2.000,B+,6.660"
+            }
+        ]
+    },
+    {
+        "id": "request-28",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1NmE1mGFh4k5ktdXe02tCMU-uv4CqKn_n.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSES,TITLE,CREDIT,GRADE,HONOR POINTS\nCAS BI107,BIOLOGY I,4.0,B+,13.2\nCAS CC101,ANCIENT WORLD,4.0,B,12.0\nCAS CH101,GEN CHEM 1,4.0,C,8.0\nCAS FY101,FIRST YEAR EXP,1.0,P,0.0\nCAS MA123,CALCULUS I,4.0,C,8.0\nPDP MA105,SHOTOKAN KARATE,1.0,P,0.0\n\nCAS BI260,MARINE BIOLOGY,4.0,A,16.0\nCAS CC102,CORE HUMANIT 2,4.0,A-,14.8\nCAS CH102,GEN CHEM 2,4.0,C+,9.2\nCAS MA115,STATISTICS I,4.0,A-,14.8\nPDP FT202,ATHLETIC CNDTNG,1.0,P,0.0\n\nCAS CC203,CORE SOC SC 1,4.0,A-,14.8\nCAS ES144,OCEANOGRAPHY,4.0,A,16.0\nCAS LS111,FIRST SEM SPAN,4.0,A-,14.8\nCAS MA124,CALCULUS 2,4.0,C,8.0\n\nCAS BI303,ECOLOGY,4.0,B+,13.2\nCAS CC204,CORE SOC SCI 2,4.0,B+,13.2\nCAS ES440,MARINE GEOLOGY,4.0,B+,13.2\nCAS LS112,SECOND SEM SPAN,4.0,A,16.0\n\nCAS BI531,ICHTHYOLOGY 1,4.0,A,16.0\nCAS BI563,SENIOR BIOLOGY,4.0,A-,14.8\nCAS BI599,TROPICAL INVERT,4.0,A,16.0\nCAS ES543,ESTUARIES,4.0,A,16.0\n\nCAS BI438E,TROP MONTANE EC,4.0,A,16.0\nCAS BI439F,TROP RM FRST EC,4.0,A,16.0\nCAS BI440E,TROP COASTAL EC,4.0,A,16.0\nCAS BI441E,STD/TROP ECOLOGY,4.0,A,16.0\nCAS QU300E,INTNS SPANISH,2.0,B,6.0\n\nCAS BI550,MARINE GENOMICS,4.0,,0.0\nCAS BI578,MARINE GIS,4.0,A,16.0\nCAS ES557,OCEAN STELLWAG,4.0,A,16.0\nCAS MR401,SR INDEP WORK,4.0,,0.0\n\nCAS CL202,WARFARE IN ANTI,4.0,,0.0\nCAS ES423,MARINE BIOGECH,4.0,,0.0\nCAS MR402,SR INDEP WORK,4.0,,0.0\nCAS PY105,ELEM PHYSICS 1,4.0,,0.0"
+            }
+        ]
+    },
+    {
+        "id": "request-29",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/13MtURI337tI0kE0CRSUZY4Apu9qOPo64.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Course Name,Grade,Credits\nANT185,Global Encounters,A,3.0\nCAS101,First Year Forum,A,1.0\nFRE101,French I,C+,4.0\nPSC124,International Relations,A-,3.0\nREL101,Religions of the World,B+,3.0\nWRT105,Studio I: Academic Writing,B,3.0\n\nANT121,Peoples&Cultures of World,A,3.0\nANT131,Intro to Bio Anthropology,B+,3.0\nANT365,Sexual Attrctn/Cultural Persp,A-,3.0\nFRE102,French II,B-,4.0\nHST400,East Asia since 1885,A,3.0\n\nANT141,Intro/Archaeology & Prehistory,A,3.0\nANT373,Magic and Religion,A,3.0\nFRE201,French III,B+,4.0\nGEO155,The Natural Environment,A,3.0\nHST300,Africa in Global Affairs,A,3.0\n\nETS300,European Cinema,B+,3.0\nFRE202,French IV,A,4.0\nIPA470,Int'l Internship Abroad,B+,1.0\nPSC369,Global Migration,B,3.0\nPSC400,The European Identity,A,3.0\nPSC427,Policy Seminar/Contemp Europe,A,3.0\n\nANT311,Anthropological Theory,B,3.0\nANT325,Anthrop of American Life,C,3.0\nECN203,Economic Ideas & Issues,B+,3.0\nGEO215,Global Env Change,B-,3.0\nSPA201,Spanish III,A,4.0\n\nANT380,Latin American Anthropology,B,3.0\nGEO380,Geography of Latin America,B-,3.0\nSPA480,Advanced-Intermediate SPA II,A,3.0\nIRP334,Issues in Contemp. Latin Amer.,A-,3.0\nIRP424,Dictatrshps/HumRights&HSTMmry,A,3.0\nSPA380,Adv SPA: Cult/Conv/Grammar,B,3.0\n\nANT415,Culture &Personality,A,3.0\nANT482,Life Histories/Narratives,A,3.0\nAST101,Our Corner Of The Universe,B+,4.0\nREL244,Indigenous Religions,A,3.0\nSOC445,Caribbean:Sex Cap&Tourism,A,3.0\n\nANT111,Intro to Cultural Anthrop,,3.0\nANT322,South American Cultures,,3.0\nHST324,Latin American History Recent,,3.0\nWRT205,Studio 2:Critical Research,,3.0"
+            }
+        ]
+    },
+    {
+        "id": "request-31",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1myrUCJhXIWCyotz6ISy9tRTnrnqHe-bD.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Description,Attempted,Earned,Grade,Points\nSumr 2015,MAE 496LEC,Engineering Internship,3.000,3.000,A,12.000\n\nFall 2015,ATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nFall 2015,GEO 101LEC,Earth Systems Science I,3.000,3.000,A,12.000\nFall 2015,MAE 338LAB,MAE Lab II,2.000,2.000,A,8.000\nFall 2015,MAE 377LLB,Product Design-CAE Environment,3.000,3.000,A,12.000\nFall 2015,MAE 422LEC,Gas Dynamics,3.000,3.000,A,12.000\nFall 2015,MAE 436LR,Flight Dynamics,3.000,3.000,A-,11.010\nFall 2015,MAE 451LEC,Design Process & Methods,3.000,3.000,A,12.000\n\nSpr 2016,MAE 311LEC,Machines & Mechanisms 1,3.000,3.000,A,12.000\nSpr 2016,MAE 364LEC,Manufacturing Processes,3.000,3.000,A,12.000\nSpr 2016,MAE 423LEC,Intro to Propulsion,3.000,3.000,A,12.000\nSpr 2016,MAE 425LEC,Space Dyn & Ctrl,3.000,3.000,A,12.000\nSpr 2016,MAE 434LEC,Aircraft Design,3.000,3.000,A,12.000\nSpr 2016,MAE 494LT,Design Project,3.000,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-32",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1Lqu1rouut65vuymNnRiBDhoNfqePRt-Y.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Description,Attempted,Earned,Grade,Points\nEAS207LR,Statics,3.0,3.0,A,12.000\nMAE204LR,Thermodynamics 1,3.0,3.0,B+,9.990\nMAE278LEC,Intro to AE Practice,3.0,3.0,A-,11.010\nMTH241LLB,College Calculus 3,4.0,4.0,A,16.000\nPHY108LR,General Physics 2,4.0,4.0,B+,13.320\nPHY158LAB,General Physics Lab 2,1.0,1.0,A,4.000\n\nCOM101LEC,Principles of Comm,3.0,3.0,A,12.000\nEAS208LR,Dynamics,3.0,3.0,B+,9.990\nEAS209LR,Mechanics of Solids,3.0,3.0,A,12.000\nEE200LR,EE Concepts/Non-Majors,3.0,3.0,A,12.000\nMTH306LLB,Intro Diff Equations,4.0,4.0,A,16.000\n\nMTH309LLB,Intro Linear Algebra,4.0,4.0,A,16.000\n\nMAE315LEC,Analysis of Structures,3.0,3.0,A,12.000\nMAE335LR,Fluid Mechanics,3.0,3.0,A,12.000\nMAE340LEC,Dynamic Systems,3.0,3.0,A,12.000\nMAE376LLB,Applied Math for MAEs,3.0,3.0,A,12.000\nMAE381LEC,Engng Materials 1,3.0,3.0,B+,9.990\n\nMAE316LEC,Aerospace Structures,3.0,3.0,A,12.000\nMAE334LLB,MAE Laboratory I,2.0,2.0,A,8.000\nMAE336LEC,Heat Transfer,3.0,3.0,A,12.000\nMAE385LAB,Engng Materials Lab,1.0,1.0,A,4.000\nMAE424LLB,Aerodynamics,4.0,4.0,A,16.000\nSOC121LEC,Substance Use and Abuse,3.0,3.0,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-33",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1jlO5TWSvRNMcCFer0Z4po1g97Ixfti2z.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Description,Attempted,Earned,Grade,Points\nFall 2012,ATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nFall 2012,ATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nFall 2012,CHE 107LEC,Gen Chem for Engineers Lecture,4.000,4.000,B,12.000\nFall 2012,MTH 141LLB,College Calculus 1,4.000,4.000,A-,14.680\nFall 2012,SOC 101LEC,Introduction to Sociology,3.000,3.000,B,9.000\n\nSpring 2013,EAS 230LLB,Engineering Computations,3.000,3.000,A,12.000\nSpring 2013,GEO 120LEC,Maps: Earth from Above,3.000,3.000,A,12.000\nSpring 2013,MAE 177LLB,Engr CAD Drawing,2.000,2.000,A,8.000\nSpring 2013,MTH 142LLB,College Calculus 2,4.000,4.000,A,16.000\nSpring 2013,PHY 107LR,General Physics 1,4.000,4.000,A-,14.680"
+            }
+        ]
+    },
+    {
+        "id": "request-35",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1JgQ6E7trMyZZnS3EfJWIfMW_oCc6ighO.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCE 5312,ADVANCED CONCRETE DESIGN I,3.00,3.00,A,12.000\nCE 5336,PAVEMENT DESIGN,3.00,3.00,C,6.000\nCE 5344,CONSTRUCTION METHODS FIELD OPS,3.00,3.00,B,9.000\n\nCE 5300,TOPICS IN CIVIL ENGINEERING,3.00,3.00,A,12.000\n\nCE 5179,CONST COST ESTIMATING SOFTWARE,1.00,1.00,B,3.000\nCE 5186,CONST PLAN AND SCHED SOFTWARE,1.00,1.00,A,4.000\nCE 5279,CONSTRUCTION COST ESTIMATING,2.0,2.00,B,6.000\nCE 5286,CONST PLANNING & SCHEDULING,2.00,2.00,B,6.000\nCE 5300,TOPICS IN CIVIL ENGINEERING (Construction Management),3.00,3.00,A,12.000\n\nCE 5300,TOPICS IN CIVIL ENGINEERING (Building Information Modeling),3.00,3.00,A,12.000\nCE 5378,CONST CNTRCT SPECS & ADMN,3.00,3.00,B,9.000\nCE 5387,CONSTRUCTION PRODUCTIVITY,3.00,3.00,B,9.000"
+            }
+        ]
+    },
+    {
+        "id": "request-37",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/19t7Hh981wqVjpsWTray28BtbR8jQFj9t.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Plan,Session,Course,Description,Attempted,Earned,Grade,Points\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 295,Spec Top Biology,2.000,2.000,A,8.000\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 330,Course Topic: Islands and Evolution,3.000,3.000,A+,12.999\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 353,Applctv Animal Bio,3.000,3.000,B+,9.999\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 350,Anim Phy Diversity,4.000,4.000,B,12.000\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 493,SP Problens in BS,3.000,3.000,S,0.000\n\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 460,Field Ecol Methds,4.000,4.000,A-,14.668\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 493,SP Problens in BS,3.000,3.000,S,0.000\nBiological Sciences Bachelor of Science,Regular Academic Session,HESD 240,Social Dance,1.000,1.000,S,0.000\nBiological Sciences Bachelor of Science,Regular Academic Session,NR 406,Cons Bio Diversity,3.000,3.000,A-,11.001\nBiological Sciences Bachelor of Science,Regular Academic Session,PP 222,Kingdom of Fungi,3.000,3.000,A,12.000\n\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 495,Spec Topic Biology (Course Topic: Ecology of Cities),1.000,1.000,S,0.000\nBiological Sciences Bachelor of Science,Regular Academic Session,BIO 499,Course Topic: Ecology of Cities,3.000,3.000,S,0.000\nBiological Sciences Bachelor of Science,Regular Academic Session,GIS 410,Intro to GIS,3.000,3.000,A,12.000\nBiological Sciences Bachelor of Science,Regular Academic Session,HESS 251,Target Archery,1.000,1.000,S,0.000\nBiological Sciences Bachelor of Science,Regular Academic Session,ST 511,Exp Stat Bio Sec I,3.000,3.000,B,12.000\nBiological Sciences Bachelor of Science,Regular Academic Session,ZC 624,Topic Problems (Course Topic: Evolutionary Thinking),3.000,3.000,S,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-38",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ItVfqYnz0xElY2RUKIHyZqJOTxChVnO0.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nENG 101,Acad Writing Rsch,4.000,4.000,CR,0.000\nHI 252,Modern Amer Hist,3.000,3.000,CR,0.000\nMEA 100,Earth Sys Science,4.000,4.000,CR,0.000\nST 311,Intro to Statistic,3.000,3.000,CR,0.000\n\nALS 103,Intro Topics ALS,1.000,1.000,A,4.000\nBIO 181,Intro Bio Ecol/Div,4.000,4.000,A-,14.668\nCH 101,Chem Molecular Sci,3.000,3.000,A-,11.001\nCH 102,Gen Chem Lab,1.000,1.000,A+,4.333\nFLS 201,Interm Spanish I,3.000,3.000,A,12.000\nHSS 110,Scholars Forum,0.000,0.000,S,0.000\nMA 131,Calc Life Manag A,3.000,3.000,A-,12.000\nPE 249,Tennis I,1.000,1.000,A+,4.333\n\nBIO 183,Intro Bio Cell/Mol,4.000,4.000,B+,13.332\nCH 221,Org Chem I,3.000,3.000,C,6.000\nCH 222,Org CH I Lab,1.000,1.000,A,4.000\nEC 201,Princ of Microecon,3.000,3.000,A-,11.001\nHSS 111,Scholars Forum,0.000,0.000,S,0.000\nMA 231,Calc Life Manag B,3.000,3.000,A-,11.001\nPSY 200,Intro to Psych,3.000,3.000,A,12.000\n\nBIO 250,Animal Anat Phys,4.000,4.000,A-,14.668\nCH 223,Org Chem II,3.000,3.000,B-,8.001\nCH 224,Org Chem II Lab,1.000,1.000,A+,4.333\nCOM 110,Public Speaking,3.000,3.000,B+,9.999\nPB 360,Ecology,4.000,4.000,A,16.000\nPE 105,Aerobics/Body Cond,1.000,1.000,S,0.000\nUSP 110,Scholars Forum,0.000,0.000,S,0.000\n\nENG 333,Commun Sci & Res,3.000,3.000,A-,11.001\nFW 221,Conserv of Nat Resources,3.000,3.000,A,12.000\nGN 311,Princ of Genetics,4.000,4.000,B,12.000\nGN 312,Elem Genetics Lab,1.000,1.000,A-,3.667\nPY 212,College Physics II,4.000,4.000,A-,14.668"
+            }
+        ]
+    },
+    {
+        "id": "request-40",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1qhje2I2KPaJ5Vgxn-PKmqfT3a68KjoGj.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nART 1400,Drawing Online,3.00,A,\nBIOL 1400,Principles in Science,4.00,B,\nCSCI 1000,Computer Basics,3.00,A,\nENGL 1111,Freshman English I,3.00,A,\nENGL 1112,College Writing II,3.00,A,\nENGL 1150,Introduction to Literature,3.00,B,\nMUSC 1300,Music World Cultures,3.00,A,\nPE 1050,Weight Training,1.00,A,\nPE 1810,Step Aerobics,1.00,A,\nSPCH 1010,Fundamentals of Public Speaking,3.00,A,\nTFT 1250,Intro to Film,3.00,B,\nTFT 1500,Acting I: Improv and Founda,3.00,A,\n\nMC 0801-,NBC Indicidual Survival Measur,5.00,P,\nMC 1401-,Personal Financial Management,3.00,P,\nMC 1405-,Enlisted Warehousing Basic,3.00,P,\nMC 1406-,Counseling for Marines,2.00,P,\nMC 2201-,Pistol Marksmanship,1.00,P,\nMC 2201-,Semper Fit Basic Fitness,1.00,P,\nMC 2204-,Basic Training,8.00,P,\nMC 2204-,Marine Rifleman: Combat Skill,3.00,P,\nMC 2204-,Leading Marines,1.00,P,\nMCE 3051-,Warehouse Clerk,16.00,P,\n\nHIS 1005,Hist of Western Civilization,4.00,A,16.00\nMAT 1005,Math for the Liberal Arts,4.00,A-,14.68\nPHE 1065,Lifetime Fitness & Wellness,1.00,A,4.00\n\nCHE 1006,Concepts of Chemistry,4.00,NC,0.00\nCHE 1006L,Concepts of Chemistry Lab,0.00,NC,0.00\nGEO 1005,Introduction to Geography,4.00,A-,14.68\n\nPSY 1005,Introduction to Psychology,4.00,B-,10.68\n\nCMM 4013,Concepts of Communication,2.00,A,8.00\nCMM 4031,Business Communication,2.00,A,8.00\nETH 4021,Foundations for Ethics,2.00,A,8.00\nETH 4023,Worldwide Ethics,2.00,A,8.00\n\nCOMN 4015,Comm'n Theory and Practice,2.00,A,8.00\nCOMN 4032,Public Rel Princp's & Writing,2.00,A,8.00\nCOMN 4042,Advanced Speak'ng & Present'tn,2.00,A,8.00\nCOMN 4046,Comm'n Conflict Resolution,2.00,A-,7.34\n\nCOMN 4018,Interpersonal Communication,2.00,A,8.00\nCOMN 4025,Communication Ethics,2.00,A,8.00\nCOMN 4034,PR Event Planning,2.00,A,8.00\n\nCOMN 4016,Intercultural Communication,2.00,A,8.00\nCOMN 4017,Group Communication,2.00,A,8.00\nCOMN 4044,Technology & Communication,2.00,A,8.00\nCOMN 4048,Mediation & Communication,2.00,A,8.00\n\nCOMN 4051,Methods of Comm'n Research,3.00,A,12.00\nCOMN 4855,Communication Capstone,3.00,A,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-42",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/14nyusdMelGWTQQe-uyS5TcmHWwe8-wfL.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Credits,Grade,Grade Points\nACCT 460,5.00,A-,18.500\nACCT 461,5.00,A,20.000\nIT 359,3.00,A,12.000\n\nACCT 450,5.00,A-,18.500\nMGT 489,5.00,A,20.000\nMIS 386,5.00,A,20.000"
+            }
+        ]
+    },
+    {
+        "id": "request-43",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1_ugldd9gX5KT8z_c9Pl75y5Z-YcQU3ln.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course Code,Course Name,Credits,Grade\nFall 2013,ACCT 350,Intermediate Accounting I,5.00,A\nFall 2013,ADMG 385,Bus Com & Rep Writ,5.00,A\nFall 2013,SCM 310,Supply Chain Management,5.00,A\n\nWinter 2014,ACCT 351,Intermediate Accounting II,5.00,B\nWinter 2014,ACCT 430,Governmental & Non-Profit Acct,5.00,A\nWinter 2014,ACCT 455,Accounting Information Systems,5.00,A\n\nSpring 2014,ACCT 352,Intermediate Accounting III,5.00,B\nSpring 2014,MGT 382,Principles of Management,5.00,A\nSpring 2014,MKT 362,Essential Mkt Concepts,5.00,A"
+            }
+        ]
+    },
+    {
+        "id": "request-44",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1zE4OTw2gtZ8O5SNwGJAlBnFyEw2XWQdO.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Session,Course Code,Course Name,Credits,Grade,Grade Points\nSix Week - First,FIN 370,Intro Financial Mgt,5.00,A-,18.500\n\nRegular Academic Session,ACCT 305,Cost Accounting,5.00,A,20.000\nRegular Academic Session,ACCT 346,Income Tax Accounting I,5.00,A-,18.500"
+            }
+        ]
+    },
+    {
+        "id": "request-46",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1KYe2Liz-VC-eELz2VqIrK1FbL5kOSFKg.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nBIO 0101,Prin of Biology,5.00,B,\nCH 1T07L,Human Anat/Phys,5.00,B,\nPOL 3T61,Intl Politics,5.00,B,\n\nECON 2105,Prin of Macroecon,3.00,A,12.00\nECON 2106,Prin of Microecon,3.00,A-,11.10\nPHIL 2010,Intro to Philosophy,3.00,A-,11.10\nSTAT 2000,Intro Statistics,4.00,WP,0.00\n\nARTS 2000,Art Apprce,3.00,A,12.00\nINTL 4250,Amer Foreign Policy,3.00,A-,11.10\nINTL 4280,Natlm & Ethnc Conf,3.00,A,12.00\nSPAN 1001,Elementary Spanish,4.00,WP,0.00\n\nGRMN 1001,Ele German I,4.00,A,16.00\nINTL 4410,Terrorism,3.00,A-,11.10\nINTL 4780,Sp Top Compara Pol,3.00,A,12.00\n\nGRMN 1002,Ele German II,4.00,A,16.00\nINTL 4360,E Asian Pol Sys,3.00,A,12.00\nINTL 4440,Strategic Intl,3.00,A,12.00\n\nGRMN 2001,Intermed German I,3.00,A,12.00\nINTL 3300,Intro to Comp Pol,3.00,A,12.00\nINTL 4240,Intl Organization,3.00,A,12.00\n\nCSCI 1100,Topics in Computing,3.00,A,12.00\nGRMN 2002,Intermed German II,3.00,A,12.00\nPEDB 1950,PTL Walking,1.00,S,0.00"
+            }
+        ]
+    },
+    {
+        "id": "request-47",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1XUOwZOu0RyskFG6m7HLinwNSv3DRJq6t.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS,R\nHPB 1T12,Health,1.00,S,,\nMIL 1T13,Military,2.00,S,,\nPEB 1T11,P.E.,1.00,S,,\n\nGLY 0115,Earth Proc Resource,5.00,B,,\nHIS 4T09,Brazil 1800-Prsnt,5.00,A,,\nMIL 4T07,Amphib Warfare I,3.00,A,,\nPOL 4T08,Gov Pol Sov Onion,5.00,B,,\n\nMIL 1T10,Naval Org/Sea Power,2.00,C,,\nMIL 1T11,Naval Ship Sys I,2.00,C,,\n\nMIL 1T12,Naval Ship Sys II,2.00,B,,\n\nMIL 2T05,Naval Weapon Sys I,2.00,D,,\n\nENG 0101,English Composition,5.00,C,,\nHIS 0111,West Civ To 1500,5.00,B,,\nMAT 0102,College Algebra,5.00,A,,\n\nGGY 0101,Intro Human Geog,5.00,B,,\nMAT 0116,Precalculus Math,5.00,A,,\nPSY 1T09,Contemp Psych,5.00,B,,\n\nENG 0102,English Composition,5.00,B,,\nMAT 0253,Analytic Geo Calcul,5.00,C,,\nPOL 0101,American Government,5.00,B,,\n\nGER 0101,Elementary German,5.00,D,,A\nPOL 0202,Intro Pol Science,5.00,C,,\nSOC 0105,Intro Sociology,5.00,C,,\n\nCML 0221,Western World Liter,5.00,B,,\nHIS 0122,Modern West Civ,5.00,B,,\nHIS 2T08Z,United States,5.00,A,,"
+            }
+        ]
+    },
+    {
+        "id": "request-49",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1LyFNEG8ERmG9XVwieEJNjHyv8fXhUw1g.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE,TITLE,CRS,GRADE\nADV 205,PRINCIPLES OF ADVERTISING,4,3.0\nCAS 110,CREATIVE PROCESSES,2,4.0\nISB 202,APP ENVIR & ORANISMAL BIO,3,4.0\nISP 203A,GLOBAL CHANGE,3,4.0\nWRA 0102,PREP FOR COLLEGE WRITING,0,4.0\nWRA 1004,PREP FOR COLLEGE WRITING,3,4.0\n\nMTH 103,COLLEGE ALGEBRA,3,4.0\nPSY 101,INTRODUCTORY PSYCHOLOGY,4,3.5\nSOC 100,INTRODUCTION TO SOCIOLOGY,4,3.0\nWRA 125,WRIT: AMER ETHNIC & RACIAL EXP,4,3.0\n\nADV 225,WRITING FOR PUBLIC RELATIONS,3,3.5\nADV 375,CONSUMER BEHAVIOR,3,2.5\nISP 203L,GEOLOGY HUMAN ENVIRONMENT LAB,2,4.0\nISS 210,SOCIETY AND THE INDIVIDUAL (D),4,3.0\nMTH 112,FINITE MATH APPL COLLEGE ALG,3,4.0\n\nACC 230,SURVEY OF ACCOUNTING CONCEPTS,3,4.0\nADV 250,MEDIA PLANNING,3,3.5\nADV 475,ADVERTISING AND SOCIETY,3,4.0\nEC 201,INTRODUCTION TO MICROECONOMICS,3,4.0\nIAH 204,ASIA AND THE WORLD (I),4,2.5\n\nISS 310,PEOPLE AND ENVIRONMENT (I),4,4.0\n\nADV 334,INTERNATIONAL ADVERTISING,3,4.0\nADV 342,ACCOUNT PLANNING AND RESEARCH,3,3.5\nJPN 101,ELEMENTARY JAPANESE I,5,4.0\nMKT 327,INTRODUCTION TO MARKETING,3,4.0\n\nADV 330,ADVERTISING MANAGEMENT,3,4.0\nADV 352,MEDIA SALES,3,3.5\nIAH 211B,AREA STUDIES ASIA (I),4,3.5\nJPN 102,ELEMENTARY JAPANESE II,5,4.0\n\nADV 260,PRINCIPLES OF PUBLIC RELATIONS,3,3.0\n\nADV 436,PROMOTIONS AND SPONSORSHIPS,3,***\nKIN 106C,BOWLING I,1,***\nMKT 313,PERSONAL SELLING & BUYING PROC,3,***\nSTA 113,COLOR AND DESIGN,3,***\n\nADV 420,NEW MEDIA DRIVER'S LICENSE,3,***"
+            }
+        ]
+    },
+    {
+        "id": "request-50",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1VIqx0hCqQ01Zhj0bTo4kjOaQS_Xh0_0b.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Subject Name,Credit Points (CP),Grade\n1001ABF,Accounting Principles,10CP,High Distinction\n1016MGT,Business Communication,10CP,Distinction\n\n1001MGT,Management Concepts,10CP,Distinction\n1303AFE,Economics for Managers,10CP,Distinction\n\n1003MKT,Introduction to Marketing,10CP,High Distinction\n1304AFE,Business Statistics,10CP,High High Distinction\n\n1001EHR,Employment Relations,10CP,Distinction\n1008ICT,Business Informatics,10CP,High Distinction"
+            }
+        ]
+    },
+    {
+        "id": "request-51",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/15_TIFEzB08lKTWSB1BKAJ91DsN9RKfB3.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Subject Name,EFTSL,Mark,Grade\nHAF101,Gender Power and Change,0.1250,60,CR\nHEA105,Studying Texts,0.1250,61,CR\nHGA101,Sociology A,0.1250,51,PP\nKHA111,Psychology A,0.1250,,WN\n\nHAF103,Sex and Bodies,0.1250,65,CR\nHEA106,Texts and Traditions,0.1250,58,PP\nHEJ102,Journalism Media and Communications 1B,0.1250,60,CR\nHGA102,Sociology B,0.1250,55,PP\n\nHAF227,Contemporary Representations of Gender,0.1250,62,CR\nHEA218,Contemporary Fiction,0.1250,57,PP\nHEA326,Modern Drama,0.1250,52,PP\nHGA261,Sociology of Nature,0.1250,41,NN\n\nHAF228,Religion and Gender,0.1250,58,PP\nHEA294,Telling Tales: Literature and Narrative,0.1250,55,PP\nHEA324,Screen Shakespeare,0.1250,57,PP\nHEJ101,Journalism Theory and Practice,0.1250,63,CR\n\nHEA372,Utopian and Dystopian Visions,0.1250,55,PP\nHEJ205,Public Relations,0.1250,62,CR\nHEJ335,Media and Music,0.1250,51,PP\nHEJ340,Feature Writing,0.1250,69,CR"
+            }
+        ]
+    },
+    {
+        "id": "request-52",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1cxIfksXC7_17WxbH48TwGcMMfg9qjdmz.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "not a transcript"
+            }
+        ]
+    },
+    {
+        "id": "request-53",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1m_gmKPm5ZVgK95BXO545HWRH8vs0yHQ2.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nWED 381B,Trng Prop & Rpt Writing,3.000,A,12.00\nWED 463,Assess Learned Perfrmnce,3.000,A,12.00\nWED 486,Adult Learning,3.000,A,12.00\nWED 495,Instructional Internship,3.000,A,12.00\n\nWED 398,Special Problems,3.000,A,12.00\nWED 466,Foundations of Work Educ,3.000,A,12.00\nWED 469,Training Systems Mngt,3.000,A,12.00\nWED 496,Professional Internship,3.000,A,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-54",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/19DxMTYwcB15uy6tUwdz38buWMroi8cL5.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO,COURSE TITLE,CRED,GRD,PTS,R\nWED 258,Work Experience,18.000,CR,.00,\nWED 381A,Trng Prog & Rpt Writing,3.000,A,12.000,\nWED 382,Career Development,3.000,A,12.00,\nWED 460,Occ Analysis & Curr Dev,3.000,A,12.00,\nWED 462,Instruct Methods & Mats,3.000,A,12.00,"
+            }
+        ]
+    },
+    {
+        "id": "request-56",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/15t7kp-onUP2nbBnQEe9SM0-cK28gCXWt.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "not a transcript"
+            }
+        ]
+    },
+    {
+        "id": "request-57",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1aI1KfJtsqsZlP_gOPhHBlOIL2zDsjLfg.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nAE 301HONYB,Aerodynamics I,3.000,3.000,A,12.000\nAE 313,Space Mechanics,3.000,3.000,A,12.000\nAE 314,Experimental Aerodynamics,1.000,1.000,A,4.000\nAE 315,Experimental Aerodynamics Lab,1.000,1.000,A,4.000\nAE 316,A/Space Engineering Materials,3.000,3.000,A,12.000\nES 305,Thermodynamics,3.000,3.000,A,12.000\nMA 441HON,Math Methods Engr & Physics I,3.000,3.000,A,12.000\n\nAE 302,Aerodynamics II,3.000,3.000,A,12.000\nAE 318,Aerospace Structures I,3.000,3.000,A,12.000\nAE 426,Spacecraft Attitude Dynamics,3.000,3.000,A,12.000\nEE 335,Electrical Engineering I,2.000,2.000,A,8.000\nEE 336,Electrical Engineering I Lab,1.000,1.000,A,4.000\nES 403,Heat Transfer,3.000,3.000,A,12.000\n\nAE 408HON,Turbine Rocket Engines Honors,3.000,0.000,****,0.000\nAE 418,Aerospace Structures II,3.000,0.000,****,0.000\nAE 427,Spacecraft Preliminary Design,4.000,0.000,****,0.000\nAE 434,Spacecraft Control,3.000,0.000,****,0.000\nES 405,Electrical Engineering II,3.000,0.000,****,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-58",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1VPJIUht_t_eOLmDwWxKFPgTM224zSyyK.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCOM 221HON,Honors Tech Report Writing,3.000,3.000,A,12.000\nEGR 115HON,Intro Computing for Engineers,3.000,3.000,A,12.000\nHON 250,Honors Seminar II,3.000,3.000,A,12.000\nMA 242,Calculus & Analytical Geom II,4.000,4.000,A,16.000\nPS 160,Physics II for Engineers,3.000,3.000,A,12.000\n\nES 201,Statics,3.000,3.000,A,12.000\nHON 350,Honors Seminar III,3.000,3.000,A,12.000\nMA 243HON,Calc & Analytical Geometry III,4.000,4.000,A,16.000\nPS 250,Physics III for Engineers,3.000,3.000,A,12.000\nPS 253,Physics Lab for Engineers,1.000,1.000,A,4.000\n\nES 202,Solid Mechanics,3.000,3.000,A,12.000\nES 204,Dynamics,3.000,3.000,A,12.000\nES 206,Fluid Mechanics,3.000,3.000,A,12.000\nMA 345HON,Differential Eq & Matrix Meth,4.000,4.000,A,16.000"
+            }
+        ]
+    },
+    {
+        "id": "request-59",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/16Lh4xXJ4GntNrL6QCtM58KmPP9_WaH-m.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nEGR 101HON,Intro to Engineering - Honors,2.000,2.000,A,8.000\nEGR 120,Graphical Communications,3.000,3.000,A,12.000\nHON 150,Honors Seminar I,3.000,3.000,A,12.000\nMA 241,Calculus & Analytical Geom I,4.000,4.000,A,16.000\nPS 150,Physics I for Engineers,3.000,3.000,A,12.000\nUNIV 101,College Success,1.000,1.000,A,4.000\n\nMA 142,Trigonometry,,3.000,T,\nPSY 101,Introduction to Psychology,,3.000,T,\n\nCOM 122,English Composition,,3.000,X,\nHU 142,Studies in Literature,,3.000,X,\nMA 111,College Math for Aviation I,,3.000,X,\nMA 112,College Math for Aviation II,,3.000,X,\nPS 142,Intro to Environmental Science,,3.000,X,\nPS 105,General Chemistry I,,4.000,X,\nPS 105L,General Chemistry I Laboratory,,0.000,X,\nPS 103,Technical Physics I,,3.000,X,\nPS 103L,Technical Physics I Laboratory,,0.000,X,\nPS 104,Technical Physics II,,3.000,X,\nPS 104L,Technical Physics II Lab,,0.000,X,\nSS 110,World History,,3.000,X,\nXSS LLAE,Social Sciences Adv Std LI,,6.000,X,\nXSS LLAE,Social Sciences Adv Std LI,,3.000,X,\nXSS LLAE,Social Sciences Adv Std LI,,3.000,X,"
+            }
+        ]
+    },
+    {
+        "id": "request-60",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ikYz558oyZpvg-ZeS3cwIv1w9bB8LKmc.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Title,Credit Hours,Grade,Repeat\nMCHE 478,Finite Element Analysis,0,,\nMCHE 468,Machine Design II,3,A,\nMCHE 468,Machine Design II,0,,\nMCHE 485,Mechanical Vibrations,3,C,\nMCHE 358,Energy Systems Laboratory,2,B,\nMCHE 470,Special Projects,3,A,\n\nECON 430,Industrial Economics & Finance,3,A,\nMCHE 484,Engineering Projects II,2,B,\nMCHE 484,Engineering Projects II,0,,\nMCHE 490,Senior Seminar,1,A,\nMCHE 474,Control Systems,3,A,\nMCHE 474,Control Systems,0,,\nMCHE 461,Energy Systems Process Design,3,A,\nPHIL 316,Professional Ethics,3,A,\nMCHE 470,Special Projects,1,B,"
+            }
+        ]
+    },
+    {
+        "id": "request-61",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1y0VfYPh9BlBkaEmJOYDSZeHjLPgE1psk.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Course Name,Credit Hours,Grade,Repeat\nENGR 201,Electrical Circuits,3,B,\nPHYS 215,Physics Laboratory I,1,A,\nMATH 350,Differential Equations,3,A,\nENGR 301,Thermodynamics,3,A,\nENGR 313,Dynamics,3,A,\nENGL 365,Technical Writing,3,A,\n\nENGR 219,Mechanics of Materials,3,B,\nENGR 304,Fluid Mechanics,3,A,\nMCHE 362,Thermal Engineering,3,A,\nMCHE 357,Instrumentation/Measurements,2,W,\nMCHE 301,Engineering Analysis,3,B,\nMCHE 363,Kinematics of Machines,3,B,\nMCHE 301,Engineering Analysis,0,,\n\nMCHE 357,Instrumentation/Measurements (Retake),2,A,\nMCHE 365,Manufacturing Processes,3,B,\nMCHE 467,Machine Design I,3,C,\nMCHE 469,Heat Transfer,3,A,\nMCHE 471,Fluid Mechanics,3,A,\nMCHE 365,Manufacturing Processes,0,,\nMCHE 478,Finite Element Analysis,3,A,"
+            }
+        ]
+    },
+    {
+        "id": "request-62",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/11evYPfhKOwoqQS2v9UKY3m90RNAl5Rs2.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Title,Credit Hours,Grade,Repeat\nMCHE 103,Graphical Communication&Design,2,A,\nECON 300,Fundamentals of Economics,3,A,\nMUS 300,Mus App: A Survey of Styles,3,B,\nENGL 205,American Literature I,3,B,\nMATH 270,Calculus I,4,A,\n\nPHYS 201,General Physics I,4,C,\nCHEE 317,Materials of Engineering,3,A,\nMATH 301,Calculus II,4,C,R\nHIST 221,The United States to 1877,3,B,\n\nENGR 211,Statics,3,B,\nPHYS 202,General Physics II,4,C,\nKNEA 161,Fitness Jogging,2,A,\nMATH 301,Calculus II,4,A,R\nMATH 302,Calculus III,4,A,"
+            }
+        ]
+    },
+    {
+        "id": "request-63",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1O2drtuOnekPC-fsCz1cNe6vFJEtFIZdy.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Grade\nFall 2010,ORNT 101,S\nFall 2010,DSGN 100,A\nFall 2010,DSGN 101,B\nFall 2010,ECON 201,A\nFall 2010,MATH 210,A\nFall 2010,ENGL 101,A\nFall 2010,HUMN 151,A\n\nSpring 2011,MCHE 101,B\nSpring 2011,CHEM 107,A\nSpring 2011,MATH 140,A\nSpring 2011,BIOL 121,A\nSpring 2011,ENGL 102,A"
+            }
+        ]
+    },
+    {
+        "id": "request-65",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/15ASTTRTAizeUMqvuU388AEjHLrgaHr5-.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Course Title,Grade,R,Hours Attempted,Hours Completed,Grade Points\nEDOL 799,Dissertation Extension,SP,,0.00,0.00,0.00\n\nEDOL 799,Dissertation Extension,,,,,"
+            }
+        ]
+    },
+    {
+        "id": "request-66",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1_qsEHMuQeNbIvA4sAI7-pqej55cdSeCP.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE,COURSE TITLE,GRADE,HRS ATT,HRS CMPT,GRADE POINTS,GPA\nEDOL 709,Assess Eval Accountability,A,3.00,3.00,12.00,\nEDOL 755,Qual Research Methods II,A,2.00,2.00,8.00,\n\nEDOL 720,Creativity Innov & Sust Chnge,A,3.00,3.00,12.00,\nEDOL 780,Transf Change Field Exp,P,3.00,3.00,0.00,\n\nEDOL 721,Ethics & Polt of Decn Making,A,3.00,3.00,12.00,\n\nEDOL 790,Dev Dissertation Prospectus,P,3.00,3.00,0.00,\n\nEDOL 722,Div & Intrcltrl Asp of lead,A,3.00,3.00,12.00,\nEDOL 724,The Leader as Change Agent,A,3.00,3.00,12.00,\n\nEDOL 723,Innovation in Resource Mgmt,A,3.00,3.00,12.00,\nEDOL 791,Dissertation I,P,3.00,3.00,0.00,\n\nEDOL 792,Dissertation II,SP,3.00,0.00,,"
+            }
+        ]
+    },
+    {
+        "id": "request-67",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1fQQ80aWu-b5ZtVgHVFFca0g3WFqZBK_i.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE,CREDIT,TERM,GRADE\nEDOL 700,Transformational Leadership,Fall 2014 Session 1 (8 Wks) (09/02/14 - 10/26/14),A\nEDOL 750,Writing Res & Publication I,Fall 2014 Session 1 (8 Wks) (09/02/14 - 10/26/14),A\n\nEDOL 705,Org Com & Conflict Mgmt,Fall 2014 Session 2 (8 Wks) (10/27/14 - 12/21/14),A\nEDOL 751,Writing Res & Publication II,Fall 2014 Session 2 (8 Wks) (10/27/14 - 12/21/14),A\n\nEDOL 706,Team and Group Dynamics,Spring 2015 Session 1 (8 Wks) (01/12/15 - 03/08/15),A\nEDOL 752,Quant Research Methods I,Spring 2015 Session 1 (8 Wks) (01/12/15 - 03/08/15),A\n\nEDOL 707,Org Theory and Development,Spring 2015 Session 2 (8 Wks) (03/09/15 - 05/03/15),A\nEDOL 753,Quant Research Methods II,Spring 2015 Session 2 (8 Wks) (03/09/15 - 05/03/15),A\n\nEDOL 708,Strategic Thinking,Summer 2015 Session 1 (8 Wks) (05/04/15 - 06/28/15),A\nEDOL 754,Qual Research Methods I,Summer 2015 Session 1 (8 Wks) (05/04/15 - 06/28/15),A"
+            }
+        ]
+    },
+    {
+        "id": "request-69",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1qUTLWbQZuiWDyaKlSYEJU09uMXhz5n45.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Semester,Course Code,Course Title,Grade,Credits,Quality Points\nSpring Quarter 1991-92,CSC-305,STRUCT PROG/PASCAL,A,2.67,10.68\nSpring Quarter 1991-92,EDU-324,PRIN OF INSTR & LRNG,A,2.67,10.68\nSpring Quarter 1991-92,MTH-241,NUMERICAL METHODS,A,2.67,10.68\n\nFall Quarter 1992-93,AST-130,THE SOLAR SYSTEM,A,2.67,10.68\nFall Quarter 1992-93,EDU-328,UTIL MEDIA FOR INSTR,A,2.00,8.00\nFall Quarter 1992-93,GEL-121,PHYSICAL GEOLOGY,A,2.67,10.68\nFall Quarter 1992-93,MTH-324,FUND CONCEPTS MATH,B+,2.67,8.81\n\nWinter Quarter 1992-93,EDU-426,METH TEACH BUS SUBJ,B+,2.67,8.81\nWinter Quarter 1992-93,EDU-441,EDU MEASURMT & EVAL,A,2.00,8.00\nWinter Quarter 1992-93,MTH-322,LINEAR ALGEBRA,A,2.67,10.68\nWinter Quarter 1992-93,MTH-325,COLLEGE GEOMETRY,A-,2.67,9.88\n\nSpring Quarter 1992-93,EDU-443,TEACH READING IN H-S,A,2.67,10.68\nSpring Quarter 1992-93,GEL-122,HISTORICAL GEOLOGY,A,2.67,10.68\n\nSummer Quarter 1992-93,EDU-444,APPLIED READ METHODS,A,0.67,2.68\n\nFall Semester 1993,EDUC-491,SECONDARY DIRECTED TEACHING,B+,12.00,39.60\nFall Semester 1993,EDUC-499,PROFESSIONAL SEMINAR,B,2.00,6.00"
+            }
+        ]
+    },
+    {
+        "id": "request-70",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ik4W7B7LEykOidEaQdLCRIqZ93sMGn0i.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Grade,Credits,Quality Points\nUS HST 20TH CENTURY,A,2.00,10.68\nINTRO TO HUM,A,2.00,8.00\nANAL GEOM & CALC 3,B+,3.33,10.99\nGENERAL PHYSICS 1,B,3.33,9.99\n\nMID EAST/MODERN ERA,A,2.00,8.00\nANAL GEOM & CALC 4,A-,3.33,12.32\nGENERAL PHYSICS 2,A,3.33,13.32\n\nCLASSICAL PERIOD,A,2.00,8.00\nDIFFERENTIAL EQUA,A,2.67,10.68\nOFFICIATE SPOT/SBALL,A,1.33,5.32\nGENERAL PHYSICS 3,A,3.33,13.32\n\nPRIN OF ECONOMICS 1,A,2.67,10.68\nTASK ANAL/INSTR DSGN,A,2.00,8.00\nPROBABILITY,B,2.67,8.01\nPSYCH OF ADOLESCENCE,A,2.00,8.00\n\nTHE STELLAR SYSTEM,A,2.67,10.68\nINTRO COMPUTER SCI,A,2.67,10.68\nSCHOOL & SOCIETY,A,2.00,8.00\nBEGIN RACQUETBALL,A-,0.67,2.48\nSTATICS,A,2.67,10.68"
+            }
+        ]
+    },
+    {
+        "id": "request-72",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1L-jris074OgxQ8p4aAsS5NGGwLvuVpLu.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Title,GR,HrA,HrE,Q-Pts\nMATH 168,GEOM ELEM & MID SCH TCHR,C,3.0,3.0,6.0\nENGL 232,AMERICAN LIT,B,3.0,3.0,9.0\nHIST 102,WESTERN CIV SINCE 1500,B,3.0,3.0,9.0\nART 371,ART FOR THE ELEM TEACHER,B,3.0,3.0,9.0\nEDUC 304,TCH READ ELEM SCH,A,3.0,3.0,12.0\nEPSY 301,ED PSYCH CHLD ADOL,D,3.0,3.0,3.0 R\n\nMATH 277,MATHEMATICS FOR ELEM ED I,W,0.0,0.0,0.0\nPHSC 102,PHYSICAL SCIENCE II,A,3.0,3.0,12.0\nENGL 231,ENGLISH LIT,A,3.0,3.0,12.0\nEDUC 307,INSTRUCTIONAL PLANNING /A,B,3.0,3.0,9.0\nLSED 401,BKS REL MAT CHLD,A,3.0,3.0,12.0\nEPSY 315,CLS MGMT/MOTV BEGN TCHR,A,3.0,3.0,12.0\n\nEDUC 320,FOUNDATIONS OF PK-8 MATHE,A,3.0,3.0,12.0\nEDUC 322,DIAG-ORESCR READING,A,3.0,3.0,12.0\nEDUC 326,CURR & NSTRUCT GRDS 1-5,A,6.0,6.0,24.0\nPHYS 142,PHYS FOR ELEMENTARY ED,A,4.0,4.0,16.0\n\nMATH 277,MATHEMATICS FOR ELEM ED 1,B,3.0,3.0,9.0\nEPSY 301,ED PSYC CHLD ADOL,A,3.0,3.0,12.0\nBIOL 154,GENERAL BIOL LAB II,A,1.0,1.0,4.0\nGBIO 107,INTRO TO BIOLOGY PRIN II,A,3.0,3.0,12.0\n\nMATH 367,CAPSTONE IN MATH FOR ELEM TCH,B,4.0,4.0,12.0\nEDUC 415,CUR-INSTR/ELEM SCH,A,9.0,9.0,36.0\nSPED 495,INDVLS OF STD UIDIS REG CL,A,3.0,3.0,12.0\n\nEDUC 427,STUDENT TCHG IN ELEM MID,P,0.0,9.0,0.0\n\nSE 101,FRESH ACADEMIC SUCCESS,A,2.0,2.0,8.0\nGBIO 151,GENERAL BIOL I,W,0.0,0.0,0.0\nCSD 213,ANAT/PHYS SP/HRNG MECH,B,3.0,3.0,9.0\nCSD 101,INTR COMM SCI DISORDE,A,3.0,3.0,9.0\nGBIO 151,GENERAL BIOL I,C,3.0,3.0,6.0\nBIOL 152,GENERAL BIOL LAB I,W,0.0,0.0,0.0\nCOMM 211,INTRO TO PUBLIC SPEAKING,B,3.0,3.0,9.0\nCPL 104,CAREER PLANNING,A,3.0,3.0,12.0\n\nHIST 201,AMERICAN HISTORY TO 1877,B,3.0,3.0,9.0\nSOC 212,SOCIAL PROBLEMS,W,0.0,0.0,0.0\nENGL 322,INTRO TO PROF/TECH WRITING,W,0.0,0.0,0.0\nKINL 133,WALKING FOR FITNESS,B,1.0,1.0,3.0\nCSD 201,INTRODUCTION TO AUDIOLOGY,B,3.0,3.0,9.0\nPOLI 201,AMERICAN POLITICS,A,3.0,3.0,12.0\nCMPS 110,COMPUTER LITERACY,C,3.0,3.0,6.0\n\nMATH 167,ELM NUMBER STRUCTURE,B,3.0,3.0,9.0\nBIOL 152,GENERAL BIOL LAB I,B,1.0,1.0,3.0\nMUS 291,FUNDAMENTALS OF MUSIC,B,3.0,3.0,9.0\nGEOG 103,INTRODUCTION TO GEOGRAPHY,B,3.0,3.0,9.0\nEDUC 203,FOUNDATIONS OF EDUC,A,2.0,2.0,8.0\nEDUC 212,DIVERSITY IN CLASSROOM,A,1.0,1.0,4.0\nSPED 210,CHARACTERISTICS OF INDIV,B,2.0,2.0,6.0"
+            }
+        ]
+    },
+    {
+        "id": "request-74",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1AdlCxTPqIGS85nt2iSIC-nRCmDmteJXh.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "not a transcript"
+            }
+        ]
+    },
+    {
+        "id": "request-75",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1HdJh0nTqG7ERg9DhX2psUkjV4vJh4Mvb.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Term,Course,Grade,PSD,PTS,GPA\nFALL QUARTER 2008,STATICS AND DYNAMICS (C&EE 101),A+,4.0,16.0,\nFALL QUARTER 2008,COMPUTNG-CIVIL ENGR (C&EE 15),B,2.0,6.0,\nFALL QUARTER 2008,INTR-EVIR & SCI & SOC (C&EE 153),A,4.0,16.0,\nFALL QUARTER 2008,INTRO-SE ASIAN STDS (SE A ST 1),P,5.0,0.0,\n\nWINTER QUARTER 2009,INT-MCHN-DFMBL SLDS (C&EE 108),A,4.0,16.0,\nWINTER QUARTER 2009,INTR-WATR RESR ENGR (C&EE 151),A+,4.0,16.0,\nWINTER QUARTER 2009,ELEM FLUID MECHANIC (MECH&AE 103),A,4.0,16.0,\n \nSPRING QUARTER 2009,NUMRCL CMPTNG&MDLNG (C&EE 103),A,4.0,16.0,\nSPRING QUARTER 2009,PROBBLTY&STATS-ENGR (C&EE 110),A-,4.0,16.0,\nSPRING QUARTER 2009,ENVIRNMNTL CHEM LAB (C&EE 156A),A-,4.0,16.0,\nSPRING QUARTER 2009,INTR-TRANSPORT ENGR (C&EE 180),A-,4.0,16.0,\n\nSUMMER SESSIONS 2009,INTR-ENGR THERMODYNC (MECH&AE 105A),A,4.0,16.0,\n\nFALL QUARTER 2009,PRIN SOIL MECHANICS (C&EE 120),A,4.0,16.0,\nFALL QUARTER 2009,ELEM STRUCT ANLY (C&EE 135A),A+,4.0,16.0,\nFALL QUARTER 2009,INTRO TO HYDROLOGY (C&EE 150),A,4.0,16.0,\nFALL QUARTER 2009,TECH MGMT&EOCONOMICS (ENGR 110),A,4.0,16.0,\n\nWINTER QUARTER 2010,ELEM STRUCTRAL MECH (C&EE 130),A,4.0,16.0,\nWINTER QUARTER 2010,INTRMD STRUCTR ANLY (C&EE 135B),A,4.0,16.0,\nWINTER QUARTER 2010,DSN-REINF CNCR STRC (C&EE 142),A,4.0,16.0,\nWINTER QUARTER 2010,FINANCE&MARKETING (ENGR 111),A-,2.0,14.8,\n\nSPRING QUARTER 2010,HYDRO ANALYS&DESIGN (C&EE 157L),A,4.0,16.0,\nSPRING QUARTER 2010,CHINESE CIVILIZATN (CHIN 50),P,5.0,0.0,\nSPRING QUARTER 2010,HMN PHYS-DIET&EXRCS (PHY SCI 5),A,5.0,20.0,\n\nSUMMER SESSIONS 2010,ENGINEERING&SOCETY WRITING INTENSIVE (ENGR 183EW),B,4.0,12.0,\nSUMMER SESSIONS 2010,ELECTRODYNMC&OPTICS (PHYSICS 1C),A-,5.0,18.5,\n\nFALL QUARTER 2010,STEEL STRUCTURES (C&EE 141),A,4.0,16.0,\nFALL QUARTER 2010,PRODUCT STRATEGY (ENGR 113),A-,4.0,14.8,\nFALL QUARTER 2010,MATHEMATCS OF ENGR (MECH&AE 182A),A,4.0,16.0,\n\nWINTER QUARTER 2011,DSGN&CNST-TALL BLDG (C&EE 147),A-,4.0,14.8,\nWINTER QUARTER 2011,SCIENCE-ENGR MATERL (MAT SCI 104),A,4.0,16.0,"
+            }
+        ]
+    },
+    {
+        "id": "request-77",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/17sayBSDHYu8innzjDkWRmTLHawmHf84b.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\n\nMAE 496LEC,Engineering Internship,3.000,3.000,A,12.000\n\nATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nGEO 101LEC,Earth Systems Science I,3.000,3.000,A,12.000\nMAE 338LAB,MAE Lab II,2.000,2.000,A,8.000\nMAE 377LLB,Product Design-CAE Envirn,3.000,3.000,A,12.000\nMAE 422LEC,Gas Dynamics,3.000,3.000,A,12.000\nMAE 436LR,Flight Dynamics,3.000,3.000,A-,11.010\nMAE 451LEC,Design Process & Methods,3.000,3.000,A,12.000\n\nMAE 311LEC,Machines & Mechanisms I,3.000,3.000,A,12.000\nMAE 364LEC,Manufacturing Processes,3.000,3.000,A,12.000\nMAE 423LEC,Intro to Propulsion,3.000,3.000,A,12.000\nMAE 425LEC,Space Dyn & Ctrl,3.000,3.000,A,12.000\nMAE 434LEC,Action Design,3.000,3.000,A,12.000\nMAE 494LT,Design Project,3.000,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-78",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1sic3-7gyOg1zc1Ru9UglWLHtGFKKWpnp.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Term,Attempted,Earned,Grade,Points\nEAS 207LR,Statics,Fall 2013,3.000,3.000,A,12.000\nMAE 204LR,Thermodynamics 1,Fall 2013,3.000,3.000,B+,9.990\nMAE 278LEC,Intro to AE Practice,Fall 2013,3.000,3.000,A-,11.010\nMTH 241LLB,College Calculus 3,Fall 2013,4.000,4.000,A,16.000\nPHY 108LR,General Physics 2,Fall 2013,4.000,4.000,B+,13.320\nPHY 158LAB,General Physics Lab 2,Fall 2013,1.000,1.000,A,4.000\n\nMTH 309LLB,Intro Linear Algebra,Summer 2014,4.000,4.000,A,16.000\n\nMAE 315LEC,Analysis of Structures,Fall 2014,3.000,3.000,A,12.000\nMAE 335LR,Fluid Mechanics,Fall 2014,3.000,3.000,A,12.000\nMAE 340LEC,Dynamic Systems,Fall 2014,3.000,3.000,A,12.000\nMAE 378LLB,Applied Math for MAEs,Fall 2014,3.000,3.000,A,12.000\nMAE 381LEC,Engng Materials 1,Fall 2014,3.000,3.000,B+,9.990\n\nCOM 101LEC,Principles of Comm,Spr 2014,3.000,3.000,A,12.000\nEAS 208LR,Dynamics,Spr 2014,3.000,3.000,B+,9.990\nEAS 209LR,Mechanics of Solids,Spr 2014,3.000,3.000,A,12.000\nEE 200LR,EE Concepts/Non-Majors,Spr 2014,3.000,3.000,A,12.000\nMTH 306LLB,Intro Diff Equations,Spr 2014,4.000,4.000,A,16.000\n\nMAE 316LEC,Aerospace Structures,Spr 2015,3.000,3.000,A,12.000\nMAE 334LLB,MAE Laboratory I,Spr 2015,2.000,2.000,A,8.000\nMAE 336LEC,Heat Transfer,Spr 2015,3.000,3.000,A,12.000\nMAE 385LAB,Engng Materials Lab,Spr 2015,1.000,1.000,A,4.000\nMAE 424LLB,Aerodynamics,Spr 2015,4.000,4.000,A,16.000\nSOC 121LEC,Substance Use and Abuse,Spr 2015,3.000,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-79",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1L-NvNFeOZ9UD-OVY-o8ndhN7NaKNIFuW.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Course Description,Attempted Credits,Earned Credits,Grade,Points\nATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nATH 175LEC,Swimming Fitness,1.000,1.000,A,4.000\nCHE 107LEC,Gen Chem for Engineers Lecture,4.000,4.000,B,12.000\nMTH 141LE,College Calculus I,4.000,4.000,A-,14.680\nSOC 101LEC,Introduction to Sociology,3.000,3.000,B,9.000\n\nEAS 230LLB,Engineering Computations,3.000,3.000,A,12.000\nGEO 120LEC,Maps: Earth from Above,3.000,3.000,A,12.000\nMAE 177LLB,Int Engng Drawing/CAD,2.000,2.000,A,8.000\nMTH 142LLB,College Calculus 2,4.000,4.000,A,16.000\nPHY 107LR,General Physics 1,4.000,4.000,A-,14.680"
+            }
+        ]
+    },
+    {
+        "id": "request-80",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ZK9gD88yjozaxgX1BYjS3vz_Q0Avfga2.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nMATH 112,College Math for Aviation II,3.000,0.000,****,0.000\nWEAX 201,Meteorology I,3.000,0.000,****,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-81",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1udDzcDW6QwjdYLmPfhSUjgfbvJ8zul--.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Attempted,Earned,Grade,Points\nASCI 316,3.000,3.000,A,12.000\nMATH 111,3.000,3.000,B,9.000\n\nECON 210,3.000,3.000,C,6.000\nMATH 211,3.000,3.000,B,9.000\n\nECON 211,3.000,3.000,B,9.000\nPHYS 102,3.000,3.000,C,6.000"
+            }
+        ]
+    },
+    {
+        "id": "request-82",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1elcA-SSoR9PjghLakifo9ufSmWkBryJw.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Course Name,Term,Attempted,Earned,Grade,Points\nASCI 318,Unmanned Aerial Sys Robotics,August 2015,3.000,3.000,A,12.000\nMGMT 210,Financial Accounting,August 2015,3.000,3.000,B,9.000\n\nASCI 404,Applications in Avia/Aero Law,October 2015,3.000,3.000,A,12.000\nMGMT 317,Organizational Behavior,October 2015,3.000,3.000,A,12.000\n\nASCI 315,Unmanned Aerial Systems & Ops,January 2016,3.000,3.000,A,12.000\nMATH 106,Basic Algebra & Trigonometry,January 2016,3.000,3.000,B,9.000"
+            }
+        ]
+    },
+    {
+        "id": "request-83",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1FnapROYgMJbMwckjQJnQrgFtdnthjuY2.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Description,Attempted,Earned,Grade,Points\nENGL 221,Technical Report Writing,3.000,3.000,A,12.000\nHUMN 330,Values and Ethics,3.000,3.000,B,9.000\n\nSFTY 409,Aviation Safety,3.000,3.000,A,12.000\nSPCH 219,Speech,3.000,3.000,A,12.000\n\nXSPEC ULTE,AAOC/TOS Elective,,7.000,T,\n\nGNED 103,Basic Mathematics,1.000,1.000,B,3.000\n\nMATH 106,Basic Algebra & Trigonometry,3.000,0.000,F,0.000\nMGMT 221,Intro to Mgmt Info Systems,3.000,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-84",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1BW1r3LwoNQp2wjl-YFg4JVrZk12eiJKI.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nASCI 254,Aviation Legislation,3.000,3.000,B,9.000\nHIST 130,History of Aviation in America,3.000,3.000,C,6.000\n\nCSCI 109,Intro Computers & Applications,,3.000,T,\nXCSCI LLTE,Computer Sci Elective,,1.000,T,\n\nXSPEC LLTE,AAOC/TOS Elective,,34.000,T,\n\nMGMT 201,Principles of Management,,3.000,X,\nMGMT 314,Human Resource Management,,3.000,X,\n\nASCI 202,Intro to Aeronautical Science,3.000,3.000,A,12.000\nENGL 123,English Composition,3.000,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-86",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/15eXZDUIuaNhkbXFnA5aEPRWhRUiScSP2.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Course Name,Units,Grade\nSOC 112,Social Problems,3.00,A\n\nFAML 100,The Family,3.00,A\nFDREL200,Family Foundations,2.00,A\nGEOL 404,Environmental Geology,3.00,A-\nGEOL 435,Hydrology,3.00,B+\nNURSF110,Pregnancy ** Retaken **,1.00,A\nRM 224E,Kayaking,2.00,A\n\nFAML 120,Parenting Skills,1.00,A\nFDREL333,Teachings of the Living Prophets,2.00,A\nGEOL 390R,Directed Study,1.00,A\nGEOL 410,Advanced Field Methods,6.00,C-\nGEOL 490R,Research Methods,2.00,A\nGS 100,Career Exploration ** Replaces a prior course **,1.00,A\nNURSF110,Pregnancy ** Replaces a prior course **,1.00,A\n\nESS 160,Swimming Beginning,1.00,A\nFDHUM105,Beauty and Creativity,3.00,A\nGEOL 351,Earth Materials,3.00,A\nGEOL 480,Paleontology,3.00,B+\nPH 121,Principles of Physics 1,3.00,A\nPH 150,Beginning Physics Lab,1.00,A\n\nGEOL 311,Structural Geology,4.00,B+\nGEOL 316,Geowriting,3.00,A\nGEOL 352,Petrology,3.00,A\n\nART 102,General Art-2D,2.00,A\nFDCA 206,Great Books of the World,2.00,A\nGEOL 340,Intro to GIS for Geoscientists,3.00,B+\nGEOL 370,Stratigraphy & Sedimentation,4.00,A"
+            }
+        ]
+    },
+    {
+        "id": "request-87",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1sYAVg91dLIOZ6Zj2TG2acovJtzTkOP1H.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Course Name,Grade,Units,Semester\nWR 121,ENGLISH COMP,A,2.00,Transfer work from Clatsop Community College\nWR 123,ENGLISH COMP,A,2.00,Transfer work from Clatsop Community College\n\nART 102,General Art-2D,B+,2.00,Fall Semester 208\nDANCE180W,Social Dance Beginning,A,1.00,Fall Semester 208\nFDCOM201,Professional Communications,B,2.00,Fall Semester 208\nFDREL121,Book of Mormon,A-,2.00,Fall Semester 208\nFDSCI101,Science Foundations,A,2.00,Fall Semester 208\nFR 101,Beginning French I,A,4.00,Fall Semester 208\nMUSIC346,Flute Ensemble,A,1.00,Fall Semester 208\n\nENG 251,Fund of Literary Interpretation,A,3.00,Spring Semester 2009\nESS 101,Water Aerobics,A,1.00,Spring Semester 2009\nFDAMF101,American Foundations,A,3.00,Spring Semester 2009\nFDMAT108,Math for the Real World,A,3.00,Spring Semester 2009\nFDREL122,Book of Mormon,A,2.00,Spring Semester 2009\nFDSCI201,Natural Disasters,A,3.00,Spring Semester 2009\nMUSIC346,Flute Ensemble,A,1.00,Spring Semester 2009\n\nENG 218,Creative Writing,A,3.00,Fall Semester 2009\nESS 161,Swimming Intermediate,A,1.00,Fall Semester 2009\nFDCNC250,Foundations Capstone,A,2.00,Fall Semester 2009\nFDHUM104,Holmer to Tolkien: Quests in Arts,A,3.00,Fall Semester 2009\nFDREL211,New Testament,A,3.00,Fall Semester 2009\n\nFDSCI207,Origins of Universe/Earth/Life,A,3.00,Fall Semester 2009 (cont.)\nMUSIC346,Flute Ensemble,A,1.00,Fall Semester 2009 (cont.)\n\nART 101,Introduction to the Visual Arts,A,3.00,Fall Semester 2010\nESS 161,Swimming Intermediate,A,1.00,Fall Semester 2010\nFDINT203,The Middle East,A,2.00,Fall Semester 2010\nFDREL324,Doctrine and Covenants,A,2.00,Fall Semester 2010\nGS 100,Career Exploration ** Retaken **,A,1.00,Fall Semester 2010\nSOC 111,Introduction to Sociology,A,3.00,Fall Semester 2010\nSOC 420,Drugs and Society,A,3.00,Fall Semester 2010\n\nENG 318R,Advanced Creative Writing,A,3.00,Spring Semester 2011\nFDREL325,Doctrine and Covenants,A,2.00,Spring Semester 2011\nGEOL 111,Physical Geology,A,3.00,Spring Semester 2011\nGEOL 111L,Physical Geology Lab,A-,1.00,Spring Semester 2011\nMATH 111,Trigonometry,A,2.00,Spring Semester 2011\nSOC 323,Race and Ethnic Relations,A,3.00,Spring Semester 2011\n\nCHEM 105,General Chemistry I,A-,4.00,Fall Semester 2011\nFDMAT112,Calculus I,A,4.00,Fall Semester 2011\nGEOL 112,Historical Geology,A,3.00,Fall Semester 2011\nGEOL 112L,Historical Geology LAB,A,1.00,Fall Semester 2011\nSOC 112,Social Problems ** Retaken **,A,3.00,Fall Semester 2011"
+            }
+        ]
+    },
+    {
+        "id": "request-90",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1YjQ1xZpEK5FMKXy7k_SlLM-CounenZ3B.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Semester,Course,Credits,Grade,Grade Points\nSpring 2011,CMPSC 101 INTRO C++ PROGRAMM,3.0,B-,8.01\nSpring 2011,IST 111S SMNR IN IST,1.0,A-,3.67\nSpring 2011,IST 110 INFO PEOPLE TECH,3.0,A,12.00\nSpring 2011,ECON 102 MICROEC ANLY,3.0,B+,9.99\nSpring 2011,INART 200 ELVIS PRESLEY,3.0,WN,0.00\n\nFall 2011,ART 201 INTRO DIGITAL ARTS,3.0,A,12.00\nFall 2011,ART 211Y INT DIG ART/DES CR,3.0,A,12.00\nFall 2011,IST 250 NEW MED WEB,3.0,A,12.00\nFall 2011,IST 220 NETWRK & TELECOM,3.0,A,12.00\n\nSpring 2012,IST 210 ORG DATA,4.0,A,16.00\nSpring 2012,ART 020 INTRO DRAWING,3.0,A,12.00\nSpring 2012,ART 203 THE ART OF WEB DSG,3.0,A,12.00\nSpring 2012,ART 302 PORTFOLIO ELEMENTS,3.0,A,12.00\nSpring 2012,IST 295A DISTER TEAM PROJ,1.0,A,4.00\n\nFall 2012,ART 402 PROF PRAC/PORT DES,3.0,A,12.00\nFall 2012,IST 260W INTRO SYS DSGN,3.0,A,12.00\nFall 2012,CAS 100C EFFECTIVE SPEECH,3.0,A-,11.01\nFall 2012,ENGL 202D BUSINESS WRITING,3.0,A-,11.01"
+            }
+        ]
+    },
+    {
+        "id": "request-91",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ow7BvqedPXvuk1iB7o4mejO7N0ZG4Vgj.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Credits,Grade,Grade Points\nENGL 015 RHETORIC & COMP,3.0,,0.00\nBIOL HUMAN BIOLOGY,4.0,GEN,0.00\nPSYCH 100 INTRO PSYCHOLOGY,3.0,,0.00\n\nSTAT 100 STAT CONCEPTS,3.0,A,12.00\nENGL 201 WHAT IS LITERATURE,3.0,B+,9.99\nMUSIC 005 INTRO/WESTRN MUSIC,3.0,A,12.00\n\nCHEM 101 INTRO CHEMISTRY,3.0,A,12.00\nMATH 021 COLLEGE ALGEBRA I,3.0,A,12.00\nPSYCH 212 DEV PSYCHOLOGY,3.0,A,12.00\n\nSPAN 001 ELEM SPANISH I,4.0,A,16.00\nBIOL 129 MAMMALIAN ANATOMY,4.0,A-,14.68\nP T 101S PTA COMPUTER,1.0,WN,0.00\nKINES 141 PHYS ACT: CULTURAL,3.0,A-,11.01\nP T 100 PTA--INTRO,3.0,WN,0.00\nPSU 008S UNV COI 1ST-YR SMN,1.0,A,4.00"
+            }
+        ]
+    },
+    {
+        "id": "request-92",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/18hMflwDZGwFLWD8TLu72j3ZsOnXWoVoI.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Mark,Grade,Units\nCMN 102,Communication Theory and Practice,50,PS,12.000\nDES 213,Graphic Design C,67,CR,12.000\nDES 214,Graphic Design D,64,PS,12.000\nDES 233,3D Design C,63,PS,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-93",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/17f5nNFyQ4Vj8W5codzBn1FCl69kpK1MW.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Program,Plan,Course,Description,Mark,Grade,Units\nB Computer-Based Design,e-Media Design Major,CMN 213,Editing for the Communications Professional,56,PS,12.000\nB Computer-Based Design,e-Media Design Major,DES 103,Digital Photographic Practice,66,CR,12.000\nB Computer-Based Design,e-Media Design Major,DES 104,Visual Worlds: An Introduction to Art and Design History,75,DN,12.000\nB Computer-Based Design,e-Media Design Major,DES 106,Typography,78,DN,12.000\n\nApplied Toward B Computer-Based Design,N/A,COR 109,Communication and Thought,,XC,12.000\nApplied Toward B Computer-Based Design,N/A,DES 102,Ways of Seeing: Understanding Images,,XC,12.000\nApplied Toward B Computer-Based Design,N/A,DES 105,Introduction to Design,,XC,12.000\nApplied Toward B Computer-Based Design,N/A,DES 221,e-Media A,,XC,12.000\nApplied Toward B Computer-Based Design,N/A,DES 222,e-Media B,,XC,12.000\nApplied Toward B Computer-Based Design,N/A,DES 224,e-Media D,,XC,12.000\nApplied Toward B Computer-Based Design,N/A,DES 199,Introductory Level Electives in Design,XC,,24.000\n\nB Computer-Based Design,e-Media Design Major,DES 101,Visual Literacy: Design Principles and Practice,71,CR,12.000\nB Computer-Based Design,e-Media Design Major,DES 211,Graphic Design A,77,DN,12.000\nB Computer-Based Design,e-Media Design Major,DES 223,e-Media C,81,DN,12.000\nB Computer-Based Design,e-Media Design Major,DES 231,3D Design A,70,CR,12.000\n\nB Computer-Based Design,e-Media Design Major; 3D Design Minor,DES 212,Graphic Design B,69,CR,12.000\nB Computer-Based Design,e-Media Design Major; 3D Design Minor,DES 225,e-media E - Internship/Professional Project,80,DN,12.000\nB Computer-Based Design,e-Media Design Major; 3D Design Minor,DES 226,e-Media F - Professional Portfolio,85,HD,12.000\nB Computer-Based Design,e-Media Design Major; 3D Design Minor,DES 232,3D Design B,72,CR,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-94",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1rCKyZwqr3VjtOUOGkrEq0S9oPdCa4Lkd.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\n,ENGLISH 110 COMP I WAIVED,,,,\nATSC 110,METEOROLOGY I,4.000,4.000,B,12.000\nAVIT 100,AVIATION ORIENTATION,1.000,1.000,A,4.000\nAVIT 102,INTRO TO AVIATION,5.000,5.000,CI,10.000\nENGL 120,COLLEGE COMPOSITION II (H),3.000,3.000,A,12.000\nGERM 1013,FIRST YEAR GERMAN I Notes: SOECIAL EXAMS CREDIT,4.000,4.000,S,0.000\nHON 101,INQUIRY IN THE HUMANITIES,1.000,1.000,A,4.000\nMSCI 101,MILITARY SCIENCE I,2.000,2.000,A,8.000\nMSCI 101L,LEADERSHIP LAB,1.000,1.000,A,4.000\nPEXS 101,FIT:MILITARY PHYS CONDITIONING,1.000,1.000,A,4.000\n\nAVIT 103,INTRO TO AIR TRAFFIC CONTROL,2.000,2.000,A,8.000\nECON 201,PRINCIPLES OF MICROECONOMICS,3.000,3.000,B,9.000\nHIST 102,WESTERN CIVILIZATION II,3.000,3.000,A,12.000\nMATH 103,COLLEGE ALGEBRA,3.000,3.000,B,9.000\nMSCI 102,MILITARY SCIENCE I,2.000,2.000,A,8.000\nMSCI 102L,LEADERSHIP LAB,1.000,1.000,A,4.000\nPEXS 102,FIT:MILITARY PHYS COND,1.000,1.000,A,4.000\n\nCOMM 110,Fundamentals Public Speaking,3.000,0.000,W,0.000\nENGL 125,Technical And Business Writing,3.000,3.000,A,12.000\nMATH 146,Applied Calculus I,3.000,3.000,B,9.000\nPHYS 150,Physics For Aerospace Sciences,5.000,5.000,A,20.000\n\nATSC 231,Aviation Meteorology I,4.000,4.000,A,16.000\nAVIT 250,Human Factors,2.000,2.000,B,6.000\nCSCI 101,Introduction To Computers,3.000,3.000,B,9.000\nHIST 220,History Of North Dakota,3.000,3.000,B,9.000"
+            }
+        ]
+    },
+    {
+        "id": "request-95",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1C29GpHKAtCDzwUMQt8m3SHwFOWDTisxK.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCJS 450,Internship,3.00,0.00,,0.000"
+            }
+        ]
+    },
+    {
+        "id": "request-96",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1n1B7gesYaJmlCGvKjWW-zbsfMsXixvmN.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Program,Plan,Semester,Course,Description,Attempted Units,Earned Units,Grade,Points\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2011 Fall,AAS 331,Race and Ethnicity,3,3,A-,11.1\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2011 Fall,ANT 323,Morality and Society,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2011 Fall,ARH 125,Renaissance to Modern Art,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2011 Fall,SOC 316,Research Methods,3,3,A-,11.1\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2011 Fall,SOC 325,Sex Marriage & Family,3,3,A+,12.0\n\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Spring,CJS 340,Law and Society,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Spring,ENL 203,Survey World Lit I,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Spring,PSC 101,Intro American Politics,3,3,B+,9.9\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Spring,SOC 350,Read Soc & Anthro Lit,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Spring,WMS 101,Intro To Women's Studies,3,3,A+,12.0\n\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Fall,ANT 113,Intro Soci & Cult Behavr,3,3,A+,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Fall,ANT 350,Read Soc & Anthro Lit,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Fall,CJS 311,Crime&Just Across LifeSpan Juv,3,3,A+,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Fall,LCE 200,Intro Leadership&Civ Engagemnt,3,3,A+,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Fall,PHL 110,Prinic of Critical Thinking,3,3,A+,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2012 Fall,PHL 336,Medieval Philosophy,3,3,A,12.0\n\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2013 Spring,CJS 350,Read Crime & Justice Studies,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2013 Spring,CJS 400,Contemporary Topics in Justice,3,3,A,12.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2013 Spring,CJS 450,Internship,3,0,W,0.0\nArts & Sciences Undergraduate,Crime & Justice Studies Major,2013 Spring,PSC 322,Constitutional Law,3,3,A,12.0"
+            }
+        ]
+    },
+    {
+        "id": "request-97",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1Et9qYzidGumej9sphWCn50hXgL_LQ0Kw.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Year Term,Course,Description,Attempted,Earned,Grade,Points\n2009 Fall,ENL 101,Critical Writ & Read I,3.00,3.00,A,12.000\n2009 Fall,MTH 120,Quantitative Reasoning,3.00,3.00,A,12.000\n2009 Fall,MTX 105,Cont Issue Materials Sciences,3.00,3.00,A,12.000\n2009 Fall,MUS 106,Art & Hist Of Rock Music,3.00,3.00,A-,11.100\n2009 Fall,SOC 101,Intro To Sociology,3.00,3.00,A,12.000\n\n2010 Spring,ANT 111,Intro Cultural Anthro,3.00,3.00,A,12.000\n2010 Spring,CJS 190,Intro Crime & Justice Studies,3.00,3.00,A,12.000\n2010 Spring,ENL 102,Critical Writ & Read II,3.00,3.00,A,12.000\n2010 Spring,PSY 101,General Psychology,3.00,3.00,A+,12.000\n2010 Spring,SOC 200,Intro To Social Thought,3.00,3.00,A,12.000\n\n2010 Fall,ANT 350,Read Soc & Anthro Lit,3.00,3.00,A,12.000\n2010 Fall,CJS 257,Justice & Society,3.00,3.00,A,12.000\n2010 Fall,ENL 200,Studies In Literature,3.00,3.00,B+,9.900\n2010 Fall,PHY 101,Introduction to Physics I,3.00,3.00,A+,12.000\n2010 Fall,PSY 201,Child Psychology,3.00,3.00,A+,12.000\n\n2011 Spring,BIO 101,General Biology I,3.00,3.00,A,12.000\n2011 Spring,CJS 258,Criminological Theory,3.00,3.00,A,12.000\n2011 Spring,CJS 314,Social Control/Crime Control,3.00,3.00,B,9.000\n2011 Spring,CJS 374,Victimization,3.00,3.00,A,12.000\n2011 Spring,PHL 215,Introduction to Ethics,3.00,3.00,A-,11.100"
+            }
+        ]
+    },
+    {
+        "id": "request-98",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1Fp4BJ8Jy5iMKbZ06p-iSbHBsYQ_FxUu-.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "not a transcript"
+            }
+        ]
+    },
+    {
+        "id": "request-99",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1VLiiC1sOyDH4pQ48GOfVX9qDteNEwXvM.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nWED 381B,Trng Prop & Rpt Writing,3.000,A,12.00\nWED 463,Assess Learned Perfrmnce,3.000,A,12.00\nWED 486,Adult Learning,3.000,A,12.00\nWED 495,Instructional Internship,3.000,A,12.00\n\nWED 398,Special Problems,3.000,A,12.00\nWED 466,Foundations of Work Educ,3.000,A,12.00\nWED 469,Training Systems Mngt,3.000,A,12.00\nWED 496,Professional Internship,3.000,A,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-100",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1kfDnjUAp3fd7W2GCdDxmiv06BES6Eltj.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nWED 258,Work Experience,18.000,CR,.00\nWED 381A,Trng Prog & Rpt Writing,3.000,A,12.000\nWED 382,Career Development,3.000,A,12.000\nWED 460,Occ Analysis & Curr Dev,3.000,A,12.000\nWED 462,Instruct Methods & Mats,3.000,A,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-102",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1Aw-Ax-O8v_dBES1ItuSIekWUZnRiPxFy.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Code,Credits,Grade\nEntrepreneurial Marketing,EEE382,3.0,A\nElectronic Retailing&Marktng,MAR401,3.0,A-\nGlobal Marketing Strategy,MAR456,3.0,A\nPortuguese II,POR102,4.0,A\nSales & Strategic Partnerships,RMT307,3.0,B+"
+            }
+        ]
+    },
+    {
+        "id": "request-104",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1n23qbXMV-8guPbz6rKaPtD_BYjMPhKz7.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nACCT 444,Auditing,4.00,A,16.00\nENGL 135,Advanced Composition,4.00,A,16.00\n\nACCT 352,Business Info Systems w/Lab,4.00,A,16.00\n\nACCT 429,Federal Income Taxation,4.00,A,16.00\nCARD 405,Career Development,2.00,A,8.00\n\nBUSN 460,Senior Project,3.00,A,12.00\nLAS 432,Tech Society and Culture,3.00,A,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-105",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1aYqhlEJ0izOdsCwkHc8ZXydRD6OEwk95.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nACCT 1TR,Accounting Transfer,1.00,TB,\nACCT 1TR,Accounting Transfer,1.00,TB,\nACCT 1TR,Accounting Transfer,2.67,TB,\nACCT 1TR,Accounting Transfer,2.67,TB,\nACCT 244,Intro to Cost Accounting,3.00,TB,\nACT 251,Intro to Acct Info Systems,2.00,TA,\nBUSN 1TR,Business Transfer,0.33,TB,\nBUSN 380,Personal Financial Planning,3.00,TB,\nCARD 1TR,Business Transfer,0.33,TB,\nCOMP 100,Computer Apps for Busn w/Lab,2.00,TB,\nCOMP 1TR,Cmptr Apps % Prog Transfer,3.33,TB,\nCOMP 1TR,Cmptr Apps & Prog Transfer,4.67,TB,\nECON 1TR,Economics Transfer,3.33,TB,\nENGL 112,Composition,3.33,TB,\nENGL 1TR,English Transfer,0.33,TB,\nENGL 230,Professional Communication,3.00,TB,\nENGL 2TR,English Transfer,3.33,TB,\nFIN 364,Money and Banking,3.33,TB,\nFIN 417,Real Estate Finance,3.33,TB,\n\nHUMN 1TR,Humanities Transfer,0.33,TA,\nHUMN 303,Introduction to Humanities,3.00,TA,\nMATH 114,Algebra for College Students,3.33,TA,\nPSYC 110,Psychology,3.00,TC,\nPSYC 1TR,Psychology Transfer,0.33,TC,\n\nBUSN 115,Intro to Business & Technology,3.00,B,9.00\nPSYC 307,Motivation and Leadership,3.00,B,9.00\n\nBIS 155,Data Analysis w/Sprdsh w/Lab,3.00,A,12.00\nMGMT 303,Principles of Management,3.00,B,9.00\n\nACCT 212,Financial Accounting,4.00,A,16.00\nSCI 228,Nutri Health & Wellness w/Lab,4.00,A,16.00\n\nACCT 304,Intermediate Accounting I,4.00,A,16.00\nMGMT 410,Human Resource Management,4.00,A,16.00\n\nACCT 305,Intermediate Accounting II,4.00,A,16.00\nMATH 221,Statistics for Decision-Making,4.00,C,8.00\n\nACCT 312,Intermediate Accounting III,4.00,A,16.00\nMGMT 404,Project Management,4.00,B,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-108",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1NO0huMLhOtYSj14HBtFI2YYSRF2pZ4Jc.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ,NO.,COURSE TITLE,CRED,GRD,PTS\nBUSI,504,Leading Organizational Change,3.00,A,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-109",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1rS6Zs2qVgJHlc1Rn_HBp3w33b41NmGOi.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS\nBUSI 604,International Business,3.00,A,12.00\n\nBUSI 620,Global Economic Environment,3.00,A,12.00\n\nBUSI 501,Executive Leadership & Managem,3.00,A,12.00\n\nBUSI 642,Contemp. Issues in Human Res.,3.00,A,12.00\n\nBUSI 550,Effective Executive Communicat,3.00,A,12.00\n\nBUSI 512,Managerial Information Technol,3.00,A,12.00\n\nBUSI 530,Managerial Finance,3.00,A,12.00\nBUSI 601,Accounting for Decision Making,3.00,B,9.00\n\nBUSI 520,Strategic Marketing Management,3.00,A,12.00\nBUSI 561,Legal Issues in Business,3.00,A,12.00\n\nBUSI 502,Servant Leadership,3.00,A,12.00\nBUSI 690,Policy & Strategy in Global Co,3.00,A,12.00\n\nBUSI 503,Leadership Theory,3.00,B,9.00"
+            }
+        ]
+    },
+    {
+        "id": "request-117",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1rtUlDERhUEiOgDSG2RWZ3tdVrRBtKOs7.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE TITLE,DEPT,CRSE,GR,CARR,EARN,QPTS\nLITERATURE AND JAZZ,ENGL,2123,C,3.00,3.00,6.00\nROMAN REPUBLIC,HIST,4003,B,3.00,3.00,9.00\nHIST COLLEGE SPORTS,HIST,4197,C,3.00,3.00,6.00\nINTRO TO POLI THEORY,POLI,2060,A,3.00,3.00,12.00\nCAMPAIGNS & ELECTNS,POLI,4026,A,3.00,3.00,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-118",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1xUS2vlmApkfswyVyqJUUWVk1gaqivGvD.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE TITLE,DEPT,CRSE,GR,CARR,EARN,QPTS\nSHAKESPEARE,ENGL,2148,A,3.00,3.00,12.00\nTHE US: 1865 TO PRES,HIST,2057,B,3.00,3.00,9.00\nELEMENTARY LATIN,LATN,1001,B,4.00,4.00,12.00\nINTRO COMTEMP MATH,MATH,1029,A,3.00,3.00,12.00\nINTRO INTNTL POLITIC,POLI,2057,A,3.00,3.00,12.00\nUG INTERNSHIP POL SC,POLI,3901,A,3.00,3.00,12.00\n\nENGLISH COMP,ENGL,2000,A,3.00,3.00,12.00\nWEST CIVIL TO 1500,HIST,1001,A,3.00,3.00,12.00\nINTERMEDIATE LATIN,LATN,2051,B,4.00,4.00,12.00\nSP TOP AMER POLITICS,POLI,4000,B,3.00,3.00,9.00\nINTRODUCTORY SOCL,SOCL,2001,A,3.00,3.00,12.00\n\nINTERPERSNL COMMNCTN,CMST,2010,A,3.00,3.00,12.00\nCIVIL WAR,HIST,4055,A,3.00,3.00,12.00\nINDEPENDENT STUDY,HIST,4091,A,3.00,3.00,12.00\nINTERMEDIATE LATIN,LATN,2053,B,4.00,3.00,9.00\nSOUTHERN POLITICS,POLI,4039,A,3.00,3.00,12.00\nINTL POL MIDDLE EAST,POLI,4059,A,3.00,3.00,12.00\n\nLOUSIANA,HIST,3071,A,3.00,3.00,12.00\nMODERN MIDDLE EAST,HIST,4096,B,3.00,3.00,9.00\nINDEPENDENT STUDY,HIST,4902,A,3.00,3.00,12.00\nGOLD AGE LYRIC POETR,LATN,2074,B,3.00,3.00,9.00\nAMER FOREGN POLICY,POLI,4043,A,3.00,3.00,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-119",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1u4cIaDE9SSa1AXUwChZA6pkWohP38nBJ.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Title,Dept,Crse,Gr,Carr,Earn,Qpts\nENGL COMPOSITION,ENGL,1001,P,,3.00,\nCOLLEGE ALGEBRA,MATH,1021,P,,3.00,\nINTRO TO PHYSICS,PHYS,1100,P,,3.00,\n\nBIOL FOR SCI MAJ I,BIOL,1201,A,3.00,3.00,12.000\nBIOL LAB SCI MAJ I,BIOL,1208,A,1.00,1.00,4.000\nGENERAL CHEMISTRY,CHEM,1201,A,3.00,3.00,12.000\nAN GEOM & CALCULUS-I,MATH,1550,W,,,\nAMERICAN GOVERNMENT,POLI,2051,A,3.00,3.00,12.000\n\nGENERAL BIOLOGY,BIOL,1002,A,3.00,3.00,12.000\nHIS WES CIVILIZATION,HIST,1003,A,3.00,3.00,12.000\nUS TO 1865,HIST,2055,A,3.00,3.00,12.000\nINTRO COMP POLITICS,POLI,2053,A,3.00,3.00,12.000\nGOVT OF LOUISIANA,POLI,2056,A,3.00,3.00,12.000\nINTRO TO THEATRE,THTR,1020,A,3.00,3.00,12.000"
+            }
+        ]
+    },
+    {
+        "id": "request-121",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1PdCmKAso6V-V5_aZqIdvmXPqvsuqy6YP.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Course Title,,,,\nSOEE5306M,MGeol Independent Field Based Project (Geological Sciences),67,M,40,20\nSOEE5308M,MGeol Independent project,70,M,20,10\nSOEE5605M,Easter Field Class - Geological Science,66,M,15,7.5\nSOEE5620M,Advanced Sedimentology and its Applications,64,M,15,7.5\nSOEE5640M,Mountain Belt Processes,72,M,15,7.5\nSOEE5645M,Plate Tectonics and Geodynamics (MGeol),67,M,15,7.5"
+            }
+        ]
+    },
+    {
+        "id": "request-122",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ycAI9-eFRMlWYEX7tAN6_iruZbR9S4Lt.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Programme,Year,Course Code,Course Name,Result,Level,Credits,ECTS\nMGeol BSc Geological Sciences (International),2010/11,SOEE1120,Vertebrate Evolution,86,1,10,5\nMGeol BSc Geological Sciences (International),2010/11,SOEE1131,Introductory Chemistry for Earth and Environmental Scientists,73,1,10,5\nMGeol BSc Geological Sciences (International),2010/11,SOEE1150,Fundamentals of Geophysics,70,1,10,5\nMGeol BSc Geological Sciences (International),2010/11,SOEE1210,The Geological Origins and Occurrences of Gold in the British Isles,65,1,10,5\nMGeol BSc Geological Sciences (International),2010/11,SOEE1280,The Atmosphere of Planet Earth,76,1,10,5\nMGeol BSc Geological Sciences (International),2010/11,SOEE1470,Computing and Data Analysis,80,1,10,5\nMGeol BSc Geological Sciences (International),2010/11,SOEE1490,Understanding the Earth I,88,1,20,10\nMGeol BSc Geological Sciences (International),2010/11,SOEE1500,Understanding the Earth 2,82,1,20,10\nMGeol BSc Geological Sciences (International),2010/11,SOEE1510,Practical Geology,74,1,20,10\n\nMGeol BSc Geological Sciences (International),2011/12,SOEE2010,Chemistry of the Earth,78,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2050,Deformation Processes,74,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2062,Sedimentary Processes,68,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2075,Basin Evolution,69,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2085,Hydrocarbon and Mineral Resources,68,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2095,Research and Career Skills,66,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2107,Geology Field and Map Skills,73,2,20,10\nMGeol BSc Geological Sciences (International),2011/12,SOEE2110,Introductory Oceanography,66,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2145,Palaeoecology Palaeobiology and Evolution,73,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2440,Mineralogy,84,2,10,5\nMGeol BSc Geological Sciences (International),2011/12,SOEE2450,Igneous and Metamorphic Petrology,66,2,10,5\n\nMGeol BSc Geological Sciences (International),2012/13,SOEE9001,Study Year Abroad,74,-,120,60"
+            }
+        ]
+    },
+    {
+        "id": "request-124",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1shj4K8vYudv6dSWNsME-N1Cq7XoMyaOi.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course No./Designator,Course Title,Grade/Designator,Credit Hours\nBUSN412,Business Policy,A,4.00\nPROJ430,Advanced Project Management,A,4.00\nBUSN460,Senior Project,A,3.00\nMGMT340,Business Systems Analysis,A,4.00"
+            }
+        ]
+    },
+    {
+        "id": "request-125",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/134jqiFVCXOUlNRt2GPElsTZyUeivtUuq.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE NO./DESIGNATOR,COURSE TITLE,GRADE,CREDITS\nPROJ420,PROJECT RISK MANAGEMENT,A,4.00\nMATH221,STATISTICS FOR DECISION MAKING,B,4.00\nACCT346,MANAGERIAL ACCOUNTING,C,4.00\nPROJ330,HUMAN RESOURCES AND COMMUNICATION IN PROJECTS,A,4.00\n\nBUSN420,BUSINESS LAW,A,4.00\nPROJ410,CONTRACTS AND PROCUREMENT,B,4.00\nBIS240,DATABASE ESSENTIALS FOR DECISION-MAKING WITH LAB,A,4.00\nCARD410,CAREER DEVELOPMENT,A,2.00\nSCI204,ENVIRONMENTAL SCIENCE WITH LAB,B,4.00\n\nBSOP206,OPERATIONS STRATEGY,A,4.00\nBUSN379,FINANCE,B,4.00\nACCT434,ADVANCED COST MANAGEMENT,B,4.00\nBSOP326,TOTAL QUALITY MANAGEMENT,A,4.00\nPSYC305,MOTIVATION AND LEADERSHIP,B,3.00"
+            }
+        ]
+    },
+    {
+        "id": "request-126",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/11Qq_qs7Ewy_niQvNz5AH06FLk4QhWqDD.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course No./Designator,Course Title,Grade/Designator,Credit Hours\nACCT212,Financial Accounting,TRNFR,4.00\nBUSN319,Marketing,TRNFR,3.00\nECON312,Principles of Economics,TRNFR,4.00\nENGL112,Composition,TRNFR,4.00\nENGL135,Advanced Composition,TRNFR,4.00\nENGL227,Professional Writing,TRNFR,4.00\nHUMN420,Contemporary Literature,TRNFR,3.00\nHUMN445,Principles of Ethics,TRNFR,3.00\nMGMT303,Principles of Management,TRNFR,3.00\nSOCS185,Culture and Society,TRNFR,3.00\nPSYC110,Psychology,TRNFR,3.00\nSPCH275,Public Speaking,TRNFR,3.00\nCOLL145,Critical Thinking and Problem Solving,PROF,1.00\n\nHUMN410,Contemporary History,A,3.00\nMATH178,College Algebra,B,4.00\nBIS150,Advanced PC Applications with Lab,A,3.00\nHUMN432,Technology Society and Culture,A,3.00"
+            }
+        ]
+    },
+    {
+        "id": "request-128",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1xfaAjinw5XTVsn_GrcBA_jgFA80UshMk.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course No./Designator,Course Title,Grade/Designator,Credit Hours\nBUSN412,Business Policy,A,4.00\nPROJ430,Advanced Project Management,A,4.00\nBUSN460,Senior Project,A,3.00\nMGMT340,Business Systems Analysis,A,4.00"
+            }
+        ]
+    },
+    {
+        "id": "request-132",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1sUD7L2Pq-yrzBVjbi-rk-uHoYLqI01Ia.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJECT NUMBER,COURSE TITLE,POINTS,GRADE\nELEN E3081,CIRCUIT ANALYSIS LABORATORY,1.00,A\nELEN E3084,SIGNALS & SYSTEMS LABORATORY,1.00,A\nELEN E3106,SOLID STATE DEVICES MATERIALS,3.50,B+\nELEN E3201,CIRCUIT ANALYSIS,3.50,A\nELEN E3801,SIGNALS AND SYSTEMS,3.50,A-\nIEOR E3658,PROBABILITY,3.00,B\n\nCOMS W3134,DATA STRUCTURES IN JAVA,3.00,B-\nCSEE W3827,FUNDAMENTALS OF COMPUTER SYSTS,3.00,C+\nELEN E3082,DIGITAL SYSTEMS LABORATORY,1.00,A\nELEN E3083,ELECTRONIC CIRCUITS LABORATORY,1.00,A\nELEN E3331,ELECTRONIC CIRCUITS,3.00,C\nELEN E3701,INTRO TO COMMUNICATION SYSTEMS,3.00,A\n\nEEME E3601,CLASSICAL CONTROL SYSTEMS,3.00,A\nELEN E3043,SOLID ST MICROWAV OPTICS LAB,3.00,A\nELEN E3399,ELECTRICAL ENGINEERING PRACTICE,1.00,A\nELEN E4411,FUNDAMENTALS OF PHOTONICS,3.00,B+\nELEN E4488,OPTICAL SYSTEMS,3.00,A\nPHYS W2001,SPECIAL RELATIVITY,3.00,B\n\nEEME E4601,DIGITAL CONTROL SYSTEMS,3.00,B\nELEN E3390,ELEC CIRCUIT DESIGN LABORATORY,3.00,A\nELEN E4815,RANDOM SIGNALS & NOISE,3.00,A+\nMECE E3408,COMPUTER GRAPHICS & DESIGN,3.00,B+\nMECE E4306,INTRO TO AERODYNAMICS,3.00,A+"
+            }
+        ]
+    },
+    {
+        "id": "request-133",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1w6IG3wJflCEg_sRLirLv4NxzpELzsrBL.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "not a transcript"
+            }
+        ]
+    },
+    {
+        "id": "request-135",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1iCvaqJaisI3oub9ODmqk4o7ScAUjX8Q3.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Title,Credits,Grades\nState Status and Politics,0.5,88\nPhysical Education(1),1.0,80\nFundamentals of Computer Application,2.0,90\nCultivation of Ideological Morality and the Basic Knowlegde of Law,2.0,90\nPolitical Economics,3.0,96\nCollege English(2),4.0,95\nAccounting,4.0,86\nAdvanced Mathematics(1),5.0,85\n\nMilitary Theory,1.0,90\nPhysical Education(2),1.0,96\nConspectus of Chinese Modern History,1.5,92\nPublic Finance,3.0,94\nFinancial Management,3.0,93\nMicroeconomics,3.0,72\nCollege English(3),4.0,88\nAdvanced Mathematics(2),5.0,90\n\nPhysical Education(3),1.0,86\nIntroduction of the Basic Principle of Marxism,2.0,96\nAssets Appraisal,2.0,95\nProject Appraisal,2.0,92\nFinance,3.0,96\nChinese Tax System,3.0,89\nMacroeconomics,3.0,100\nProbability and Statistics,4.0,99\nCollege English(4),4.0,97\n\nPhysical Education(4),1.0,92\nGovernment Budget Management,2.0,91\nIntangible Assets Appraisal,2.0,91\nGovernment and Nonprofit Organization Accounting,2.0,96\nReal Estate Appraisal,2.0,88\nCommercial Bank Management,2.0,94\nSecurity Investment,2.0,90\nIntroduction to Insurance,2.0,95\nLinear Algebra,3.0,93\nStatistics,3.0,91\nDatabase Principle and Application,4.0,87\nMao Zedong Thought and Introduction on the Theoretical System of Socialism with Chinese Characteristics,4.0,90\nBritish and American Society and Culture(2),4.0,99\n\nManagement of State-Owned Assets,2.0,94\nEnterprise Value Appraisal,2.0,85\nAssets Valuation Standards,2.0,90\nAuditing Principles,2.0,95\nInvestment and Operation of Artwork,2.0,88\nFinancial Economics,2.0,80\nEconometrics,3.0,90\nIntroduction to Economic Law,3.0,93\nInvestments,3.0,89\n\nFixed-income Security,2.0,86\nOperation and management of real estate,2.0,90\nInternational Finance,2.0,81\nVenture Capital,2.0,96\nFinancial Reporting & Analysis,2.0,90\nInvestment Banking,2.0,85\nProject Management,2.0,96"
+            }
+        ]
+    },
+    {
+        "id": "request-136",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1xQYEbTUTX56Kk6VpDLhAM_b9sUJTnLiS.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Number,Descriptive Title of the Course,Final Grade,Re-exam_Completion,Credits\nAMAT 198,Practicum,2.25,,3\n\nAMAT 161,Nonlinear Programming,2.00,,3\nAMAT 162,Integer and Dynamic Programming,2.00,,3\nAMAT 190A,Special Problems,S,,0\nAMAT 199,Undergraduate Seminar,S,,1\nMATH 155,Advanced Calculus I,2.50,,3\nMST 6,The Biodiversity Challenge,2.00,,3\nNSM 192,Scientific Research Process,1.50,,3\n\nAH 3,Effective Speech Communication,1.75,,3\nAMAT 190C,Special Problems,1.0,,3\nAMAT 191,Special Topics,1.75,,3\nMATH 111,Modern Algebra I,3.00,,3\nMGT 131,Introduction to Human Relations and Behavior in Organizations,1.50,,3\nPI 100,The Life and Works of Jose Rizal,1.50,,3"
+            }
+        ]
+    },
+    {
+        "id": "request-137",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1rhIbePFgXTjO4223aY43LWAorsZ3wYrE.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE NUMBER,DESCRIPTIVE TITLE OF THE COURSE,Final Grades,Re-exam Completion,CREDITS\nAMAT 110,Mathematical Modeling,1.25,,3\nMATH 101,Logic and Set Theory,1.25,,3\nMATH 38,Mathematical Analysis III,2.50,,3\nMST 4,Science Technology and Society,1.75,,3\nSSP 2,Asia and the World,1.25,,3\nPE 2 WT,Weight Training,1.50,,(2)\n\nBDO 191,Special Topics,2.25,,3\nMATH 120,Linear Algebra,2.00,,3\nMATH 141,Introductory Combinatorics,2.75,,3\nMATH 176,Numerical Analysis I,2.50,,3\nMATH 181,Introduction to Probability Theory,2.75,,3\nSTAT 101,Statistical Methods,1.50,,3\nNSTP 1-CWTS DSS,National Service Training Program-Civic Welfare Training Service 1,1.25,,(3)\n\nAMAT 115,Introduction to Mathematical Decision Theory,2.50,,3\nAMAT 160,Linear Programming,2.25,,3\nAMAT 167,Mathematical Models in Operations Research I,1.75,,3\nMATH 151,Ordinary Differential Equations,2.00,,3\nMATH 177,Numerical Analysis II,2.00,,3\nSTAT 164,Statistics for Biological Sciences,1.25,,3\nNSTP 2-CWTS DSS,National Service Training Program-Civic Welfare Training Service 2,1.75,,(3)"
+            }
+        ]
+    },
+    {
+        "id": "request-138",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/18GPV7lam4qahbx6cdXkqIeqdeOthOWji.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE NUMBER,DESCRIPTIVE TITLE OF THE COURSE,Final Grade,Re-exam Completion,CREDITS\nAMAT 19,Finite Mathematics,1.50,,3\nMATH 17,Algebra and Trigonometry,2.25,,5\nMST 1,Foundations of Natural Sciences I,1.25,,3\nMST 3,Mathematics for General Education,1.75,,3\nSSP 4,Social Economic and Political Thought,2.00,,3\nPE 1,Foundations of Physical Fitness,1.50,,(2)\n\nAH 5,Art and Society,1.25,,3\nAH 7,The Search for Meaning: Philosophy Through Literature,2.25,,3\nMATH 36,Mathematical Analysis I,2.00,,5\nSSP 5,Philosophical Analysis,1.50,,3\nSTAT 1,Elementary Statistics,1.75,,3\nPE 2 VD,Volleyball,1.75,,(2)\n\nAH 4,Adventures in Fiction Poetry and Drama,1.75,,3\nAMAT 150,Computer Programming,2.00,,3\nMATH 37,Mathematical Analysis II,2.50,,5\nMST 2,Foundations of Natural Sciences II,2.75,,3\nSSP 1,Philippine History,2.25,,3\nSSP 3,Foundations of Behavioral Sciences,2.50,,3\nPE 2 TT,Table Tennis,1.25,,(2)\nAH 2,Exploring Ideas Through Academic Writing,1.75,,3"
+            }
+        ]
+    },
+    {
+        "id": "request-139",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1hDET3ybE1Hfx5iMMG7SY6xh_h-dfZjxP.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE NUMBER,DESCRIPTIVE TITLE OF THE COURSE,Final Grade,Re-exam Completion,CREDITS\nM201,Deterministic and Probabilistic Models of Choice,1.0,,2\nM202,Organizational Analysis I: Groups and Individuals in the Organization,1.0,,2\nM203,Organizational Analysis II: Organizational Structure and Process,1.50,,2\nM205,Management Communication and Information,2.25,,2\n\nM211,Marketing Management,1.0,,2\nM212,Financial Management,1.50,,2\nM213,Operations Management,1.0,,2\nM214,Human Resource Management,1.50,,2\n\nIR 201,Introduction to Industrial Relations,1.50,,2\nM221,Enterprise Management,1.25,,2\nM222,Project Management,1.25,,2\nM224,Managerial Economics,1.50,,2\n\nABM 231,Small and Medium Agribusiness Enterprises and Agricultural Farm Operations,1.50,,2\nDM 232,Community Management,1.50,,2\nIR 211,Collective Bargaining and Industrial Democracy,1.50,,2\nM234i,Special Topics in Management: Managerial Accounting,1.25,,2\nM241,Policy and Strategic Planning,INC,1.50,4"
+            }
+        ]
+    },
+    {
+        "id": "request-142",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ZMNxh94WhaUlc0M5un0zeWVsS48LuXVW.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,R,PTS\nGOVT 402,NATURE MODERNIZATION & DEVEL,5.000,4.0,,20.00\n\nGOVT 203,INTRO COMPARATIVE POLITICS,5.000,4.0,,20.00\nGOVT 313,ANCIENT & MEDIEVAL POL THOUGHT,5.000,4.0,,20.00\nGOVT 323,U.S. FOREIGN POLICY,5.000,4.0,,20.00\n\nGOVT 306,BASIC CONCEPTS OF CRIMINAL LAW,5.000,3.9,,19.50\nGOVT 330,FEDERALISM STATE & LOCAL POL,5.000,4.0,,20.00\nGOVT 495,PUBLIC AFFAIRS INTERNSHIP,5.000,4.0,I,12.00\n\nGOVT 320,INTERNATIONAL SYSTEMS,5.000,3.9,,19.50\nGOVT 336,US POLITICAL PARTIES AND ELECT,5.000,4.0,,20.00\nGOVT 493,PORTFOLIO ASSESSMENT,2.000,4.0,,8.00\n\nGOVT 319,NATIONS NATIONALISM & PAT,5.000,4.0,,20.00\nGOVT 335,U.S. CONGRESS,5.000,4.0,,20.00\nGOVT 401,NIETZSCHE SEMINAR,5.000,4.0,,20.00\nGOVT 495,PUBLIC AFFAIRS INTERNSHIP,5.000,4.0,I,20.00\n\nART 155,BEGINNING PAINTING,5.000,4.0,,20.00\nGOVT 422,FEDERAL INDIAN LAW & POLICY II,5.000,4.0,,20.00\nGOVT 490,SENIOR CAPSTONE: GLOBALIZ,5.000,4.0,,20.00"
+            }
+        ]
+    },
+    {
+        "id": "request-143",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1OoV6cmRXOkYUq4v33jo5Q48aXUW1WQL0.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRADE,R,PTS\nSPAN 103,FIRST-YEAR SPANISH III,5.000,2.7,,13.50\n\nANTH 161,INTRO TO CHICANO CULTURE,5.000,4.0,,20.00\nGOVT 202,INTRO TO POLITICAL THEORY,5.000,4.0,,20.00"
+            }
+        ]
+    },
+    {
+        "id": "request-145",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1v0yGIyshUlW4b7MXyG202u_2LaJIZgeY.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subj No.,Title,Cred,Grade,Pts,R\nBA 3103,Integrative Bus Applic,3.00,B,9.00,\nMKTG 3505,Entrepreneurial Marketing,3.00,B+,9.99,\nBA 4101,Global Business Policies,3.00,C+,6.99,\nIB 3101,Fundamentals of International Business,3.00,B,9.00,\nSGM 3685,Internship in Entrepreneurship,3.00,C,6.00,\nSGM 4596,Senior Entrepreneurship S,3.00,A,12.00,"
+            }
+        ]
+    },
+    {
+        "id": "request-146",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1n2nIWooJSXxUu6wkk80J09y-V8dzAvoL.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subj,No.,Title,Cred,Grade,Pts,R\nECON,1101,Macroeconomic Principles,3.00,A-,11.01,\nENG,0802,Analytic Read & Writing,4.00,A-,14.68,\nLGLS,0856,Law & American Society,3.00,C,6.00,\nPOLS,0832,Politics of Identity,3.00,A-,11.01,\nSTAT,1001,Pre-Calculus for Busines,3.00,A-,11.01,\n\nAOD,0836,Interpersonal Communica,3.00,A-,11.01,\nIH,0851,Mosaic Humanities Sem I,3.00,A-,11.01,\nPHYS,0846,Universe As We Know It,3.00,A,12.00,\nSTRC,1111,Public Speaking,3.00,B+,9.99,\nSTRC,1112,Communicating Leadership,3.00,A-,11.01,\n\nECON,1102,Microeconomic Principles,3.00,B+,9.99,\nHIST,0865,The Global Crisis,3.00,A-,11.01,\nUH,0852,Mosaic Humanities Sem II,3.00,A,12.00,\nPHYS,0847,How Things Work,3.00,B+,9.99,\nSTRC,2112,Persuasion,3.00,B-,8.01,\n\nACCT,2101,Financial Accounting,3.00,W,0.00,\nSOC,0825,Quant Methods in Soc Sci,4.00,B-,10.68,\nSTRC,2552,Intro to Public Relation,3.00,C-,5.01,\nSTRC,2672,Global Comm & Leadership,3.00,D,3.00,\n\nACCT,2101,Financial Accounting,3.00,A-,11.01,\nARTH,0808,Arts of Western World,4.00,C+,9.32,\nMKTG,2101,Marketing Management,3.00,B,9.00,\n\nBA,2101,Professional Development Strategies,1.00,A,4.00,\nHRM,1101,Foundations of Human Resource Management,3.00,C,0.00,E\nLGLS,1101,Legal Environment of Bus,3.00,D+,0.00,E\nSGM,3503,Managing New and Small Enterprises,3.00,A,12.00,\nSTAT,1102,Calculus for Business,3.00,B,9.00,\n\nMKTG,3503,Promotion Management,3.00,B-,8.01,\nSGM,3580,Special Topics in SGM,3.00,B,9.00,\n\nBA,3102,Business Society and Ethics,3.00,A-,11.01,\nFIN,3101,Financial Management,3.00,C+,6.99,\n\nACCT,2521,Cost Accounting,3.00,C+,6.99,\nHRM,1101,Leadership and Organizational Management,3.00,A-,11.01,I\nMIS,2101,Information Systems in Organizations,3.00,C,6.00,\nSGM,3501,Entrepreneurial and Innovative Thinking,3.00,W,0.00,\nSTAT,2103,Business Statistics,4.00,C-,6.68,\n\nBA,2196,Business Communications,3.00,B,9.00,\nLGLS,1101,Legal Environment of Business,3.00,C,6.00,I\nMSOM,3101,Operations Management,3.00,C-,5.01,\nRMI,2101,Introduction to Risk Management,3.00,B+,9.99,\nSGM,3501,Entrepreneurial and Innovative Thinking,3.00,B-,8.01,"
+            }
+        ]
+    },
+    {
+        "id": "request-148",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1h5m_MuGDNlkqxvM68Ox_1jYejA8mgO3B.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCHE 321,Physical Chemistry,4.0,4.0,A,16.0\nCHE 342,Quantitative Analysis,4.0,4.0,A,16.0\nFRS 319,Forensic Biology,4.0,4.0,A,16.0\nPHY 210,General Physics I,4.0,4.0,A,16.0\n\nCHE 212,Organic Chemistry,5.0,5.0,A,20.0\nCHE 322,Physical Chemistry,4.0,4.0,A,16.0\nCHE 343,Instrumental Analysis,4.0,4.0,A,16.0\nPHY 211,General Physics II,4.0,4.0,A,16.0\nSSC 361,Social Science Statistics,3.0,3.0,A,12.0\n\nFLS 161,Spanish I,3.0,3.0,A,12.0\nFRS 320,Forensic Chemistry,4.0,4.0,A,16.0\nFRS 499,Senior Capstone Seminar,1.0,1.0,A,4.0\nPED 122,Beginning Tennis,1.0,1.0,A,4.0\nPED 234,Archery/Bowling/Golf/Rec. Game,1.0,0.0,W,0.0\nPSY 352,Theories of Personality,3.0,3.0,A,12.0"
+            }
+        ]
+    },
+    {
+        "id": "request-149",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1-hqIRtyEdmxfFFzHC64crlcNef5Q7akq.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Description,Attempted,Earned,Grade,Points,Term\nBIO 128,General Bio Lecture,3.000,3.000,A,12.000,Fall 2013\nCHE 142,Gen College Chemistry,4.000,4.000,A,16.000,Fall 2013\nCRJ 358,Criminalistics,3.000,3.000,A,12.000,Fall 2013\nMAT 266,Calculus & Analytic Geom. II,4.000,4.000,A,16.000,Fall 2013\nPHY 206,College Physics I,4.000,4.000,A,16.000,Fall 2013\n\nBIO 337,Cell Biology,4.000,4.000,A,16.000,Spr 2014\nCHE 211,Organic Chemistry,5.000,5.000,A,20.000,Spr 2014\nFRS 423,Prin. of Forensic Toxicology,4.000,4.000,A,16.000,Spr 2014\nFRS 424,Forensic Microscopy,3.000,3.000,A,12.000,Spr 2014\nFRS 425,Forensic Microscopy Lab,1.000,1.000,A,4.000,Spr 2014\n\nENG 210,Intro to Literature,3.000,3.000,A,12.000,Sum 2014\nFRS 466,Forensic Science Internship,3.000,3.000,A,12.000,Sum 2014"
+            }
+        ]
+    },
+    {
+        "id": "request-150",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1Nb3HRP5F3KZJCtMCnFW7QmUqg3vdUr1D.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCMS 205,Public Speaking,3.000,3.000,A,12.000\nENG 141,Eng Composition Honors,3.000,3.000,A,12.000\nHIS 132,World History,3.000,3.000,A,12.000\nHUM 103,Hum / African American,3.000,3.000,B,9.000\nMUS 121,Music Appreciation,3.000,3.000,A,12.000\nPSY 251,General Psychology,3.000,3.000,A,12.000\n\nBIOL 127,Laboratory for Biology 127,1.000,1.000,A,4.000\nCHE 141,Gen College Chemistry,4.000,4.000,A,16.000\nCSC 210,Intro to Computer Scienc,3.000,3.000,A,12.000\nFRS 220,Forensic Science Survey,3.000,3.000,A,12.000\nMAT 165,Pre-Calculus Trig,5.000,5.000,A,20.000\n\nBIO 127,General Bio Lecture,3.000,3.000,A,12.000\nFRS 412,Forensic Analysis CSI & Ethic,4.000,4.000,A,16.000\nMAT 265,Calculus & Analy Geom I,4.000,4.000,B,12.000\nPED 103,Beginning Basketball,1.000,1.000,A,4.000"
+            }
+        ]
+    },
+    {
+        "id": "request-151",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1zpq3cddjMDf17UBAhEzZBblQVazIUalD.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nENG 140,Eng Composition Honors,3.000,3.000,A,12.000\nGEO 206,World Geography,3.000,3.000,A,12.000\nHIS 131,World History,3.000,3.000,A,12.000\nHUM 101,Interdisciplinary Humanities,3.000,3.000,A,12.000\nMAT 136,Finite Mathematics,3.000,3.000,B,9.000\nORI 100,Orientation,1.000,1.000,A,4.000"
+            }
+        ]
+    },
+    {
+        "id": "request-153",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/14oE6rHXt6XNlqgP3OL1APZQGNmK8JQYE.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SEMESTER,COURSE TITLE,DEPT,CRSE,GR,CARR,EARN,QPTS\n1ST SEM 2011-2012,LITERATURE AND JAZZ,ENGL,2123,C,3.00,3.00,6.00\n1ST SEM 2011-2012,ROMAN REPUBLIC,HIST,4003,B,3.00,3.00,9.00\n1ST SEM 2011-2012,HIST COLLEGE SPORTS,HIST,4197,C,3.00,3.00,6.00\n1ST SEM 2011-2012,INTRO TO POLI THEORY,POLI,2060,A,3.00,3.00,12.00\n1ST SEM 2011-2012,CAMPAIGNS & ELECTNS,POLI,4026,A,3.00,3.00,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-154",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1Sf2xNCjVK-Gn6ld_kSvvkHqniZnenJ5b.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE TITLE,DEPT,CRSE,GR,CARR,EARN,QPTS\nSHAKESPEARE,ENGL,2148,A,3.00,3.00,12.00\nTHE U.S.: 1865 TO PRES,HIST,2057,B,3.00,3.00,9.00\nELEMENTARY LATIN,LATN,1001,B,4.00,4.00,12.00\nINTRO CONTEMP MATH,MATH,1029,A,3.00,3.00,12.00\nINTRO INTNTL POLITIC,POLI,2057,A,3.00,3.00,12.00\nUG INTERNSHIP POL SC,POLI,3901,A,3.00,3.00,12.00\n\nENGLISH COMP,ENGL,2000,A,3.00,3.00,12.00\nWEST CIVIL TO 1500,HIST,1001,A,3.00,3.00,12.00\nINTERMEDIATE LATIN,LATN,2051,B,4.00,4.00,12.00\nSP TOP AMER POLITICS,POLI,4000,B,3.00,3.00,9.00\nINTRODUCTORY SOCL,SOCI,2001,A,3.00,3.00,12.00\n\nINTERPERSNL COMMNCTN,CMST,2010,A,3.00,3.00,12.00\nCIVIL WAR,HIST,4055,A,3.00,3.00,12.00\nINDEPENDENT STUDY,HIST,4901,A,3.00,3.00,12.00\nINTERMEDIATE LATIN,LATN,2053,B,4.00,4.00,9.00\nSOUTHERN POLITICS,POLI,4039,A,3.00,3.00,12.00\nINTL POL MIDDLE EAST,POLI,4059,A,3.00,3.00,12.00\n\nLOUISIANA,HIST,3071,A,3.00,3.00,12.00\nMODERN MIDDLE EAST,HIST,4096,B,3.00,3.00,9.00\nINDEPENDENT STUDY,HIST,4902,A,3.00,3.00,12.00\nGOLD AGE LYRIC POETR,LATN,2074,B,3.00,3.00,9.00\nAMER FOREIGN POLICY,POLI,4043,A,3.00,3.00,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-155",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/17pdPc7M2ZF_RETVUwtP4_eRBPpvmLNKq.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "COURSE TITLE,DEPT,CRSE,GR,CARR,EARN,QPTS\nENGL COMPOSITION,ENGL,1001,P,,3.00,\nCOLLEGE ALGEBRA,MATH,1021,P,,3.00,\nINTRO TO PHYSICS,PHYS,1100,P,,3.00,\n\nBIOL FOR SCI MAJ I,BIOL,1201,A,3.00,3.00,12.00\nBIOL LAB SCI MAJ I,BIOL,1208,A,1.00,1.00,4.00\nGENERAL CHEMISTRY I,CHEM,1201,A,3.00,3.00,12.00\nAN GEOM & CALCULUS-I,MATH,1550,W,,,\nAMERICAN GOVERNMENT,POLI,2051,A,3.00,3.00,12.00\n\nGENERAL BIOLOGY,BIOL,1002,A,3.00,3.00,12.00\nHIS WESTERN CIVILIZATION,HIST,1003,A,3.00,3.00,12.00\nUS TO 1865,HIST,2055,A,3.00,3.00,12.00\nINTRO COMP POLITICS,POLI,2053,A,3.00,3.00,12.00\nGOVT OF LOUISIANA,POLI,2056,A,3.00,3.00,12.00\nINTRO TO THEATRE,THTR,1020,A,3.00,3.00,12.00"
+            }
+        ]
+    },
+    {
+        "id": "request-157",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1bLpBLJwbN3TF00zziJl_5ri0T-26hmgw.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nCOM 225LEC,Interpersonal Comm (Repeated Included in GPA),3.000,3.000,B+,9.990\nMUS 113LEC,Music and Society,3.000,3.000,A-,11.010\nPSY 342LEC,Intro Cognitive Science (Repeated Included in GPA),3.000,3.000,B-,8.010\nSOC 371LEC,Individual & Society,3.000,3.000,A-,11.010\n\nCOM 249DIS,Mass Communication Theor,3.000,3.000,B,9.000"
+            }
+        ]
+    },
+    {
+        "id": "request-158",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1HVdqHnhfa9Z7azkQk1Ngec5onZoPkO7T.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course,Description,Attempted,Earned,Grade,Points\nESL 407LEC,Written English 1,3.000,3.000,B-,8.010\nMTH 115LEC,Survey of Algebra & Trig,4.000,4.000,A,16.000\nPSY 101LEC,Introductory Psychology,3.000,3.000,B,9.000\n\nESL 408LEC,Written English 2,3.000,3.000,B,9.000\nNTR 108LEC,Human Nutrition,3.000,3.000,B-,8.010\nPSY 207LLB,Psychological Statistics,4.000,4.000,B+,13.332\nPSY 342LEC,Intro Cognitive Science (Repeated: Excluded from GPA),0.000,0.000,C+,0.000\n\nPSY 250LEC,Scientific Inquiry,3.000,3.000,B,9.000\nPSY 332LEC,Conflict Resolution,3.000,3.000,C+,6.990\nPSY 351LEC,Biopsychology (Repeated: Excluded from GPA),0.000,0.000,C,0.000\n\nCOM 225LEC,Interpersonal Comm (Repeated: Excluded from GPA),0.000,0.000,C,0.000\nNTR 109LEC,Nutrition in Practice,3.000,3.000,B+,9.990\nNTR 110LAB,Nutrition in Practice,1.000,1.000,A,4.000\nPSY 324LEC,Clinical Psychology,3.000,3.000,B,9.000\n\nPSY 351LEC,Biopsychology (Repeated: Included in GPA),3.000,3.000,A-,11.010\nPSY 440LEC,Hormones and Behavior,3.000,3.000,B,9.000\n\nPSY 458LEC,Adolescent Development,3.000,3.000,A-,11.010\nPSY 487LEC,Topics,3.000,3.000,B-,8.010"
+            }
+        ]
+    },
+    {
+        "id": "request-160",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1oyFn8FVBRuN9ZaHZELYALxn6CXNqEcmr.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "C.NO,SUBJECTS,MAX. MRKS.,MIN. MRKS.,OBT. MRKS.,CRT. HRS.,GRADE,Q.P\nPHARM710,PHARMACEUTICAL TECHNOLOGY,100,50,80,3,A,12\nPHARM711,PHARMACEUTICAL TECHNOLOGY (LAB),50,25,40,1,A,4\nPHARM712,PHARMACEUTICS -XVII (CLINICAL PHARMACY),100,50,60,3,B,9\nPHARM713,PHARMACEUTICS -XVII (LAB),50,25,40,1,A,4\nPHARM714,FORENSIC PHARMACY -I,100,50,70,3,B,9\nPHARM716,PHARMACEUTICAL MANAGEMENT & MARKETING -I,100,50,80,3,A,12\nPHARM718,PHARMACEUTICAL CHEMISTRY -V,100,50,55,3,C,6\nPHARM719,PHARMACEUTICAL CHEMISTRY -V (LAB),50,25,27,1,C,2\n\nPHARM720,PHARMACEUTICAL TECHNOLOGY -II,100,50,80,3,A,12\nPHARM721,PHARMACEUTICAL TECHNOLOGY -II (LAB),50,25,40,1,A,4\nPHARM722,PHARMACEUTICS-XVIII (CLINICAL PHARMACY -III),100,50,80,3,A,12\nPHARM723,PHARMACEUTICS-XVIII (CLINICAL PHARMACY -III) (LAB),50,25,40,1,A,4\nPHARM724,FORENSIC PHARMACY -II,100,50,80,3,A,12\nPHARM726,PHARMACEUTICAL MANAGEMENT & MARKETING -II,100,50,80,3,A,12\nPHARM728,PHARMACEUTICAL CHEMISTRY -VI (MEDICINIAL -II),100,50,74,3,B,9\nPHARM729,PHARMACEUTICAL CHEMISTRY -VI (LAB),50,25,40,1,A,4\nPHARM730,COMPREHENSIVE VIVA VOCE,100,50,80,2,A,8"
+            }
+        ]
+    },
+    {
+        "id": "request-161",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1rg9H3qFRaxjkE6fSsdeD05BnVY1u2F1M.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure it into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SEMESTER,C.NO.,SUBJECTS,MAX. MRKS.,MIN. MRKS.,OBT. MRKS.,CRT. HRS.,GRADE,Q.P\nFIFTH SEMESTER,PHARM510,PHARMACEUTICS-V (DISPENSING PHARMACY),100,50,66,3,B,9\nFIFTH SEMESTER,PHARM511,PHARMACEUTICS-V (LAB),50,25,40,1,A,4\nFIFTH SEMESTER,PHARM512,PHARMACEUTICAL CHEMISTRY-III (INSTRUMENTATION-I),100,50,50,3,C,6\nFIFTH SEMESTER,PHARM513,PHARMACEUTICAL CHEMISTRY-III (LAB),50,25,25,1,C,2\nFIFTH SEMESTER,PHARM514,PHARMACOLOGY & THERAPEUTICS -III (SYSTEMIC PHARMACOLOGY-II),100,50,75,4,B,9\nFIFTH SEMESTER,PHARM515,PHARMACOLOGY & THERAPEUTICS-III (LAB),50,25,40,1,A,4\nFIFTH SEMESTER,PHARM516,PHARMACOGNOSY -III,100,50,60,3,B,9\nFIFTH SEMESTER,PHARM517,PHARMACOGNOSY -III (LAB),50,25,40,1,A,4\nFIFTH SEMESTER,PHARM518,PATHOLOGY,100,50,67,3,B,9\nFIFTH SEMESTER,PHARM519,PATHOLOGY (LAB),50,25,35,1,B,3\n\nSIXTH SEMESTER,PHARM520,PHARMACEUTICS -IV (COMMUNITY PHARMACY),100,50,66,3,B,9\nSIXTH SEMESTER,PHARM522,PHARMACEUTICAL CHEMISTRY-IV (INSTRUMENTATION-II),100,50,70,3,B,9\nSIXTH SEMESTER,PHARM523,PHARMACEUTICAL CHEMISTRY-IV (INSTRUMENTATION-II) (LAB),50,25,33,1,B,3\nSIXTH SEMESTER,PHARM524,PHARMACOLOGY & THERAPEUTICS-IV (SYSTEMIC PHARMACOLOGY -III),100,50,80,3,A,12\nSIXTH SEMESTER,PHARM525,PHARMACOLOGY & THERAPEUTICS-IV (SYSTEMIC PHARMACOLOGY -III) (LAB),50,25,40,1,A,4\nSIXTH SEMESTER,PHARM526,PHARMACOGNOSY -VI,100,50,60,3,B,9\nSIXTH SEMESTER,PHARM527,PHARMACOGNOSY -VI (LAB),50,25,40,1,A,4\nSIXTH SEMESTER,PHARM528,COMPUTER & ITS APPLICATIONS IN PHARMACY,100,50,81,3,A,12\nSIXTH SEMESTER,PHARM529,COMPUTER & ITS APPLICATIONS IN PHARMACY (LAB),50,25,42,1,A,4\n\nSEVENTH SEMESTER,PHARM610,PHARMACEUTICS -VII (HOSPITAL PHARMACY -I),100,50,60,3,B,9\nSEVENTH SEMESTER,PHARM612,PHARMACEUTICS -VIII (CLINICAL PHARMACY -I),100,50,81,3,A,12\nSEVENTH SEMESTER,PHARM613,PHARMACEUTICS -VIII (LAB),50,25,40,1,A,4\nSEVENTH SEMESTER,PHARM614,PHARMACEUTICS -IX (INDUSTRIAL PHARMACY -I),100,50,80,3,A,12\nSEVENTH SEMESTER,PHARM615,PHARMACEUTICS -IX (LAB),50,25,40,1,A,4\nSEVENTH SEMESTER,PHARM616,PHARMACEUTICS -X (BIO-PHARMACEUTICS -I),100,50,67,3,B,9\nSEVENTH SEMESTER,PHARM617,PHARMACEUTICS -X (LAB),50,25,36,1,B,3\nSEVENTH SEMESTER,PHARM618,PHARMACEUTICS -XI (PHARM QUALITY MANAGEMENT -I) (LAB),100,50,63,3,B,9\nSEVENTH SEMESTER,PHARM619,PHARMACEUTICS -XI (LAB),50,25,36,1,B,3\n\nEIGHTH SEMESTER,PHARM620,PHARMACEUTICS -XII (HOSPITAL PHARMACY -II),100,50,80,3,A,12\nEIGHTH SEMESTER,PHARM622,PHARMACEUTICS -XIII (CLINICAL PHARMACY -II),100,50,80,3,A,12\nEIGHTH SEMESTER,PHARM623,PHARMACEUTICS -XIII (LAB),50,25,37,1,B,3\nEIGHTH SEMESTER,PHARM624,PHARMACEUTICS -XIV (INDUSTRIAL PHARMACY -II),100,50,68,3,B,9\nEIGHTH SEMESTER,PHARM625,PHARMACEUTICS -XIV (LAB),50,25,33,1,B,3\nEIGHTH SEMESTER,PHARM626,PHARMACEUTICS -XV (BIO-PHARMACEUTICS PHARMACY -II),100,50,80,3,A,12\nEIGHTH SEMESTER,PHARM627,PHARMACEUTICS -XV (LAB),50,25,35,1,B,3\nEIGHTH SEMESTER,PHARM628,PHARMACEUTICS -XVI (PHARM. QUALITY MANAGEMENT -II),100,50,80,3,A,12\nEIGHTH SEMESTER,PHARM629,PHARMACEUTICS -XVI (LAB),50,25,40,1,A,4"
+            }
+        ]
+    },
+    {
+        "id": "request-162",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1pr768bDOrNKjUIGhHxCie5AVvbVdpXWT.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nIdentify and extract the tabular grade information from the attached transcript image. Transcribe this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "C.NO.,SUBJECTS,MAX. MRKS.,MIN. MRKS.,OBT. MRKS.,CRT. HRS.,GRADE,Q.P\nENGL300,ENGLISH,100,50,75,2,B,6\nIS302,ISLAMIC STUDIES,60,30,51,1,A,4\nPHAR310,PHARMACEUTICS -I (PHYSICAL PHARMACY -I),100,50,81,3,A,12\nPHAR311,PHARMACEUTICS -I (PHYSICAL PHARMACY -I) (LAB),50,25,40,1,A,4\nPHAR312,PHARMACEUTICAL CHEMISTRY -I (ORGANIC -I),100,50,70,3,B,9\nPHAR313,PHARMACEUTICAL CHEMISTRY -I (ORGANIC -I) (LAB),50,25,27,1,C,2\nPHAR314,PHARMACEUTICAL BIOCHEMISTRY -I,100,50,72,3,B,9\nPHAR315,PHARMACEUTICAL BIOCHEMISTRY -I (LAB),50,25,40,1,A,4\nPHAR316,PHYSIOLOGY -I,100,50,65,3,B,9\nPHAR317,PHYSIOLOGY -I (LAB),50,25,35,1,B,3\nPHAR318,ANATOMY,100,50,73,3,B,9\n\nENGL301,ENGLISH,100,50,65,2,B,6\nPS303,PAKISTAN STUDIES,100,40,32,1,B,3\nPHAR320,PHARMACEUTICS -II (PHYSICAL PHARMACY -II),100,50,81,3,A,12\nPHAR321,PHARMACEUTICS -II (PHYSICAL PHARMACY -II) (LAB),50,25,40,1,A,4\nPHAR322,PHARMACEUTICAL CHEMISTRY -II (ORGANIC -II),100,50,65,3,C,3\nPHAR323,PHARMACEUTICAL CHEMISTRY -II (ORGANIC -II) (LAB),50,25,31,1,B,3\nPHAR324,PHARMACEUTICAL BIOCHEMISTRY -II,100,50,66,3,B,9\nPHAR325,PHARMACEUTICAL BIOCHEMISTRY -II (LAB),50,25,32,1,B,3\nPHAR326,PHYSIOLOGY -II,100,50,78,3,A,12\nPHAR327,PHYSIOLOGY -II (LAB),50,25,28,1,B,3\nPHAR328,HISTOLOGY,100,50,84,3,A,12\nPHAR329,HISTOLOGY (LAB),50,25,34,1,B,3\n\nENGL400,ENGLISH,100,50,65,2,B,6\nPHAR410,PHARMACEUTICS-III (PHARM. PREPARATIONS -I),100,50,70,3,B,9\nPHAR411,PHARMACEUTICS-III (PHARM. PREPARATIONS -I) (LAB),50,25,43,1,A,4\nPHAR412,PHARMACEUTICAL MICROBIOLOGY-I,100,50,61,3,B,9\nPHAR413,PHARMACEUTICAL MICROBIOLOGY-I (LAB),50,25,37,1,B,3\nPHAR414,PHARMACOLOGY AND THERAPEUTICS-I (GEN. PHARMACOLOGY),100,50,68,3,B,9\nPHAR415,PHARMACOLOGY AND THERAPEUTICS-I (GEN. PHARMACOLOGY) (LAB),50,25,36,1,B,3\nPHAR416,PHARMACOGNOSY -I,100,50,66,3,B,9\nPHAR417,PHARMACOGNOSY -I (LAB),50,25,35,1,B,3\nPHAR418,PHARMACEUTICAL MATHEMATICS,100,50,50,3,C,6\n\nENGL401,ENGLISH,100,50,80,2,A,8\nPHAR420,PHARMACEUTICS -IV (PHARM. PREPARATION -II),100,50,70,3,B,9\nPHAR421,PHARMACEUTICS -IV (PHARM. PREPARATION -II) (LAB),50,25,35,1,B,3\nPHAR422,PHARMACEUTICAL MICROBIOLOGY-II,100,50,56,3,C,6\nPHAR423,PHARMACEUTICAL MICROBIOLOGY-II (LAB),50,25,40,1,A,4\nPHAR424,PHARMACOLOGY & THERAPEUTICS -II (SYSTEMIC PHARMACOLOGY -I),100,50,60,3,B,9\nPHAR425,PHARMACOLOGY & THERAPEUTICS -II (SYS. PHARMACOLOGY -I) (LAB),50,25,36,1,B,3\nPHAR426,PHARMACOGNOSY -II,100,50,60,3,B,9\nPHAR427,PHARMACOGNOSY -II (LAB),50,25,36,1,B,3\nPHAR428,BIO-STATISTICS,100,50,52,3,C,6"
+            }
+        ]
+    },
+    {
+        "id": "request-163",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1s0LylQPlLbrvVSROIrjQ4StQUchDin71.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Subject Code,Course Name,EFTSL,Mark,Grade\nHAF101,Gender Power and Change,0.1250,60,CR\nHEA105,Studying Texts,0.1250,61,CR\nHGA101,Sociology A,0.1250,51,PP\nKHA111,Psychology A,0.1250,,WN\n\nHAF103,Sex and Bodies,0.1250,65,CR\nHEA106,Texts and Traditions,0.1250,58,PP\nHEJ102,Journalism Media and Communications 1B,0.1250,60,CR\nHGA102,Sociology B,0.1250,55,PP\n\nHAF227,Contemporary Representations of Gender,0.1250,62,CR\nHEA218,Contemporary Fiction,0.1250,57,PP\nHEA326,Modern Drama,0.1250,52,PP\nHGA261,Sociology of Nature,0.1250,41,NN\n\nHAF228,Religion and Gender,0.1250,58,PP\nHEA294,Telling Tales: Literature and Narrative,0.1250,55,PP\nHEA324,Screen Shakespeare,0.1250,57,PP\nHEJ101,Journalism Theory and Practice,0.1250,63,CR\n\nHEA372,Utopian and Dystopian Visions,0.1250,55,PP\nHEJ205,Public Relations,0.1250,62,CR\nHEJ335,Media and Music,0.1250,51,PP\nHEJ340,Feature Writing,0.1250,69,CR"
+            }
+        ]
+    },
+    {
+        "id": "request-174",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1ZiJ5COiA6Jwbld---RDAJb6_kRduFjHn.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nPlease transcribe only the grade data from the attached transcript image into a CSV format with the appropriate fields. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "NOT A TRANSCRIPT."
+            }
+        ]
+    },
+    {
+        "id": "request-175",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1HFf9hT8hI1It4GzJzugtPPsRjMm1djFV.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "MODULE CODE,MODULE,MARK,CREDITS\nCHEM 331,ORGANIC CHEMISTRY III (BSC),32,15\nCHEM 335,MEDICINAL CHEMISTRY OF ANTI-INFECTIVES,42,7.5\nCHEM 338,HETEROCYCLIC CHEMISTRY AND DRUG SYNTHESIS,22,7.5\nCHEM 356,YEAR 3 CHEMISTRY PROJECT (BSC),55,15\nCHEM 365,PRACTICAL CHEMISTRY YEAR 3 (BSC),58,15\nCHEM 378,INTRODUCTION TO POLYMER CHEMISTRY,43,7.5\nCHEM 380,FURTHER KEY SKILLS WITH MOLECULAR MODELLING (BSC),58,15\nCHEM 385,CHEMICAL DATABASE SKILLS,65,7.5\nPHAR 453,MOLECULAR AND CHEMICAL PHARMACOLOGY,64,15\nPHAR 459,ANTIMICROBIAL CHEMOTHERAPY FOR CHEMISTS,48,15"
+            }
+        ]
+    },
+    {
+        "id": "request-176",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1O_sheNbj9VEuhI-ShlFyWO-AuSE1_Fud.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract comprehensive course details from the attached transcript image, such as subject codes, course names, grades, and credits. If there are more or other column headers, include them aswell. Organize this data into a table in CSV format. Only extract data relevant to the course information. If the image does not contain a student transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "MODULE CODE,MODULE,MARK,CREDITS\nANAT 123,CELL STRUCTURE AND FUNCTION,55,7.5\nBIOL 127,PRINCIPLES OF MOLECULAR BIOLOGY,40,7.5\nCHEM 111,INTRODUCTORY INORGANIC CHEMISTRY,63,15\nCHEM 130,INTRODUCTORY ORGANIC CHEMISTRY,54,30\nCHEM 152,INTRODUCTORY PHYSICAL CHEMISTRY,44,15\nCHEM 170,INTRODUCTORY SPECTROSCOPY,55,15\nCHEM 180,KEY SKILLS FOR CHEMISTS 1,70,15\nPHAR 164,INTRODUCTION TO PHARMACOLOGY,54,7.5\nPHGY 162,INTRODUCTORY PHYSIOLOGY,40,7.5\n\nCHEM 214,INORGANIC CHEMISTRY FOR MCHEM STUDENTS,47,15\nCHEM 231,ORGANIC CHEMISTRY II,40 *,15\nCHEM 245,PREP. CHEMISTRY: SYNTHESIS AND CHARACTERISATION,55,15\nCHEM 246,MEASUREMENTS IN CHEMISTRY,48,15\nCHEM 248,AN INTRODUCTION TO MEDICINAL CHEMISTRY,46 *,7.5\nCHEM 260,PHYSICAL CHEMISTRY II,40 *,15\nCHEM 280,KEY SKILLS FOR CHEMISTS 2,67,15\nPHAR 280,PRACTICAL PHARMACOLOGY 2,62,7.5\nPHAR 295,PRINCIPLES OF PHARMACOLOGY,46 *,15"
+            }
+        ]
+    },
+    {
+        "id": "request-197",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1XxkV4Wit78WQYkZ6zgTsJqBr5IVhEZd4.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nFrom the attached transcript image, extract and organize the course and grade data, along with any other columns, into CSV format. No need to include term data or student basic information. Ensure all data is accurately transcribed and formatted. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO,COURSE TITLE,CRED,GRD,PTS,R\nPSYC 305,Motivation and Leadership,3.00,A,12.00,\n\nHOSP 320,Foundations of Hotel Mgmt,4.00,A,16.00,\n\nBUSN 412,Business Policy,4.00,A,16.00,\nHOSP 410,Restaurant Management,N/A,N/A,16.00,\n\nBUSN 258,Customer Relations,4.00,B,12.00,\n\nCARD 405,Career Development,2.00,A,8.00,\nHOSP 450,Tourism Management,4.00,A,16.00,\n\nHOSP 420,Food Safety and Sanitation,4.00,A,16.00,\n\nBUSN 460,Senior Project,3.00,A,12.00,\nLAS 432,Tech Society and Culture,3.00,B,9.00,\n\nHOSP 330,Meetings and Events Management,4.00,A,16.00,"
+            }
+        ]
+    },
+    {
+        "id": "request-198",
+        "image": "/Users/declanbracken/Development/UofT_Projects/Meng_Project/code_base/Synthetic_Image_Annotation/images/1oIE6OYxsDiPcVPqUAde635qxbrPTQboS.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract and transcribe just the course information from the transcript image into a table in CSV format. Include specific fields for the courses, grades, and any other columns available. Ensure all data is formatted correctly. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "SUBJ NO.,COURSE TITLE,CRED,GRD,PTS,R\nELTV 1TR,Elective & Support Transfer,1.00,TA,I,\nELTV 1TR,Elective & Support Transfer,1.00,TA,I,\nELTV 2TR,Elective & Support Transfer,3.00,TC,I,\nELTV 2TR,Elective & Support Transfer,3.00,TB,I,\n\nBUSN 420,Business Law,3.00,TC,,\nCOMP 100,Computer Apps for Busn w/Lab,2.00,TA,,\nCOMP 1TR,Cmpter Apps & Prog Transfer,1.00,TA,,\nCOMP 2TR,Cmpter Apps & Prog Transfer,3.00,TA,,\nELTV 1TR,Elective & Support Transfer,3.00,TC,I,\nELTV 1TR,Elective & Support Transfer,3.00,TA,I,\nELTV 2TR,Elective & Support Transfer,3.00,TA,I,\nELTV 2TR,Elective & Support Transfer,3.00,TB,I,\nENGL 112,Composition,3.00,TB,,\nENGL 135,Advanced Composition,3.00,TB,,\nLTRE 2TR,Literature Transfer,3.00,TB,,\nLTRE 421,Studies in Literature,3.00,TB,,\nMATH 114,Algebra for College Students,3.00,TC,,\nSPCH 275,Public Speaking,3.00,TA,,\n\nCOLL 148,Critical Thinking & Prob-Solving,3.00,B,9.00,\n\nBIS 155,Data Analysis w/Spreadsheets w/Lab,3.00,C,6.00,\nBUSN 115,Intro to Business & Technology,3.00,B,9.00,\n\nMATH 221,Statistics for Decision-Making,4.00,C,8.00,\n\nMGMT 303,Principles of Management,3.00,C,6.00,\nMGMT 410,Human Resource Management,4.00,B,12.00,\n\nPSYC 110,Psychology,3.00,A,12.00,\nSCI 228,Nutrition Health & Wellness w/Lab,4.00,B,12.00,\n\nMGMT 404,Project Management,4.00,A,16.00,\n\nHOSP 310,Intro to Hospitality Mgmt,4.00,A,16.00,"
+            }
+        ]
+    }
+]
