@@ -1,11 +1,7 @@
 import os
-from ..Evaluation.text_reconstruction_evaluator import TextReconstructionEvaluator
-from ..Pipelines.Py_files.full_pipeline import TranscriptPipeline
+from Evaluation.text_reconstruction_evaluator import TextReconstructionEvaluator
+from Pipelines.Py_files.full_pipeline import TranscriptPipeline
 import json
-
-# 1. Import Test Images and Actual Strings
-# 2. Get Prediction Strings
-    # - full_pipeline.py
 
 class RunEvaluation():
     def __init__(self, test_set_path, save_file_path):

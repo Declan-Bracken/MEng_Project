@@ -1,6 +1,6 @@
-from .ocr_processor import OCRProcessor
-from .vision_pipeline import VisionPipeline
-from .mistral_pipeline_v3 import MistralInference
+from Pipelines.Py_files.ocr_processor import OCRProcessor
+from Pipelines.Py_files.vision_pipeline import VisionPipeline
+from Pipelines.Py_files.mistral_pipeline_v3 import MistralInference
 import torch
 import os
 from glob import glob
