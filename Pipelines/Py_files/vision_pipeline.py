@@ -109,131 +109,131 @@ class VisionPipeline():
     
     return results
   
-  def process_images_with_ocr(self, results, image_directory, config="--psm 6"):
-    """
-    Processes images by cropping based on bounding boxes, applying OCR, and organizing the results
-    by image name. Each image's results include bounding box coordinates, class name, confidence level,
-    and OCR-extracted text.
+  # def process_images_with_ocr(self, results, image_directory, config="--psm 6"):
+  #   """
+  #   Processes images by cropping based on bounding boxes, applying OCR, and organizing the results
+  #   by image name. Each image's results include bounding box coordinates, class name, confidence level,
+  #   and OCR-extracted text.
 
-    Parameters:
-        results (list): A list of dictionaries containing bounding boxes and class IDs. Each dictionary
-                        should have a 'boxes' key with 'data' and 'cls' sub-keys.
-        image_directory (str): Path to the directory containing the images used for detection.
+  #   Parameters:
+  #       results (list): A list of dictionaries containing bounding boxes and class IDs. Each dictionary
+  #                       should have a 'boxes' key with 'data' and 'cls' sub-keys.
+  #       image_directory (str): Path to the directory containing the images used for detection.
 
-    Returns:
-        dict: A dictionary where each key is an image name, and the value is a list of dictionaries
-              for each bounding box's data including class name, confidence, OCR text, and coordinates.
+  #   Returns:
+  #       dict: A dictionary where each key is an image name, and the value is a list of dictionaries
+  #             for each bounding box's data including class name, confidence, OCR text, and coordinates.
 
-    Configurations for OCR:
-    0    Orientation and script detection (OSD) only.
-    1    Automatic page segmentation with OSD.
-    2    Automatic page segmentation, but no OSD, or OCR.
-    3    Fully automatic page segmentation, but no OSD. (Default)
-    4    Assume a single column of text of variable sizes.
-    5    Assume a single uniform block of vertically aligned text.
-    6    Assume a single uniform block of text. ***
-    7    Treat the image as a single text line.
-    8    Treat the image as a single word.
-    9    Treat the image as a single word in a circle.
-    10   Treat the image as a single character.
-    11   Sparse text. Find as much text as possible in no particular order.
-    12   Sparse text with OSD.
-    13   Raw line. Treat the image as a single text line,
-    """
-    if os.path.isdir(image_directory):
-        onlyfiles = [os.path.join(image_directory, file) for file in os.listdir(image_directory)]
-    else:
-        onlyfiles = [image_directory]  # Handle single image
+  #   Configurations for OCR:
+  #   0    Orientation and script detection (OSD) only.
+  #   1    Automatic page segmentation with OSD.
+  #   2    Automatic page segmentation, but no OSD, or OCR.
+  #   3    Fully automatic page segmentation, but no OSD. (Default)
+  #   4    Assume a single column of text of variable sizes.
+  #   5    Assume a single uniform block of vertically aligned text.
+  #   6    Assume a single uniform block of text. ***
+  #   7    Treat the image as a single text line.
+  #   8    Treat the image as a single word.
+  #   9    Treat the image as a single word in a circle.
+  #   10   Treat the image as a single character.
+  #   11   Sparse text. Find as much text as possible in no particular order.
+  #   12   Sparse text with OSD.
+  #   13   Raw line. Treat the image as a single text line,
+  #   """
+  #   if os.path.isdir(image_directory):
+  #       onlyfiles = [os.path.join(image_directory, file) for file in os.listdir(image_directory)]
+  #   else:
+  #       onlyfiles = [image_directory]  # Handle single image
 
-    # Dictionary to store results grouped by image name
-    processed_results = {}
+  #   # Dictionary to store results grouped by image name
+  #   processed_results = {}
 
-    # Iterate over each result and corresponding image path
-    for result, image_path in zip(results, onlyfiles):
-        image_name = os.path.basename(image_path)
-        image = cv2.imread(image_path)
-        if image is None:
-            print(f"Failed to load image from {image_path}.")
-            continue  # Skip files that aren't valid images
+  #   # Iterate over each result and corresponding image path
+  #   for result, image_path in zip(results, onlyfiles):
+  #       image_name = os.path.basename(image_path)
+  #       image = cv2.imread(image_path)
+  #       if image is None:
+  #           print(f"Failed to load image from {image_path}.")
+  #           continue  # Skip files that aren't valid images
 
-        image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+  #       image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-        boxes = result.boxes.data.cpu().numpy()
-        classes = result.boxes.cls.cpu().numpy()
+  #       boxes = result.boxes.data.cpu().numpy()
+  #       classes = result.boxes.cls.cpu().numpy()
 
-        image_results = []  # List to hold results for this image
+  #       image_results = []  # List to hold results for this image
 
-        for idx, box in enumerate(boxes):
-            x1, y1, x2, y2 = map(int, box[:4])
-            cropped_image = image_rgb[y1:y2, x1:x2]
-            class_id = int(classes[idx])
-            class_name = self.class_names[class_id]
-            confidence = box[4]
+  #       for idx, box in enumerate(boxes):
+  #           x1, y1, x2, y2 = map(int, box[:4])
+  #           cropped_image = image_rgb[y1:y2, x1:x2]
+  #           class_id = int(classes[idx])
+  #           class_name = self.class_names[class_id]
+  #           confidence = box[4]
 
-            pil_cropped_image = Image.fromarray(cropped_image)
+  #           pil_cropped_image = Image.fromarray(cropped_image)
 
-            if class_name == 'grade table':
-                config = "--psm 6"  # Example config for grade tables
-            else:
-                config = "--psm 7"  # Default config for other classes
+  #           if class_name == 'grade table':
+  #               config = "--psm 6"  # Example config for grade tables
+  #           else:
+  #               config = "--psm 7"  # Default config for other classes
 
-            text_extracted = pytesseract.image_to_string(pil_cropped_image, config=config)
+  #           text_extracted = pytesseract.image_to_string(pil_cropped_image, config=config)
 
-            image_results.append({
-                "class_name": class_name,
-                "confidence": confidence,
-                "text": text_extracted.strip(),
-                "bounding_box": [x1, y1, x2, y2]
-            })
+  #           image_results.append({
+  #               "class_name": class_name,
+  #               "confidence": confidence,
+  #               "text": text_extracted.strip(),
+  #               "bounding_box": [x1, y1, x2, y2]
+  #           })
 
-        # Append the results for this image to the dictionary
-        processed_results[image_name] = image_results
+  #       # Append the results for this image to the dictionary
+  #       processed_results[image_name] = image_results
 
-    return processed_results
+  #   return processed_results
     
-  def format_strings(self, processed_results):
-    """
-    Processes OCR results to format text strings for LLM processing.
+  # def format_strings(self, processed_results):
+  #   """
+  #   Processes OCR results to format text strings for LLM processing.
 
-    This function combines text from 'grade table' and 'single row table' into a single string, and 
-    all 'grade headers' data into another string. These formatted strings are intended to be passed 
-    to an LLM for further processing.
+  #   This function combines text from 'grade table' and 'single row table' into a single string, and 
+  #   all 'grade headers' data into another string. These formatted strings are intended to be passed 
+  #   to an LLM for further processing.
 
-    Parameters:
-        processed_results (dict): A dictionary with image names as keys and lists of dictionaries 
-                                  for each bounding box's OCR results.
+  #   Parameters:
+  #       processed_results (dict): A dictionary with image names as keys and lists of dictionaries 
+  #                                 for each bounding box's OCR results.
 
-    Returns:
-        dict: A dictionary where each key is an image name and the value is another dictionary with
-              two keys 'table_data' and 'header_data' containing formatted strings for each category.
-    """
+  #   Returns:
+  #       dict: A dictionary where each key is an image name and the value is another dictionary with
+  #             two keys 'table_data' and 'header_data' containing formatted strings for each category.
+  #   """
 
-    formatted_data = {}
+  #   formatted_data = {}
 
-    for image_name, results in processed_results.items():
-        table_texts = []
-        header_texts = []
+  #   for image_name, results in processed_results.items():
+  #       table_texts = []
+  #       header_texts = []
 
-        for result in results:
-            class_name = result['class_name']
-            text = result['text']
+  #       for result in results:
+  #           class_name = result['class_name']
+  #           text = result['text']
             
-            if class_name == 'grade table' or class_name == 'single row table':
-                table_texts.append(text)
-            elif class_name == 'grade headers':
-                header_texts.append(text)
+  #           if class_name == 'grade table' or class_name == 'single row table':
+  #               table_texts.append(text)
+  #           elif class_name == 'grade headers':
+  #               header_texts.append(text)
 
-        # Combine all relevant texts into single strings, separated by newline or another separator
-        table_data = '\n'.join(table_texts)  # Space or '\n' can be used depending on how the LLM processes data
-        header_data = '\n'.join(header_texts)
+  #       # Combine all relevant texts into single strings, separated by newline or another separator
+  #       table_data = '\n'.join(table_texts)  # Space or '\n' can be used depending on how the LLM processes data
+  #       header_data = '\n'.join(header_texts)
 
-        # Store formatted text in dictionary
-        formatted_data[image_name] = {
-            'table_data': table_data,
-            'header_data': header_data
-        }
+  #       # Store formatted text in dictionary
+  #       formatted_data[image_name] = {
+  #           'table_data': table_data,
+  #           'header_data': header_data
+  #       }
 
-    return formatted_data
+  #   return formatted_data
   
 if __name__ == '__main__':
 

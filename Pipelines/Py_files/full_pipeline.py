@@ -1,13 +1,13 @@
-from ocr_processor import OCRProcessor
-from vision_pipeline import VisionPipeline
-from mistral_pipeline_v3 import MistralInference
+from Pipelines.Py_files.ocr_processor import OCRProcessor
+from Pipelines.Py_files.vision_pipeline import VisionPipeline
+from Pipelines.Py_files.mistral_pipeline_v3 import MistralInference
 import torch
 import os
 from glob import glob
 
 class TranscriptPipeline():
     def __init__(self, device = torch.device('cuda'), cnn_path = r'yolo_training\yolo_v8_models\finetune_v5\best.pt',
-                 LLM_path = r"d:\llm_models\Mistral-7B-Instruct-v0.3.fp16.gguf", stream = False):
+                 LLM_path = r"d:\llm_models\Mistral-7B-Instruct-v0.3.fp16.gguf"):
 
         if device == torch.device('cuda') and torch.cuda.is_available():
             print("Using GPU Acceleration.")
@@ -16,7 +16,6 @@ class TranscriptPipeline():
             print('GPU Unavailable, using CPU may take longer when running Mistral.')
             device = torch.device('cpu')
 
-        self.stream = stream
         self.vision_pipeline = VisionPipeline(cnn_path, device = self.device)                           # YOLO Model
         self.ocr_processor = OCRProcessor()                                                             # Tesseract Engine
         self.mistral_pipeline = MistralInference(device = self.device, model_path=LLM_path)             # LLM
