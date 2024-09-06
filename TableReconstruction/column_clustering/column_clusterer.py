@@ -7,7 +7,6 @@ from sklearn.metrics import davies_bouldin_score
 from hdbscan import HDBSCAN
 from scipy.spatial.distance import cdist
 
-
 class ColumnClusterer:
     def __init__(self, tables):
         self.all_tables_data = tables

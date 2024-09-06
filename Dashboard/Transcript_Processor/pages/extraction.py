@@ -16,7 +16,6 @@ def display_image_with_boxes(image_path, boxes, classes):
     img_with_boxes = Image.open(img_with_boxes_path)
     return img_with_boxes
 
-
 # Example image directory
 EXAMPLE_IMAGE_DIR = "Dashboard/Transcript_Processor/assets"
 
