@@ -44,6 +44,7 @@ class TranscriptPipeline():
             if all(os.path.isfile(path) for path in input_path):  # Check if all are valid files
                 return input_path
             else:
+                print("Paths:", [path for path in input_path])
                 raise ValueError("One or more paths in the list are not valid files.")
         else:
             raise TypeError("Input should be a string (file or folder path) or a list of file paths.")

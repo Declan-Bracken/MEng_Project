@@ -1,4 +1,10 @@
 import os
+import sys
+
+# Add the project root directory to PYTHONPATH
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # One level up from 'Evaluation'
+if project_root not in sys.path:
+    sys.path.append(project_root)
 from Evaluation.text_reconstruction_evaluator import TextReconstructionEvaluator
 from Pipelines.Py_files.full_pipeline import TranscriptPipeline
 import json
@@ -26,10 +32,14 @@ class RunEvaluation():
             print(f"Error: The file {self.test_set_path} is not a valid JSON file.")
     
     def save_results(self, dict):
-        # Check if the directory exists, if not, create it
-        if not os.path.exists(self.save_file_path):
-            os.makedirs(self.save_file_path)
+        # Ensure the directory exists
+        directory = os.path.dirname(self.save_file_path)  # Extract the directory from the full file path
 
+        # Check if the directory exists, if not, create it
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+        # Now save the results to the specified file path
         with open(self.save_file_path, 'w') as f:
             json.dump(dict, f, indent=4)
         print(f"Dataset saved to {self.save_file_path}")
@@ -65,12 +75,12 @@ class RunEvaluation():
         return results_dictionary
 
 if __name__ == "__main__":
-    test_set_path = "Synthetic_Image_Annotation\Test_Data\Cleaned_JSON\Test_Responses - Copy.json"
-    save_path = "Evaluation\Test_Results"
+    test_set_path = "Synthetic_Image_Annotation\Test_Data\Cleaned_JSON\Test_Responses.json"
+    save_path = "Evaluation\Test_Results\output.json"
 
     run_evaluation = RunEvaluation(test_set_path, save_path)
     print(run_evaluation.image_list)
     print(run_evaluation.image_label_dict)
 
-    run_evaluation.run_pipeline(plot_bboxes=True, iou=0.3, conf=0.2, agnostic_nms=True)
+    run_evaluation.run_pipeline(plot_bboxes=False, iou=0.3, conf=0.2, agnostic_nms=True)
     

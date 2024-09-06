@@ -12,18 +12,4 @@
                 "content": "Course Code,Course Name,Grade,Achievement\nMANF 8420,Managing Manufacturing Operations,,75,Distinction\nMANF 8430,Understanding Good Manufacturing Practice,89,High Distinction\nMANF 8471,Manufacturing Strategy,81,Distinction\nPHPH 9104,Law Ethics and the Regulation of Medicines,67,Credit\nGBAT 9114,Principles of Marketing,75,Distinction\nGBAT 9102,Management of Manufacturing Systems,, \nGBAT 9125,Fundamentals of People Management,70,Credit"
             }
         ]
-    },
-    {
-        "id": "request-3",
-        "image": "Synthetic_Image_Annotation/Test_Data/images/1jtQjFKztmz2l5DAk1KPRq9YtYNayU4V6.jpg",
-        "conversations": [
-            {
-                "role": "user",
-                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
-            },
-            {
-                "role": "assistant",
-                "content": "Course Code, Description, Attempted Credits, Earned Credits, Grade\nSOC 101, Intro To Soc, 3.00, 3.00,\nHIST 1, W Civil Anc-Scru Rev, 3.00, 3.00,\nBIOL 1050, Physical & Cell Biol, 4.00, 4.00,\nCHEM 113, Introd Chemistry, 4.50, 4.50,\nFNES 11, Physical Condition, 1.00, 1.00,\nNLAE 499, Non-Liberal Arts Elective, 2.00, 2.00,\nFREN 111, Elem French 1, 4.00, 4.00,\nARTH 1, Introduction To Art 3.00, 3.00,\nBIOL 1060, Life Fortn % Eco systems, 4.00, 4.00,\nCHEM 1013, Basic Chemistry, 3.00, 3.00,\nCHEM 1011, Basic Chem Lab, 1.00, 1.00,\nCHEM 499, Elective Credit, 0.50, 0.50,\nCHEM 2514, Org Chem 1, 4.00, 4.00,\nCHEM 2511, Org Chem LAB 1, 1.00, 1.00,\nBIOL 11, Intro Cell Biology, 4.00, 4.00,\nENGL 120W, Writ LIt & Cult, 3.00, 3.00,\nPSYCH 217, Life Span Des Psych, 3.00, 3.00,\nMEDST 151, Public Snesking, 3.00, 3.00,\n\nSOC 499, Elective Credit, 3.00, 3.00,\nENGL 110, College Writing, 3.00, 3.00,\nENGL 499, Elective Credit, 1.00, 1.00,\nMATH 499, Elective Credit, 1.00, 1.00,\nMATH 151, Cale/Dilt & Integrin, 4.00, 4.00,\nBIOL 499, Elective Credit, 4.00, 4.00,\nPSYCH 301, General Psychology, 3.00, 3.00,\n\nPSYCH 221, PSYCHOPATHOLOGY, 3.00, 3.00, B+\nPSYCH 243, BEHAVIORAL NEUROSCI, 3.00, 3.00, B+\n\nBIOL 3854, VT: SPEC TOPICS-MDC, 4.00, 4.00, B\nPHIL 118, INTRO ORIENTAL PHILO, 3.00, 3.00, B\nPSYCH 107, STATISTICAL METHODS, 4.00, 4.00, A\nPSYCH 345, COGNITIVE NEUROSCI, 3.00, 3.00, A+\n\nPSYCH 238, SOCIAL BEHAVIOR, 3.00, 3.00, A\nPSYCH 347, INTRO CLINICAL PSY, 3.00, 3.00, A\n\nCHEM 2521, ORGANIC CHEM LAB II, 1.00, 1.00, B+\nCHEM 2524, ORGANIC CHEM II, 4.00, 4.00, B+\nPSYCH 103, Pleasure and Pain, 3.00, 3.00, A\nReq Designation:, Flexible Cor: Scientific World, , ,\nPSYCH 213W, EXPERIMENTAL PSYCH, 4.00, 4.00, A\nPSYCH, SPECIAL PROBLEMS Research, 3.00, 3.00, A\n\nPHYS 1211, GENERAL PHYS I LAB, 1.00, 1.00, A\nReq Designation:, Required Core-Life and Physical Sciences, , ,\nPHYS 1214, GENERAL PHYSICS 1-LEC/REC, 4.00, 4.00, A\nReq Designation:, Required Core-Life and Physical Sciences, , ,"
-            }
-        ]
     }]

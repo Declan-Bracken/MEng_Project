@@ -147,28 +147,30 @@ class MistralInference():
             temperature=temperature,
             echo=echo,
             stop=stop,
-            stream = True
+            stream = False
         )
+        print("Inference Complete.")
+        output_text = model_output["choices"][0]["text"].strip()
 
-        print("Streaming Inference Now...")
+        # print("Streaming Inference Now...")
 
-        # Initialize a variable to store the full output
-        final_result = ""
+        # # Initialize a variable to store the full output
+        # final_result = ""
 
-        # Iterate over the streamed output and print tokens as they are generated
-        for chunk in model_output:
-            # Access the text from the chunk
-            token = chunk["choices"][0]["text"]
+        # # Iterate over the streamed output and print tokens as they are generated
+        # for chunk in model_output:
+        #     # Access the text from the chunk
+        #     token = chunk["choices"][0]["text"]
             
-            # Append the token to the final result
-            final_result += token
+        #     # Append the token to the final result
+        #     final_result += token
             
-            # Print the token (or process it as needed)
-            print(token, end='', flush=True)
+        #     # Print the token (or process it as needed)
+        #     print(token, end='', flush=True)
 
         # After streaming is complete, you can use `final_result` as the full generated output
         # print("\nFinal Output:", final_result)
-        return self.extract_csv(final_result.replace('<|im_end|>','').strip())
+        return self.extract_csv(output_text.replace('<|im_end|>','').strip())
      
 
 if __name__ == "__main__":
