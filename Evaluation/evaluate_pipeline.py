@@ -13,6 +13,9 @@ class RunEvaluation():
         self.load_dataset()
         self.create_image_list()
 
+        # Instantiate pipeline
+        self.transcript_pipeline = TranscriptPipeline(cnn_path = self.vision_model_path, LLM_path=self.llm_model_path)
+
     def load_dataset(self):
         try:
             with open(self.test_set_path, 'r') as f:
@@ -47,10 +50,8 @@ class RunEvaluation():
                 print(f"Missing key {e} in entry: {entry}")
 
     def run_pipeline(self, **kwargs):
-        # Instantiate pipeline
-        pipeline = TranscriptPipeline(cnn_path = self.vision_model_path)
         # Process input (can be a file, list of files, or folder)
-        predicted_strings_dict = pipeline.process_transcripts(self.image_list, LLM_path=self.llm_model_path, **kwargs)
+        predicted_strings_dict = self.transcript_pipeline.process_transcripts(self.image_list, **kwargs)
         self.save_results(predicted_strings_dict)
         return predicted_strings_dict
     

@@ -6,8 +6,7 @@ import os
 from glob import glob
 
 class TranscriptPipeline():
-    def __init__(self, device = torch.device('cuda'), cnn_path = r'yolo_training\yolo_v8_models\finetune_v5\best.pt',
-                 LLM_path = r"d:\llm_models\Mistral-7B-Instruct-v0.3.fp16.gguf"):
+    def __init__(self, device = torch.device('cuda'), cnn_path = r'yolo_training\yolo_v8_models\finetune_v5\best.pt', LLM_path = r"d:\llm_models\Mistral-7B-Instruct-v0.3.fp16.gguf"):
 
         if device == torch.device('cuda') and torch.cuda.is_available():
             print("Using GPU Acceleration.")
