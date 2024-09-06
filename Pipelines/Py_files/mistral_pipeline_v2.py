@@ -6,6 +6,7 @@ import gc
 import os
 import sys
 import csv
+import re
 
 # For output suppression of the LLM logging
 class SuppressOutput:
@@ -28,13 +29,14 @@ class MistralInference():
     _instance = None  # Class variable to store the singleton instance
 
     # Create new class instance if one doesn't exist (Singleton pattern)
-    def __new__(cls, device=torch.device('cuda'), model_path=None, new_instance = False):
+    def __new__(cls, device=torch.device('cuda'), model_path=None, new_instance = False, stream = False):
         if cls._instance is None or new_instance == True:
             print("Creating new instance of MistralInference")
             cls._instance = super(MistralInference, cls).__new__(cls)
 
             # Initialize instance variables
             cls._instance.initialize(device, model_path)
+            cls.stream = stream
         else:
             print("Using existing instance of MistralInference")
 
@@ -45,7 +47,7 @@ class MistralInference():
             raise ValueError("Model path must be provided.")
         
         # Output Collumns
-        self.headers = ['Course Code', 'Grade', 'Credits']
+        # self.headers = ['Course Code', 'Grade', 'Credits']
 
         if device == torch.device('cuda') and not torch.cuda.is_available():
             print("Switching device to CPU.")
@@ -77,65 +79,26 @@ class MistralInference():
                 print(f"Error Loading Model Weights: {e}")
             
     def query_mistral(self, text, headers = None):
-        self.prompt_templates = [f'''I will provide you with OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have the following columns: '{self.headers[0]}' or 'Course Title' (or both), '{self.headers[1]}', and '{self.headers[2]}'. you must select which columns best fit these fields. For example, this is how you would format the following table:
-Example Input:
-Course Description Attempted Earned Grade Points
-MAT 101 Intro to Math 3.000 3.000 At 12.999
-                                 
-Expected Result:
-Course Code, Course Title, Credits, Grade
-MAT 101, Intro to Math, 3.000, At
-                                 
-MAT 101 is an example course, DO NOT include it in your CSV.
-                                                              
+#         self.prompt_templates = [f'''I will provide you with OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have the following columns: '{self.headers[0]}' or 'Course Title' (or both), '{self.headers[1]}', and '{self.headers[2]}'. you must select which columns best fit these fields. For example, this is how you would format the following table:
+# Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}' or 'Course Title' (or both), '{self.headers[1]}', and '{self.headers[2]}'. you must select which columns best fit these fields. For example, this is how you would format the following table:
+
+        self.prompt_templates = [
+f'''Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. Please output only the CSV table and no other preceding or trailing text in your response.
+                                                        
 ### Text:
 {headers}
-{text}
-
-### CSV:
-
-''',f'''
-Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}' or 'Course Title' (or both), '{self.headers[1]}', and '{self.headers[2]}'. you must select which columns best fit these fields. For example, this is how you would format the following table:
-
-Example Input:
-MAT 101 Intro to Math 3.000 3.000 At 12.999
-
-Expected Result:
-Course Code, Course Title, Credits, Grade
-MAT 101, Intro to Math, 3.000, At
-
-MAT 101 is an example course, DO NOT include it in your CSV.
-
+{text}''',
+f'''Below is OCR text from a student transcript. This text contains a table, or multiple tables. Select data only relevant to student courses and grades from these tables and format the fields into a table in csv format. **Output only the CSV table**
 ### Text:
 {text}
-
-### CSV:
-
 ''']
-#         self.prompt_templates = [f'''
-# Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}' (or units), you must select which columns best fit these fields. Make sure to clean the data by removing any extra quotes or semicolons, and fix small OCR mistakes.
-        
-# ### Text:
-# {headers}
-# {text}
 
-# ### CSV:
-
-# ''',f'''
-# Below is OCR text of a grade table from a student transcript. Format the fields into a table in csv format. The csv you output should only have 3 columns: '{self.headers[0]}', '{self.headers[1]}', and '{self.headers[2]}'. This is not necessarily the order in which the table is currently structured, you must select which columns are likely the best fit for these fields based on contents, and then organize them.
-
-# ### Text:
-# {text}
-
-# ### CSV:
-
-# ''']
         if headers is not None:
             prompt = self.prompt_templates[0]
         else:
             prompt = self.prompt_templates[1]
 
-        system_message = "You are a helpful assistant who excels at organizing data into structured tables." #You take input input data and clean/organize it into CSV texts
+        system_message = "You are a helpful assistant." #You take input input data and clean/organize it into CSV texts
         prompt_template=f'''<|im_start|>system
         {system_message}<|im_end|>
         <|im_start|>user
@@ -146,6 +109,7 @@ MAT 101 is an example course, DO NOT include it in your CSV.
         temperature = 0
         echo = False
         stop = ["</s>"]
+
         try:
             print("Prompting Mistral...")
             # Define the parameters
@@ -156,31 +120,59 @@ MAT 101 is an example course, DO NOT include it in your CSV.
                     temperature=temperature,
                     top_p=0,
                     echo=echo,
-                    stop=stop,)
-            print("Prompt Successful!")
-            final_result = model_output["choices"][0]["text"].strip()
-            return final_result, model_output
+                    stop=stop,
+                    stream = self.stream)
+            print("Prompting Successful!")
+            # Handle streamed or non-streamed output
+            if self.stream:
+                print("Streaming Inference Now...")
+                final_result = ""
+                for chunk in model_output:
+                    token = chunk["choices"][0]["text"]
+                    final_result += token
+                output_text = final_result
+            else:
+                output_text = model_output["choices"][0]["text"].strip()
+                
+            # Extract CSV using the new method
+            csv_data = self.extract_csv(output_text)
+            return csv_data, model_output
         except Exception as e:
             print(f"An error occurred during model inference: {e}")
-            
+            return None, None
+
+    def extract_csv(self, output_text):
+        """
+        Extracts the CSV part from the output text using more robust logic.
+        """
+        # Use regex to find the part of the text that resembles a CSV table
+        csv_match = re.search(r"(?<=\n)([^\n,]+,)+[^\n,]+", output_text)
+        if csv_match:
+            csv_text = csv_match.group(0)
+            return csv_text
+        else:
+            print("No valid CSV found in the output.")
+            return ""
+        
     def string_to_dataframe(self, data_str):
+        """
+        Converts a string in CSV format to a pandas DataFrame.
+        """
         try:
             # Use StringIO to simulate a file-like object for the pandas read_csv function.
             data_io = StringIO(data_str)
-            
             # Read the data into a DataFrame.
             df = pd.read_csv(data_io)
-
             # Strip whitespace from strings in the DataFrame
-            df = df.map(lambda x: x.strip() if isinstance(x, str) else x)
-
+            df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
             # Apply strip to column titles
             df.columns = df.columns.str.strip()
+            return df
         except Exception as e:
             print(f"Failed converting string to dataframe: {e}")
-        return df
+            return pd.DataFrame()
     
-    def clean_data(self, dataframe, grade_header):
+    def clean_data(self, dataframe):
         # Remove unwanted characters from all cells
         dataframe = dataframe.replace({r'[;:"()$%^#*@!]': ''}, regex=True)
         # Clean the column headers
@@ -191,13 +183,13 @@ MAT 101 is an example course, DO NOT include it in your CSV.
         dataframe = dataframe.map(lambda x: x.strip() if isinstance(x, str) else x)
 
         # Define the mapping for grades
-        map_plus = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
+        # map_plus = {'At': 'A+', 'Bt': 'B+', 'Ct': 'C+', 'Dt': 'D+'}
         # Check if the specified grade_header is in the dataframe's columns
-        if grade_header in dataframe.columns:
-            # Apply the mapping to the specified grade column
-            dataframe[grade_header] = dataframe[grade_header].replace(map_plus)
-        else:
-            raise ValueError(f"The specified grade header '{grade_header}' is not found in the dataframe.")
+        # if grade_header in dataframe.columns:
+        #     # Apply the mapping to the specified grade column
+        #     dataframe[grade_header] = dataframe[grade_header].replace(map_plus)
+        # else:
+        #     print(f"The specified grade header '{grade_header}' is not found in the dataframe.")
         # Return the modified dataframe
         return dataframe
     
@@ -212,7 +204,7 @@ MAT 101 is an example course, DO NOT include it in your CSV.
         # Convert to Dataframe
         self.df = self.string_to_dataframe(self.csv_output)
         # Fix OCR issues with grade pluses
-        self.final_df = self.clean_data(self.df, self.headers[1]) # Second header is for grades
+        self.final_df = self.clean_data(self.df) # Second header is for grades
         # Optionally save the DataFrame
         if save:
             if output_filename:

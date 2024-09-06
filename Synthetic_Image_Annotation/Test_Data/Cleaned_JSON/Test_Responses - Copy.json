@@ -1,0 +1,15 @@
+[
+    {
+        "id": "request-2",
+        "image": "Synthetic_Image_Annotation/Test_Data/images/1P8LvUcCM1NoIU2qo_cS4hCzRgfdFb_nL.jpg",
+        "conversations": [
+            {
+                "role": "user",
+                "content": "<image>\nExtract only the course information from the attached transcript image, including but not limited to subjects/course codes, grades, credits, and other information. Please then structure this information into a table in CSV format. If the image is not a transcript, respond with 'not a transcript'."
+            },
+            {
+                "role": "assistant",
+                "content": "Course Code,Course Name,Grade,Achievement\nMANF 8420,Managing Manufacturing Operations,,75,Distinction\nMANF 8430,Understanding Good Manufacturing Practice,89,High Distinction\nMANF 8471,Manufacturing Strategy,81,Distinction\nPHPH 9104,Law Ethics and the Regulation of Medicines,67,Credit\nGBAT 9114,Principles of Marketing,75,Distinction\nGBAT 9102,Management of Manufacturing Systems,, \nGBAT 9125,Fundamentals of People Management,70,Credit"
+            }
+        ]
+    }]

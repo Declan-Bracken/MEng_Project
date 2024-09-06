@@ -98,8 +98,6 @@ def display_aggrid(df, key):
 def load_vision_pipeline(model_path):
     return VisionPipeline(model_path)
 
-
-
 @st.cache_resource(show_spinner=False)
 def load_mistral(model_path = r"C:\Users\Declan Bracken\MEng_Project\mistral\models\dolphin-2.1-mistral-7b.Q5_K_M.gguf"):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

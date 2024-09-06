@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AutoGPTQ",
+    "\\AutoGPTQ\\autogptq_extension",
+    "\\AutoGPTQ\\autogptq_extension\\cuda_64"
+  ],
+  "SelectedNode": "\\AutoGPTQ\\autogptq_extension\\cuda_64\\autogptq_cuda_64.cpp",
+  "PreviewInSolutionExplorer": false
+}
