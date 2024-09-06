@@ -14,7 +14,7 @@ class TranscriptPipeline():
             self.device = torch.device("cuda")
         else:
             print('GPU Unavailable, using CPU may take longer when running Mistral.')
-            device = torch.device('cpu')
+            self.device = torch.device('cpu')
 
         self.vision_pipeline = VisionPipeline(cnn_path, device = self.device)                           # YOLO Model
         self.ocr_processor = OCRProcessor()                                                             # Tesseract Engine
