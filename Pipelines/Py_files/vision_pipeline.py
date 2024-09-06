@@ -1,6 +1,4 @@
 from ultralytics import YOLO
-from PIL import Image
-import pytesseract
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import cv2

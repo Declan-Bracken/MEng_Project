@@ -1,6 +1,6 @@
-from Pipelines.Py_files.ocr_processor import OCRProcessor
-from Pipelines.Py_files.vision_pipeline import VisionPipeline
-from Pipelines.Py_files.mistral_pipeline_v3 import MistralInference
+from .ocr_processor import OCRProcessor
+from .vision_pipeline import VisionPipeline
+from .mistral_pipeline_v3 import MistralInference
 import torch
 import os
 from glob import glob
@@ -99,16 +99,9 @@ if __name__ == "__main__":
     transcript_path = r'\Users\Declan Bracken\Pictures\Saved Pictures\2015-queens-university-transcript-1-2048.webp'
 
     # Instantiate pipeline
-    pipeline = TranscriptPipeline(cnn_path = vision_model_path, stream = True)
+    pipeline = TranscriptPipeline(cnn_path = vision_model_path)
     # Process input (can be a file, list of files, or folder)
     tables = pipeline.process_transcripts(transcript_path, plot_bboxes=False, iou=0.3, conf=0.2, agnostic_nms=True)
 
     # Print the results
     print(tables)
-
-    
-    
-
-
-
-

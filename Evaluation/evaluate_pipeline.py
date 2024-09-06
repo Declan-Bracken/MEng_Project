@@ -1,13 +1,6 @@
-import sys
 import os
-# Add your parent directory to the path
-parent_dir = r'c:\Users\Declan Bracken\MEng_Project'
-try:
-    sys.path.append(parent_dir)
-except:
-    print("Exception Occured")
-from text_reconstruction_evaluator import TextReconstructionEvaluator
-from Pipelines.Py_files.full_pipeline import TranscriptPipeline
+from ..Evaluation.text_reconstruction_evaluator import TextReconstructionEvaluator
+from ..Pipelines.Py_files.full_pipeline import TranscriptPipeline
 import json
 
 # 1. Import Test Images and Actual Strings
