@@ -82,15 +82,17 @@ class MistralInference():
             n_gpu_layers = 0  # No GPU offloading
 
         print(f"""-----------------------------------------------------------------------\nLoading Mistral to {device}...\n-----------------------------------------------------------------------""")
-        with SuppressOutput(): # Suppress Verbose Output
+        # Set up LLaMA model with multi-GPU support
+        with SuppressOutput():  # Suppress Verbose Output
             try:
                 self.llm = Llama(
-                model_path= model_path,     # Download the model file first
-                n_ctx=max_sequence_len,     # The max sequence length to use - note that longer sequence lengths require much more resources
-                n_threads=n_threads,        # The number of CPU threads to use, tailor to your system and the resulting performance
-                n_gpu_layers=n_gpu_layers   # The number of layers to offload to GPU, if you have GPU acceleration available
+                    model_path=model_path,
+                    n_ctx=max_sequence_len,
+                    n_threads=n_threads,
+                    n_gpu_layers=n_gpu_layers,
+                    n_gpus=available_gpus  # Enable multiple GPUs
                 )
-                print("Model Loaded Successfully!")
+                print("Model Loaded Successfully with multi-GPU support!")
             except Exception as e:
                 print(f"Error Loading Model Weights: {e}")
 
