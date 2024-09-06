@@ -73,9 +73,8 @@ class MistralInference():
             print(f"Total GPU memory available per GPU: {total_memory_per_gpu_gb:.2f} GB")
 
             # Decide how many layers to offload per GPU
-            if n_gpu_layers is None:
-                # Estimate layers based on available memory (adjust as needed)
-                n_gpu_layers = min(24, int(total_memory_per_gpu_gb // 1.2))  # Example: 1.2 GB per layer
+
+            n_gpu_layers = min(24, int(total_memory_per_gpu_gb // 1.2))  # Example: 1.2 GB per layer
             print(f"Offloading {n_gpu_layers} layers per GPU across {available_gpus} GPUs.")
 
         else:
