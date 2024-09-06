@@ -1,0 +1,382 @@
+{
+    "Evaluation/Test_Results/pipe1_output.json": {
+        "Image Results": {
+            "Synthetic_Image_Annotation/Test_Data/images/1jtQjFKztmz2l5DAk1KPRq9YtYNayU4V6.jpg": {
+                "Levenshtein Distance": 1166,
+                "Token F1 Score": 0.17777777777777778,
+                "BLEU Score": 8.669612184277444e-232,
+                "ROUGE-L Score": 0.19801979745123038,
+                "Word Error Rate": 0.8662790697674418
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1vKUpnIE73KoQslO-7cw_XhR4areynUP0.jpg": {
+                "Levenshtein Distance": 136,
+                "Token F1 Score": 0.6493506493506495,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.6582278431982054,
+                "Word Error Rate": 0.4909090909090909
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1WrHrCzvwxk5IyXpj2LPNBXqxkCl5Hmql.jpg": {
+                "Levenshtein Distance": 795,
+                "Token F1 Score": 0.15841584158415842,
+                "BLEU Score": 8.319100378795605e-232,
+                "ROUGE-L Score": 0.11881187672189018,
+                "Word Error Rate": 0.9178082191780822
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kqW27F0vtWl99s-u0XOYHMaOyya6ivsK.jpg": {
+                "Levenshtein Distance": 2256,
+                "Token F1 Score": 0,
+                "BLEU Score": 1.384292958842266e-231,
+                "ROUGE-L Score": 0.0,
+                "Word Error Rate": 1.0
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1qXufiu8cLDN5CCxRI69T867qZSsxOd2X.jpg": {
+                "Levenshtein Distance": 37,
+                "Token F1 Score": 0.9176470588235294,
+                "BLEU Score": 5.4269696562331364e-232,
+                "ROUGE-L Score": 0.9398907053826632,
+                "Word Error Rate": 0.07751937984496124
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1K1eTxzaYPiP68_GS_AXOTm1nJ9BEoniq.jpg": {
+                "Levenshtein Distance": 596,
+                "Token F1 Score": 0.467741935483871,
+                "BLEU Score": 7.771531073507414e-232,
+                "ROUGE-L Score": 0.49606298719573444,
+                "Word Error Rate": 0.6585365853658537
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1T5P769wOOhsdY4sQ17tUFag7ReKyj3Zb.jpg": {
+                "Levenshtein Distance": 1217,
+                "Token F1 Score": 0.18811881188118815,
+                "BLEU Score": 7.337741777064293e-232,
+                "ROUGE-L Score": 0.2139534836110331,
+                "Word Error Rate": 0.896774193548387
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1gDraQhEah7I9VX1FHSzm-Sinj_HBQhNs.jpg": {
+                "Levenshtein Distance": 348,
+                "Token F1 Score": 0.23529411764705882,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.3823529362640571,
+                "Word Error Rate": 1.2093023255813953
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1a2SqGFdFGGX81zAHb9-9r7vi2r_SnkXb.jpg": {
+                "Levenshtein Distance": 731,
+                "Token F1 Score": 0.25668449197860965,
+                "BLEU Score": 6.957990942521506e-232,
+                "ROUGE-L Score": 0.3039215636755095,
+                "Word Error Rate": 0.8357142857142857
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kSkSCW9j9yNISQJri3SB2_ifNhDr-6QF.jpg": {
+                "Levenshtein Distance": 2269,
+                "Token F1 Score": 0.04580152671755725,
+                "BLEU Score": 4.628662477364524e-232,
+                "ROUGE-L Score": 0.10144927124553682,
+                "Word Error Rate": 5.066666666666666
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1LTl-rZAATpqczCM3Ene5C6tXsxVLIpxK.jpg": {
+                "Levenshtein Distance": 714,
+                "Token F1 Score": 0.3366336633663366,
+                "BLEU Score": 8.844844403089351e-232,
+                "ROUGE-L Score": 0.36220472021576045,
+                "Word Error Rate": 0.7608695652173914
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1pI3toNgtVMDZ-HEKqGUqyr0z_6Tj46VC.jpg": {
+                "Levenshtein Distance": 828,
+                "Token F1 Score": 0.3902439024390244,
+                "BLEU Score": 5.677823098089411e-232,
+                "ROUGE-L Score": 0.5599999950435557,
+                "Word Error Rate": 0.9759036144578314
+            }
+        },
+        "Average Results": {
+            "Average Levenshtein Distance": 924.4166666666666,
+            "Average Token F1 Score": 0.31864248142081336,
+            "Average BLEU Score": 6.456433798280445e-232,
+            "Average ROUGE-L Score": 0.36124126500043136,
+            "Average Word Error Rate": 1.1463569163542822
+        }
+    },
+    "Evaluation/Test_Results/pipe2_output.json": {
+        "Image Results": {
+            "Synthetic_Image_Annotation/Test_Data/images/1jtQjFKztmz2l5DAk1KPRq9YtYNayU4V6.jpg": {
+                "Levenshtein Distance": 1328,
+                "Token F1 Score": 0.06172839506172839,
+                "BLEU Score": 5.1467539968448294e-232,
+                "ROUGE-L Score": 0.10169491146222363,
+                "Word Error Rate": 0.9651162790697675
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1vKUpnIE73KoQslO-7cw_XhR4areynUP0.jpg": {
+                "Levenshtein Distance": 112,
+                "Token F1 Score": 0.7027027027027029,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.7105263109591413,
+                "Word Error Rate": 0.43636363636363634
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1WrHrCzvwxk5IyXpj2LPNBXqxkCl5Hmql.jpg": {
+                "Levenshtein Distance": 801,
+                "Token F1 Score": 0.14285714285714285,
+                "BLEU Score": 7.114448003820407e-232,
+                "ROUGE-L Score": 0.12244897526655575,
+                "Word Error Rate": 0.9041095890410958
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kqW27F0vtWl99s-u0XOYHMaOyya6ivsK.jpg": {
+                "Levenshtein Distance": 2254,
+                "Token F1 Score": 0,
+                "BLEU Score": 1.384292958842266e-231,
+                "ROUGE-L Score": 0.0,
+                "Word Error Rate": 1.0
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1qXufiu8cLDN5CCxRI69T867qZSsxOd2X.jpg": {
+                "Levenshtein Distance": 1522,
+                "Token F1 Score": 0,
+                "BLEU Score": 1.384292958842266e-231,
+                "ROUGE-L Score": 0.0,
+                "Word Error Rate": 1.0
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1K1eTxzaYPiP68_GS_AXOTm1nJ9BEoniq.jpg": {
+                "Levenshtein Distance": 598,
+                "Token F1 Score": 0.467741935483871,
+                "BLEU Score": 7.797479785342187e-232,
+                "ROUGE-L Score": 0.49606298719573444,
+                "Word Error Rate": 0.6585365853658537
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1T5P769wOOhsdY4sQ17tUFag7ReKyj3Zb.jpg": {
+                "Levenshtein Distance": 1232,
+                "Token F1 Score": 0.19095477386934673,
+                "BLEU Score": 6.232719878487911e-232,
+                "ROUGE-L Score": 0.21698112735359568,
+                "Word Error Rate": 0.896774193548387
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1gDraQhEah7I9VX1FHSzm-Sinj_HBQhNs.jpg": {
+                "Levenshtein Distance": 618,
+                "Token F1 Score": 0.08602150537634408,
+                "BLEU Score": 8.364937377160846e-232,
+                "ROUGE-L Score": 0.07079645518678084,
+                "Word Error Rate": 2.0232558139534884
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1a2SqGFdFGGX81zAHb9-9r7vi2r_SnkXb.jpg": {
+                "Levenshtein Distance": 919,
+                "Token F1 Score": 0.23943661971830987,
+                "BLEU Score": 6.518923202947529e-232,
+                "ROUGE-L Score": 0.2763157855955679,
+                "Word Error Rate": 0.8357142857142857
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kSkSCW9j9yNISQJri3SB2_ifNhDr-6QF.jpg": {
+                "Levenshtein Distance": 2253,
+                "Token F1 Score": 0.046875,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.10370369953360783,
+                "Word Error Rate": 5.0
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1LTl-rZAATpqczCM3Ene5C6tXsxVLIpxK.jpg": {
+                "Levenshtein Distance": 730,
+                "Token F1 Score": 0.346938775510204,
+                "BLEU Score": 7.601159375410181e-232,
+                "ROUGE-L Score": 0.3709677378837149,
+                "Word Error Rate": 0.7608695652173914
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1pI3toNgtVMDZ-HEKqGUqyr0z_6Tj46VC.jpg": {
+                "Levenshtein Distance": 983,
+                "Token F1 Score": 0.2121212121212121,
+                "BLEU Score": 5.1716383031778185e-232,
+                "ROUGE-L Score": 0.35460992408430164,
+                "Word Error Rate": 1.5783132530120483
+            }
+        },
+        "Average Results": {
+            "Average Levenshtein Distance": 1112.5,
+            "Average Token F1 Score": 0.20811483855840515,
+            "Average BLEU Score": 6.802826591669753e-232,
+            "Average ROUGE-L Score": 0.23534232621010198,
+            "Average Word Error Rate": 1.3382544334404962
+        }
+    },
+    "Evaluation/Test_Results/pipe3_output.json": {
+        "Image Results": {
+            "Synthetic_Image_Annotation/Test_Data/images/1jtQjFKztmz2l5DAk1KPRq9YtYNayU4V6.jpg": {
+                "Levenshtein Distance": 1543,
+                "Token F1 Score": 0.1267605633802817,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.15286623936062316,
+                "Word Error Rate": 0.9476744186046512
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1vKUpnIE73KoQslO-7cw_XhR4areynUP0.jpg": {
+                "Levenshtein Distance": 148,
+                "Token F1 Score": 0.6233766233766234,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.632911387502003,
+                "Word Error Rate": 0.509090909090909
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1WrHrCzvwxk5IyXpj2LPNBXqxkCl5Hmql.jpg": {
+                "Levenshtein Distance": 724,
+                "Token F1 Score": 0.13008130081300812,
+                "BLEU Score": 7.221785213960615e-232,
+                "ROUGE-L Score": 0.09756097064974577,
+                "Word Error Rate": 1.0410958904109588
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kqW27F0vtWl99s-u0XOYHMaOyya6ivsK.jpg": {
+                "Levenshtein Distance": 2090,
+                "Token F1 Score": 0.08547008547008547,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.08474576012640055,
+                "Word Error Rate": 1.6481481481481481
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1qXufiu8cLDN5CCxRI69T867qZSsxOd2X.jpg": {
+                "Levenshtein Distance": 38,
+                "Token F1 Score": 0.9058823529411765,
+                "BLEU Score": 5.4269696562331364e-232,
+                "ROUGE-L Score": 0.9289617436340291,
+                "Word Error Rate": 0.08527131782945736
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1K1eTxzaYPiP68_GS_AXOTm1nJ9BEoniq.jpg": {
+                "Levenshtein Distance": 834,
+                "Token F1 Score": 0.4272727272727273,
+                "BLEU Score": 8.197111960922882e-232,
+                "ROUGE-L Score": 0.44933920236371755,
+                "Word Error Rate": 0.7658536585365854
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1T5P769wOOhsdY4sQ17tUFag7ReKyj3Zb.jpg": {
+                "Levenshtein Distance": 1322,
+                "Token F1 Score": 0.1,
+                "BLEU Score": 7.337741777064293e-232,
+                "ROUGE-L Score": 0.12621358760250748,
+                "Word Error Rate": 0.9806451612903225
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1gDraQhEah7I9VX1FHSzm-Sinj_HBQhNs.jpg": {
+                "Levenshtein Distance": 423,
+                "Token F1 Score": 0.15053763440860216,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.3225806401729969,
+                "Word Error Rate": 1.2790697674418605
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1a2SqGFdFGGX81zAHb9-9r7vi2r_SnkXb.jpg": {
+                "Levenshtein Distance": 575,
+                "Token F1 Score": 0.4623655913978495,
+                "BLEU Score": 6.736276080651047e-232,
+                "ROUGE-L Score": 0.4999999951020409,
+                "Word Error Rate": 0.7142857142857143
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kSkSCW9j9yNISQJri3SB2_ifNhDr-6QF.jpg": {
+                "Levenshtein Distance": 1462,
+                "Token F1 Score": 0.09756097560975609,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.08333333055555565,
+                "Word Error Rate": 2.088888888888889
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1LTl-rZAATpqczCM3Ene5C6tXsxVLIpxK.jpg": {
+                "Levenshtein Distance": 636,
+                "Token F1 Score": 0.39639639639639634,
+                "BLEU Score": 6.720628411503338e-232,
+                "ROUGE-L Score": 0.47222221750096455,
+                "Word Error Rate": 0.7065217391304348
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1pI3toNgtVMDZ-HEKqGUqyr0z_6Tj46VC.jpg": {
+                "Levenshtein Distance": 646,
+                "Token F1 Score": 0.2772277227722772,
+                "BLEU Score": 6.60163220855285e-232,
+                "ROUGE-L Score": 0.25454544982479343,
+                "Word Error Rate": 0.7349397590361446
+            }
+        },
+        "Average Results": {
+            "Average Levenshtein Distance": 870.0833333333334,
+            "Average Token F1 Score": 0.31524433115323197,
+            "Average BLEU Score": 4.02017877574068e-232,
+            "Average ROUGE-L Score": 0.34210671036628154,
+            "Average Word Error Rate": 0.9584571143911731
+        }
+    },
+    "Evaluation/Test_Results/pipeline_results.json": {
+        "Image Results": {
+            "Synthetic_Image_Annotation/Test_Data/images/1jtQjFKztmz2l5DAk1KPRq9YtYNayU4V6.jpg": {
+                "Levenshtein Distance": 1124,
+                "Token F1 Score": 0.19742489270386265,
+                "BLEU Score": 8.439601420831656e-232,
+                "ROUGE-L Score": 0.2186234768050617,
+                "Word Error Rate": 0.9302325581395349
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1vKUpnIE73KoQslO-7cw_XhR4areynUP0.jpg": {
+                "Levenshtein Distance": 283,
+                "Token F1 Score": 0.21333333333333335,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.21052631095914137,
+                "Word Error Rate": 0.9090909090909091
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1WrHrCzvwxk5IyXpj2LPNBXqxkCl5Hmql.jpg": {
+                "Levenshtein Distance": 785,
+                "Token F1 Score": 0.10084033613445378,
+                "BLEU Score": 6.573479617511883e-232,
+                "ROUGE-L Score": 0.09999999506805579,
+                "Word Error Rate": 0.9315068493150684
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kqW27F0vtWl99s-u0XOYHMaOyya6ivsK.jpg": {
+                "Levenshtein Distance": 1218,
+                "Token F1 Score": 0.2395209580838323,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.23391812379877583,
+                "Word Error Rate": 0.8055555555555556
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1qXufiu8cLDN5CCxRI69T867qZSsxOd2X.jpg": {
+                "Levenshtein Distance": 1468,
+                "Token F1 Score": 0.08695652173913042,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.09999999836200002,
+                "Word Error Rate": 0.9689922480620154
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1K1eTxzaYPiP68_GS_AXOTm1nJ9BEoniq.jpg": {
+                "Levenshtein Distance": 1075,
+                "Token F1 Score": 0.22448979591836732,
+                "BLEU Score": 7.244248269687037e-232,
+                "ROUGE-L Score": 0.3004694791236307,
+                "Word Error Rate": 0.926829268292683
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1T5P769wOOhsdY4sQ17tUFag7ReKyj3Zb.jpg": {
+                "Levenshtein Distance": 1013,
+                "Token F1 Score": 0.24444444444444444,
+                "BLEU Score": 5.866614974264094e-232,
+                "ROUGE-L Score": 0.33922260986852126,
+                "Word Error Rate": 1.1290322580645162
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1gDraQhEah7I9VX1FHSzm-Sinj_HBQhNs.jpg": {
+                "Levenshtein Distance": 654,
+                "Token F1 Score": 0,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.0,
+                "Word Error Rate": 1.0
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1a2SqGFdFGGX81zAHb9-9r7vi2r_SnkXb.jpg": {
+                "Levenshtein Distance": 738,
+                "Token F1 Score": 0.5051546391752577,
+                "BLEU Score": 7.32173788293977e-232,
+                "ROUGE-L Score": 0.5631067911546801,
+                "Word Error Rate": 0.8857142857142857
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1kSkSCW9j9yNISQJri3SB2_ifNhDr-6QF.jpg": {
+                "Levenshtein Distance": 430,
+                "Token F1 Score": 0,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.0,
+                "Word Error Rate": 1.0
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1LTl-rZAATpqczCM3Ene5C6tXsxVLIpxK.jpg": {
+                "Levenshtein Distance": 793,
+                "Token F1 Score": 0.22608695652173913,
+                "BLEU Score": 7.690076942257604e-232,
+                "ROUGE-L Score": 0.19548871737690102,
+                "Word Error Rate": 0.9130434782608695
+            },
+            "Synthetic_Image_Annotation/Test_Data/images/1pI3toNgtVMDZ-HEKqGUqyr0z_6Tj46VC.jpg": {
+                "Levenshtein Distance": 731,
+                "Token F1 Score": 0.3166666666666667,
+                "BLEU Score": 0,
+                "ROUGE-L Score": 0.3333333283379248,
+                "Word Error Rate": 0.891566265060241
+            }
+        },
+        "Average Results": {
+            "Average Levenshtein Distance": 859.3333333333334,
+            "Average Token F1 Score": 0.19624321206009065,
+            "Average BLEU Score": 3.594646592291004e-232,
+            "Average ROUGE-L Score": 0.21622406923789106,
+            "Average Word Error Rate": 0.9409636396296399
+        }
+    }
+}
