@@ -61,14 +61,25 @@ class MistralInference():
         torch.cuda.empty_cache()
         gc.collect()
 
-        # Dynamically determine optimal number of threads and GPU layers
+        # Dynamically determine optimal number of threads
         n_threads = max(1, torch.get_num_threads() - 1)  # Leave one thread for OS and other processes
         print(f"Using {n_threads} CPU threads.")
-        n_gpu_layers = 0  # Default to no GPU layers if not using CUDA
 
+        # Determine the number of layers to offload to GPUs
         if device.type == 'cuda':
-            n_gpu_layers = torch.cuda.get_device_capability(device.index)[0]  # Use number of SMs as a heuristic
-            print(f"Offloading {n_gpu_layers} layers to GPU.")
+            available_gpus = torch.cuda.device_count()
+            total_memory_per_gpu_gb = torch.cuda.get_device_properties(0).total_memory / (1024**3)
+            print(f"Total GPUs available: {available_gpus}")
+            print(f"Total GPU memory available per GPU: {total_memory_per_gpu_gb:.2f} GB")
+
+            # Decide how many layers to offload per GPU
+            if n_gpu_layers is None:
+                # Estimate layers based on available memory (adjust as needed)
+                n_gpu_layers = min(24, int(total_memory_per_gpu_gb // 1.2))  # Example: 1.2 GB per layer
+            print(f"Offloading {n_gpu_layers} layers per GPU across {available_gpus} GPUs.")
+
+        else:
+            n_gpu_layers = 0  # No GPU offloading
 
         print(f"""-----------------------------------------------------------------------\nLoading Mistral to {device}...\n-----------------------------------------------------------------------""")
         with SuppressOutput(): # Suppress Verbose Output
