@@ -4,7 +4,10 @@ from Pipelines.Py_files.full_pipeline import TranscriptPipeline
 import json
 
 class RunEvaluation():
-    def __init__(self, test_set_path, save_file_path):
+    def __init__(self, test_set_path, save_file_path, vision_model_path = r'yolo_training\yolo_v8_models\finetune_v5\best.pt', 
+                 llm_model_path = r'd:\llm_models\Mistral-7B-Instruct-v0.3.fp16.gguf'):
+        self.vision_model_path = vision_model_path
+        self.llm_model_path = llm_model_path
         self.test_set_path = test_set_path
         self.save_file_path = save_file_path
         self.load_dataset()
@@ -20,7 +23,6 @@ class RunEvaluation():
             print(f"Error: The file {self.test_set_path} is not a valid JSON file.")
     
     def save_results(self, dict):
-
         # Check if the directory exists, if not, create it
         if not os.path.exists(self.save_file_path):
             os.makedirs(self.save_file_path)
@@ -43,11 +45,12 @@ class RunEvaluation():
                 self.image_label_dict[image_path] = csv_string
             except KeyError as e:
                 print(f"Missing key {e} in entry: {entry}")
-    def run_pipeline(self, vision_model_path = r'yolo_training\yolo_v8_models\finetune_v5\best.pt', **kwargs):
+
+    def run_pipeline(self, **kwargs):
         # Instantiate pipeline
-        pipeline = TranscriptPipeline(cnn_path = vision_model_path)
+        pipeline = TranscriptPipeline(cnn_path = self.vision_model_path)
         # Process input (can be a file, list of files, or folder)
-        predicted_strings_dict = pipeline.process_transcripts(self.image_list, **kwargs)
+        predicted_strings_dict = pipeline.process_transcripts(self.image_list, LLM_path=self.llm_model_path, **kwargs)
         self.save_results(predicted_strings_dict)
         return predicted_strings_dict
     
