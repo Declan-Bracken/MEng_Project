@@ -41,6 +41,12 @@ class MistralInference():
 
         return cls._instance
     
+    @classmethod
+    def reset_instance(cls):
+        """Resets the singleton instance."""
+        print("Resetting the MistralInference singleton instance.")
+        cls._instance = None
+    
     def initialize(self, device, model_path, max_sequence_len = 3072):
         if not model_path:
             raise ValueError("Model path must be provided.")
