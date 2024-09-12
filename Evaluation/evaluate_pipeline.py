@@ -5,7 +5,7 @@ import sys
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # One level up from 'Evaluation'
 if project_root not in sys.path:
     sys.path.append(project_root)
-# from Evaluation.text_reconstruction_evaluator import TextReconstructionEvaluator
+from Evaluation.text_reconstruction_evaluator import TextReconstructionEvaluator
 from Pipelines.Py_files.full_pipeline import TranscriptPipeline
 import json
 
@@ -65,14 +65,14 @@ class RunEvaluation():
         self.save_results(predicted_strings_dict)
         return predicted_strings_dict
     
-    # def evaluate_tables(self, predicted_strings_dict):
-    #     results_dictionary = {}
-    #     for image_path in predicted_strings_dict:
-    #         evaluator = TextReconstructionEvaluator(predicted_strings_dict[image_path], self.image_label_dict[image_path])
-    #         results = evaluator.evaluate()
-    #         print("Evaluation Results for", image_path, ":", results)
-    #         results_dictionary[image_path] = results
-    #     return results_dictionary
+    def evaluate_tables(self, predicted_strings_dict):
+        results_dictionary = {}
+        for image_path in predicted_strings_dict:
+            evaluator = TextReconstructionEvaluator(predicted_strings_dict[image_path], self.image_label_dict[image_path])
+            results = evaluator.evaluate()
+            print("Evaluation Results for", image_path, ":", results)
+            results_dictionary[image_path] = results
+        return results_dictionary
 
 if __name__ == "__main__":
     test_set_path = "Synthetic_Image_Annotation\Test_Data\Cleaned_JSON\Test_Responses.json"
