@@ -21,9 +21,6 @@ class ImageProcessor:
             cropped_image = self.image_rgb[y1:y2, x1:x2]
             # preprocessed_image = self.preprocess_image(cropped_image)
             cropped_images.append(Image.fromarray(cropped_image))
-            cropped_image = self.image_rgb[y1:y2, x1:x2]
-            # preprocessed_image = self.preprocess_image(cropped_image)
-            cropped_images.append(Image.fromarray(cropped_image))
         return cropped_images
     
     def plot_images(self):

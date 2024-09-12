@@ -83,7 +83,6 @@ class ColumnClusterer:
 
         # Extract the best cluster_selection_epsilon
         best_cluster_selection_epsilon = result.x[0]
-        # print(f"Optimal cluster_selection_epsilon: {best_cluster_selection_epsilon}")
 
         return best_cluster_selection_epsilon
 
@@ -123,7 +122,7 @@ class ColumnClusterer:
                 labels = self.perform_clustering(positions, optimal_eps)
                 num_cols = len(set(labels))
 
-            df = pd.DataFrame(np.nan, index=range(num_lines), columns=range(num_cols), dtype=object)
+            df = pd.DataFrame("", index=range(num_lines), columns=range(num_cols), dtype=object)
 
             for text, label, line in zip(texts, labels, line_numbers):
                 if 0 <= label < num_cols and 0 <= line < num_lines:

@@ -515,7 +515,6 @@ class RowClassifier:
                     'y_global_positions': [],
                     'line_numbers': []
                 }
-            
 
             # Extract text and positional data from the row
             text_data = row['text']
